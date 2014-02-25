@@ -1,0 +1,72 @@
+<html>
+<!--
+Copyright (c) 2011-2013 F-Secure
+See LICENSE for details
+-->
+<body>
+<br><br>
+Reference model: <select id='models'></select><br>
+<br>
+<input type=button id='compare' value='Compare'>
+<br><br>
+<div id='comparison results'></div>
+<script>
+ function swap(id1, id2) {
+    img1 = document.getElementById(id1);
+    src1 = img1.src;
+    title1 = img1.title;
+    img2 = document.getElementById(id2);
+    img1.src = img2.src;
+    img1.title = img2.title;
+    img2.src = src1;
+    img2.title = title1;
+    button = document.getElementById('button-' + id1);
+    if (button.value.indexOf('<-') === 0) {
+        button.value = '      New    ->\n<- Reference   ';
+    } else {
+        button.value = '<-    New      \n   Reference ->';
+    }
+ }
+</script>
+</body>
+<script src='query_string.js'></script>
+<script src='model.js'></script>
+<script>
+
+var model = new Model(QueryString.model, function (err) { alert(err);});
+
+var source = document.createTextNode("Model: " + QueryString.model);
+document.body.insertBefore(source, document.body.firstChild);
+
+Model.getModels(function (models) {
+    var i, select_elem = document.getElementById('models');
+    for (i = 0; i < models.length; i += 1) {
+        if (models[i] !== QueryString.model) {
+            option = document.createElement("option");
+            option.text = models[i];
+            select_elem.add(option);
+        }
+    }
+});
+
+function compare() {
+    var reference = document.getElementById('models');
+    reference = reference.options[reference.selectedIndex].text;
+    model.compare(reference, function(result) {
+        var container = document.getElementById('comparison results');
+        while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+        }
+        var tweaked = result[1].replace('<html>', '');
+        tweaked = tweaked.replace('<body>', '');
+        tweaked = tweaked.replace('</body>', '');
+        tweaked = tweaked.replace('</html>', '');
+        //var text = document.createElement('div');
+        //text.innerHTML = result[1];
+        //container.appendChild(text);
+        document.body.innerHTML = tweaked;
+    }, function (err) { alert(err);});
+}
+document.getElementById('compare').addEventListener('click', compare);
+</script>
+</html>

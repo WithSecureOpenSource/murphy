@@ -1,0 +1,100 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 3473772, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 518, 
+                            "right": 606, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 3670336, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 428, 
+                            "right": 577, 
+                            "top": 368
+                        }, 
+                        "text": "Invalid key, please try again!", 
+                        "wm text": "Invalid key, please try again!"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 1311256, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 413, 
+                    "right": 617, 
+                    "top": 317
+                }, 
+                "text": "Error"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Invalid Key Please Try Again", 
+        "reference screenshots": [
+            {
+                "file": "invalid_key_please_try_again.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "invalid_key_please_try_again.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Error"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Please Type In Your Installation Key And Click Ok", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 3473772, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 518, 
+                        "right": 606, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "invalid_key_please_try_again.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                105, 
+                104, 
+                193, 
+                130
+            ]
+        }
+    }
+}

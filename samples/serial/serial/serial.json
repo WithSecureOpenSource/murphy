@@ -1,0 +1,20 @@
+{
+    "business rules": "rules", 
+    "coverage": "coverage.json", 
+    "global timeout": 90, 
+    "images dir": "img", 
+    "modules": [
+        "node_00", 
+        "please_type_in_your_installation_key_and_click_ok", 
+        "invalid_key_please_try_again", 
+        "were_sorry_you_did_not_installed_us"
+    ], 
+    "namespace": "serial.serial", 
+    "tags": [], 
+    "views": [
+        {
+            "name": "All", 
+            "starts at": "Node 0"
+        }
+    ]
+}

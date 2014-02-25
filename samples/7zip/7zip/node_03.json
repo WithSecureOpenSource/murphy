@@ -1,0 +1,105 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "Node 3", 
+        "reference screenshots": [
+            {
+                "file": "node_03.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_03.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Browse For Folder"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Element 0", 
+        "goes to": null, 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_03.edge.Element 0.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                156, 
+                285, 
+                228, 
+                305
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Element 1", 
+        "goes to": null, 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_03.edge.Element 1.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                237, 
+                285, 
+                309, 
+                305
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Element 2", 
+        "goes to": null, 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_03.edge.Element 2.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "link", 
+            "visual": [
+                41, 
+                130, 
+                108, 
+                150
+            ]
+        }
+    }, 
+    "V_ELEM_03": {
+        "desc": "Element 3", 
+        "goes to": null, 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_03.edge.Element 3.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                24, 
+                285, 
+                126, 
+                305
+            ]
+        }
+    }
+}

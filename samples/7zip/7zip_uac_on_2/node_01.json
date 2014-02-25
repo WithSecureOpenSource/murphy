@@ -1,0 +1,84 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "User Access Control", 
+        "reference screenshots": [
+            {
+                "file": "node_01.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_01.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": ""
+    }, 
+    "V_ELEM_00": {
+        "desc": "Show details", 
+        "goes to": "User Access Control_2", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Show details.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                17, 
+                181, 
+                107, 
+                199
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Yes", 
+        "goes to": "Choose Install Location", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Yes.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                292, 
+                178, 
+                364, 
+                200
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "No", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.No.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                373, 
+                178, 
+                445, 
+                200
+            ]
+        }
+    }
+}

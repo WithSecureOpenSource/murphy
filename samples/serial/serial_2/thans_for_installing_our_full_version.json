@@ -1,0 +1,100 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 2687306, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 537, 
+                            "right": 625, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 2883920, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 409, 
+                            "right": 596, 
+                            "top": 368
+                        }, 
+                        "text": "Thans for installing our full version!", 
+                        "wm text": "Thans for installing our full version!"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 1180032, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 394, 
+                    "right": 636, 
+                    "top": 317
+                }, 
+                "text": "Full installation"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Thans For Installing Our Full Version", 
+        "reference screenshots": [
+            {
+                "file": "thans_for_installing_our_full_version.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "thans_for_installing_our_full_version.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Full installation"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 2687306, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 537, 
+                        "right": 625, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "thans_for_installing_our_full_version.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                143, 
+                104, 
+                231, 
+                130
+            ]
+        }
+    }
+}

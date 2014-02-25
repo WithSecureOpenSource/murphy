@@ -1,0 +1,288 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "HelpPane.WebBrowser", 
+                        "control id": 3124256, 
+                        "enabled": true, 
+                        "hwnd": 721390, 
+                        "rect": {
+                            "bottom": 598, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 110
+                        }, 
+                        "text": "What are User Account Control settings?", 
+                        "wm text": "What are User Account Control settings?"
+                    }, 
+                    {
+                        "class": "Shell Embedding", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 655818, 
+                        "rect": {
+                            "bottom": 598, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 110
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Shell DocObject View", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 2556192, 
+                        "rect": {
+                            "bottom": 598, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 110
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Internet Explorer_Server", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 3015122, 
+                        "rect": {
+                            "bottom": 598, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 110
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "HelpPane.Navigation", 
+                        "control id": 2979968, 
+                        "enabled": true, 
+                        "hwnd": 2752984, 
+                        "rect": {
+                            "bottom": 76, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 40
+                        }, 
+                        "text": "NavigationTile", 
+                        "wm text": "NavigationTile"
+                    }, 
+                    {
+                        "class": "ATL:ReBarWindow32", 
+                        "control id": 2980072, 
+                        "enabled": true, 
+                        "hwnd": 590224, 
+                        "rect": {
+                            "bottom": 440, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 40
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "ATL:ToolbarWindow32", 
+                        "control id": 2980152, 
+                        "enabled": true, 
+                        "hwnd": 459190, 
+                        "rect": {
+                            "bottom": 80, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 40
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "HelpPane.Search", 
+                        "control id": 2980496, 
+                        "enabled": true, 
+                        "hwnd": 3670486, 
+                        "rect": {
+                            "bottom": 110, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 76
+                        }, 
+                        "text": "SearchTile", 
+                        "wm text": "SearchTile"
+                    }, 
+                    {
+                        "class": "ATL:ReBarWindow32", 
+                        "control id": 2980760, 
+                        "enabled": true, 
+                        "hwnd": 262568, 
+                        "rect": {
+                            "bottom": 476, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 76
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "ATL:STATIC", 
+                        "control id": 2980680, 
+                        "enabled": true, 
+                        "hwnd": 262576, 
+                        "rect": {
+                            "bottom": 105, 
+                            "left": 604, 
+                            "right": 934, 
+                            "top": 81
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "ATL:EDIT", 
+                        "control id": 2980944, 
+                        "enabled": true, 
+                        "hwnd": 1311094, 
+                        "rect": {
+                            "bottom": 105, 
+                            "left": 604, 
+                            "right": 908, 
+                            "top": 86
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "ATL:ToolbarWindow32", 
+                        "control id": 2980856, 
+                        "enabled": true, 
+                        "hwnd": 590308, 
+                        "rect": {
+                            "bottom": 103, 
+                            "left": 908, 
+                            "right": 934, 
+                            "top": 82
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "HelpPane.Escalation", 
+                        "control id": 2984048, 
+                        "enabled": true, 
+                        "hwnd": 2687464, 
+                        "rect": {
+                            "bottom": 620, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 598
+                        }, 
+                        "text": "EscalationTile", 
+                        "wm text": "EscalationTile"
+                    }, 
+                    {
+                        "class": "ATL:ReBarWindow32", 
+                        "control id": 2984152, 
+                        "enabled": true, 
+                        "hwnd": 852424, 
+                        "rect": {
+                            "bottom": 998, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 598
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "ATL:ToolbarWindow32", 
+                        "control id": 2984232, 
+                        "enabled": true, 
+                        "hwnd": 721396, 
+                        "rect": {
+                            "bottom": 624, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 598
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "HelpPane.Connection", 
+                        "control id": 2984528, 
+                        "enabled": true, 
+                        "hwnd": 393712, 
+                        "rect": {
+                            "bottom": 642, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 620
+                        }, 
+                        "text": "ConnectionTile", 
+                        "wm text": "ConnectionTile"
+                    }, 
+                    {
+                        "class": "ATL:ReBarWindow32", 
+                        "control id": 2984632, 
+                        "enabled": true, 
+                        "hwnd": 262604, 
+                        "rect": {
+                            "bottom": 1020, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 620
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "ATL:ToolbarWindow32", 
+                        "control id": 2984712, 
+                        "enabled": true, 
+                        "hwnd": 262630, 
+                        "rect": {
+                            "bottom": 646, 
+                            "left": 522, 
+                            "right": 1016, 
+                            "top": 620
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }
+                ], 
+                "class": "HelpPane", 
+                "hwnd": 2032022, 
+                "rect": {
+                    "bottom": 650, 
+                    "left": 514, 
+                    "right": 1024, 
+                    "top": 10
+                }, 
+                "text": "Windows Help and Support"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Windows Help And Support", 
+        "reference screenshots": [
+            {
+                "file": "windows_help_and_support.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "windows_help_and_support.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Windows Help and Support"
+    }
+}

@@ -1,0 +1,216 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Static", 
+                        "control id": 1002, 
+                        "enabled": true, 
+                        "hwnd": 1114496, 
+                        "rect": {
+                            "bottom": 393, 
+                            "left": 390, 
+                            "right": 634, 
+                            "top": 354
+                        }, 
+                        "text": "Please type in your installation key and click OK", 
+                        "wm text": "Please type in your installation key and click OK"
+                    }, 
+                    {
+                        "class": "Edit", 
+                        "control id": 1001, 
+                        "enabled": true, 
+                        "hwnd": 3146082, 
+                        "rect": {
+                            "bottom": 408, 
+                            "left": 390, 
+                            "right": 634, 
+                            "top": 388
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 1, 
+                        "enabled": true, 
+                        "hwnd": 2818384, 
+                        "rect": {
+                            "bottom": 436, 
+                            "left": 414, 
+                            "right": 489, 
+                            "top": 413
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 2621770, 
+                        "rect": {
+                            "bottom": 436, 
+                            "left": 536, 
+                            "right": 611, 
+                            "top": 413
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 524622, 
+                "rect": {
+                    "bottom": 454, 
+                    "left": 372, 
+                    "right": 652, 
+                    "top": 314
+                }, 
+                "text": "Welcome to superapp"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Please Type In Your Installation Key And Click Ok", 
+        "reference screenshots": [
+            {
+                "file": "please_type_in_your_installation_key_and_click_ok.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "please_type_in_your_installation_key_and_click_ok.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Welcome to superapp"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Text input", 
+        "goes to": "Please Type In Your Installation Key And Click Ok", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Edit", 
+                    "control id": 1001, 
+                    "enabled": true, 
+                    "hwnd": 3146082, 
+                    "rect": {
+                        "bottom": 408, 
+                        "left": 390, 
+                        "right": 634, 
+                        "top": 388
+                    }, 
+                    "text": "", 
+                    "wm text": ""
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "please_type_in_your_installation_key_and_click_ok.edge.Text input.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "text", 
+            "visual": [
+                18, 
+                74, 
+                262, 
+                94
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Ok", 
+        "goes to": "Invalid Key Please Try Again", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1, 
+                    "enabled": true, 
+                    "hwnd": 2818384, 
+                    "rect": {
+                        "bottom": 436, 
+                        "left": 414, 
+                        "right": 489, 
+                        "top": 413
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "please_type_in_your_installation_key_and_click_ok.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                42, 
+                99, 
+                117, 
+                122
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Cancel", 
+        "goes to": "Were Sorry You Did Not Installed Us", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 2621770, 
+                    "rect": {
+                        "bottom": 436, 
+                        "left": 536, 
+                        "right": 611, 
+                        "top": 413
+                    }, 
+                    "text": "Cancel", 
+                    "wm text": "Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "please_type_in_your_installation_key_and_click_ok.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                164, 
+                99, 
+                239, 
+                122
+            ]
+        }
+    }, 
+    "V_ELEM_03": {
+        "desc": "Valid serial", 
+        "goes to": "Thans For Installing Our Full Version", 
+        "how": [
+            "press_ok", 
+            "\ndef press_ok():\n    '''\n    Simplest way, press enter...\n    '''        \n    WORKER.input.keyboard.enters('{enter}')\n"
+        ]
+    }, 
+    "V_ELEM_04": {
+        "desc": "Demo serial", 
+        "goes to": "Thans For Installing Our Demo Version", 
+        "how": [
+            "press_ok", 
+            "\ndef press_ok():\n    '''\n    Simplest way, press enter...\n    '''        \n    WORKER.input.keyboard.enters('{enter}')\n"
+        ]
+    }
+}

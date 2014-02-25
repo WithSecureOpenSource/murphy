@@ -1,0 +1,21 @@
+{
+    "business rules": "rules", 
+    "coverage": "coverage.json", 
+    "global timeout": 90, 
+    "images dir": "img", 
+    "modules": [
+        "node_00", 
+        "node_01", 
+        "node_02", 
+        "node_03", 
+        "node_04"
+    ], 
+    "namespace": "7zip.7zip", 
+    "tags": [], 
+    "views": [
+        {
+            "name": "All", 
+            "starts at": "Node 0"
+        }
+    ]
+}

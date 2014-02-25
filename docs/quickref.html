@@ -1,0 +1,30 @@
+<html>
+<title>Murphy cheatsheet</title>
+<body>
+<h4>Running murphy (the web ui)</h4>
+<pre>C:\git-projects\murphy_sdk\web_workbench>workbench.py</pre>
+And also:<br>
+<pre>C:\git-projects\murphy_sdk\model_extraction_helpers>python -m SimpleHTTPServer 8901</pre>
+Then open a browser and go to <a href="http://127.0.0.1:8090/">http://127.0.0.1:8090/</a><br>
+<br>
+<h4>Extracting a model</h4>
+<pre>set PYTHONPATH=C:\git-projects\murphy_sdk</pre>
+Be sure the local files are served:<br>
+<pre>C:\git-projects\murphy_sdk\model_extraction_helpers>python -m SimpleHTTPServer 8901</pre>
+Then do:<br>
+<pre>C:\git-projects\murphy_sdk\7zip_modeller>extract_7zip_win_scraper.py</pre>
+<br>
+<h4>Adding a model to the web workbench</h4>
+Edit \git-projects\murphy_sdk\web_workbench\config.json and add it there, for example add this at the end right before the ]:<br>
+<pre>, {"file": "../7zip_modeller/7zipWinScraper/7zipWinScraper.json"}</pre>
+(be sure the opening [ is matched with one ] at the end!)<br>
+<br>
+<h4>Creating / running a manually written test script</h4>
+Take a look at 7zip_modeller/test_scripts/test_7zip_installation.py for a sample (and simple) script<br>
+To execute it ensure that local files are served and run test_7zip_installation.py<br>
+<br>
+<h4>How do I...</h4>
+Dunno, but as a starting point check the samples directory.<br>
+<br>
+</body>
+</html>

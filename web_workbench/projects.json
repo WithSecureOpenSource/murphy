@@ -1,0 +1,29 @@
+[
+  {
+    "file": "../samples/7zip/7zip/7zip.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zip_newer/7zip_newer.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zipWinScraper/7zipWinScraper.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zip_uac_on/7zip_uac_on.json"
+  },
+  {
+    "file": "../samples/7zip/7zip_uac_on_2/7zip_uac_on_2.json"
+  },
+  {
+    "file": "../samples/7zip/7zip_uac_on_full/7zip_uac_on_full.json"
+  },
+  {
+    "file": "../samples/serial/serial/serial.json"
+  },
+  {
+    "file": "../samples/serial/serial_2/serial_2.json"
+  },
+  {
+    "file": "../samples/click_for_next/click_for_next/click_for_next.json"
+  }
+]

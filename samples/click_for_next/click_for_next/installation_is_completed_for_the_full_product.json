@@ -1,0 +1,100 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 459144, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 561, 
+                            "right": 649, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 328120, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 384, 
+                            "right": 620, 
+                            "top": 368
+                        }, 
+                        "text": "Installation is completed for the full product.", 
+                        "wm text": "Installation is completed for the full product."
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 262564, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 369, 
+                    "right": 660, 
+                    "top": 317
+                }, 
+                "text": "Installation completed"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Installation Is Completed For The Full Product", 
+        "reference screenshots": [
+            {
+                "file": "installation_is_completed_for_the_full_product.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "installation_is_completed_for_the_full_product.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Installation completed"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 459144, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 561, 
+                        "right": 649, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "installation_is_completed_for_the_full_product.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                192, 
+                104, 
+                280, 
+                130
+            ]
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<html>
+<title>How murphy works</title>
+<body>
+<h3>High level inner workings of murphy</h3>
+<h4>Extracting an application model</h4>
+Murphy will run in one machine (let's call it the controller) and will spawn a virtual machine<br>
+In the virtual machine it will launch the application to be analyzed<br>
+It will analyze what is seeing in the screen, what is the currently active window, what actions can the user do (buttons / links it can click, text inputs, selections from dropdown boxes, etc)<br>
+It will systematically try to do those actions and generate a model that describes such application<br>
+At any given point, murphy may decide to recreate the virtual machine to get back to a clean state (to prevent side effects from previously executed actions)<br>
+<h4>Separation of concerns</h4>
+Internally murphy has a few abstractions, amongst them:<br>
+<ul>
+<li>A scraper (a sorry name, but responsible to decompose what the user sees, akin to a DOM of the application)</li>
+<li>A crawler (responsible for 'walking around' the application for mapping it)</li>
+<li>A machine (handles the logic for creating, allocating and deallocating a virtual machine or device</li>
+<li>A user (simulates user actions like mouse clicks and keyboard strokes, also responsible for providing screenshots</li>
+</ul>
+<h4>How does murphy know what elements the user can interact with?</h4>
+The scraper component is a class responsible for doing that, there are at the moment 2 scrapers provided in murphy.<br>
+One uses windows API's for enumerating windows and controls, so any native application built on c, c++, mfc and many other technologies will work fine,
+it can be found in model_extraction_helpers/window_scraper.py<br>
+The other uses user actions (pressing the TAB key and hovering the mouse) and analyzes the changes in the UI, it then deduces the user interface elements based on that, it can be found in model_extraction/ui/scraper.py<br>
+The good side of scraper.py is that it works for most applications independently of the language used to develop them, the bad is that is unable to extract texts from the ui and that many applications are poorly written
+and many ui elements are not reachable while pressing the TAB key.<br>
+<br>
+It is relatively simple to create additional scrapers, in house we had to develop a custom one for applications based on QT 4, we also develop an experimental scraper for android applications and also another one
+based on the windows accessibility API (ui automation)<br>
+<h4>How does murphy know it has to input a serial key / activation code / etc in an input field?</h4>
+It doesnt, that's why the way to extract a model is to write a simple script and tell murphy the very specific, non guessable things of the application you're interested in.<br>
+<h4>Boundaries</h4>
+You dont want to crawl everything, suppose a case that there's a link in your application that opens a browser, im pretty sure you dont want murphy to crawl the whole internet.<br>
+Here's where the concept of boundary comes, in an extraction script, one of the things you tell murphy is what you're NOT interested to crawl, in other words what are the boundaries of the exploration<br>
+<h4>In simple words</h4>
+The idea is to tell only the essential things in an extraction script, some typical things to handle:<br>
+<ul>
+<li>launch x application (run x command)</li>
+<li>if the window is a help window, i'm not interested to crawl beyond it.</li>
+<li>if the window is the 'enter serial number' then use x value on y field</li>
+<li>if the window is 'license information' then the value of field 'y' must be ignored or custom handle (for example a timestamp)</li>
+</ul>
+<h4>Simplest model extraction script</h4>
+<pre>
+extractor = base_extractor.BaseExtractor('7zip', '\\utils\\runurl.py http://127.0.0.1:8901/files/7z920.exe')
+
+extractor.add_boundary_node('Browse For Folder')
+
+extractor.crawl_application()
+</pre>
+</body>
+</html>

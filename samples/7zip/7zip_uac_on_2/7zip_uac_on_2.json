@@ -1,0 +1,23 @@
+{
+    "business rules": "rules", 
+    "coverage": "coverage.json", 
+    "global timeout": 90, 
+    "images dir": "img", 
+    "modules": [
+        "node_00", 
+        "node_01", 
+        "node_02", 
+        "choose_install_location", 
+        "completing_the_7_zip_9_20_setup_wizard", 
+        "are_you_sure_you_want_to_quit_7_zip_9_20_setup", 
+        "select_the_folder_to_install_7_zip_9_20_in"
+    ], 
+    "namespace": "7zip.7zip_uac_on_2", 
+    "tags": [], 
+    "views": [
+        {
+            "name": "All", 
+            "starts at": "Node 0"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "Node 1", 
+        "reference screenshots": [
+            {
+                "file": "node_01.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_01.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "7-Zip 9.20 Setup "
+    }, 
+    "V_ELEM_00": {
+        "desc": "Element 0", 
+        "goes to": "Node 1", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Element 0.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "text", 
+            "visual": [
+                41, 
+                236, 
+                355, 
+                255
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Element 1", 
+        "goes to": "Node 2", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Element 1.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                328, 
+                353, 
+                400, 
+                373
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Element 2", 
+        "goes to": "Node 3", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Element 2.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                369, 
+                234, 
+                456, 
+                255
+            ]
+        }
+    }, 
+    "V_ELEM_03": {
+        "desc": "Element 3", 
+        "goes to": "Node 4", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Element 3.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                414, 
+                353, 
+                486, 
+                373
+            ]
+        }
+    }
+}

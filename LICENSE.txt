@@ -1,0 +1,11 @@
+Murphy is licensed under the Apache 2.0 (APL 2.0) license, see
+LICENSE-murphy.txt
+
+Murphy includes a slightly modified version of vncdotool in 
+murphy\user_simulation\vnc\vncdotool:
+    vncdotool is a command line VNC client. It can be useful to automating
+    interactions with virtual machines or hardware devices that are otherwise
+    difficult to control.
+See LICENSE-vncdotool.txt for license information, website can be found at
+https://github.com/sibson/vncdotool
+

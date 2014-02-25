@@ -1,0 +1,270 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "DirectUIHWND", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 4129122, 
+                        "rect": {
+                            "bottom": 636, 
+                            "left": 140, 
+                            "right": 884, 
+                            "top": 114
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "CtrlNotifySink", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 2294250, 
+                        "rect": {
+                            "bottom": 199, 
+                            "left": 228, 
+                            "right": 808, 
+                            "top": 184
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "SysLink", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 721344, 
+                        "rect": {
+                            "bottom": 199, 
+                            "left": 228, 
+                            "right": 808, 
+                            "top": 184
+                        }, 
+                        "text": "<a href=\"\">Tell me more about User Account Control settings</a>", 
+                        "wm text": "<a href=\"\">Tell me more about User Account Control settings</a>"
+                    }, 
+                    {
+                        "class": "CtrlNotifySink", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 590244, 
+                        "rect": {
+                            "bottom": 464, 
+                            "left": 268, 
+                            "right": 294, 
+                            "top": 244
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "msctls_trackbar32", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 2163106, 
+                        "rect": {
+                            "bottom": 464, 
+                            "left": 268, 
+                            "right": 294, 
+                            "top": 244
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "CtrlNotifySink", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 4391560, 
+                        "rect": {
+                            "bottom": 599, 
+                            "left": 644, 
+                            "right": 720, 
+                            "top": 576
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 328110, 
+                        "rect": {
+                            "bottom": 599, 
+                            "left": 644, 
+                            "right": 720, 
+                            "top": 576
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "CtrlNotifySink", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 2097568, 
+                        "rect": {
+                            "bottom": 599, 
+                            "left": 726, 
+                            "right": 802, 
+                            "top": 576
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 2752988, 
+                        "rect": {
+                            "bottom": 599, 
+                            "left": 726, 
+                            "right": 802, 
+                            "top": 576
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }
+                ], 
+                "class": "NativeHWNDHost", 
+                "hwnd": 3473802, 
+                "rect": {
+                    "bottom": 644, 
+                    "left": 132, 
+                    "right": 892, 
+                    "top": 84
+                }, 
+                "text": "User Account Control Settings"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "User Account Control Settings", 
+        "reference screenshots": [
+            {
+                "file": "user_account_control_settings.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "user_account_control_settings.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "User Account Control Settings"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Tell me more about user account control settings", 
+        "goes to": "Windows Help And Support", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "SysLink", 
+                    "control id": 0, 
+                    "enabled": true, 
+                    "hwnd": 721344, 
+                    "rect": {
+                        "bottom": 199, 
+                        "left": 228, 
+                        "right": 808, 
+                        "top": 184
+                    }, 
+                    "text": "<a href=\"\">Tell me more about User Account Control settings</a>", 
+                    "wm text": "<a href=\"\">Tell me more about User Account Control settings</a>"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "user_account_control_settings.edge.Tell me more about user account control settings.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "link", 
+            "visual": [
+                96, 
+                100, 
+                676, 
+                115
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Ok", 
+        "goes to": "User Access Control_3", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 0, 
+                    "enabled": true, 
+                    "hwnd": 328110, 
+                    "rect": {
+                        "bottom": 599, 
+                        "left": 644, 
+                        "right": 720, 
+                        "top": 576
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "user_account_control_settings.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                512, 
+                492, 
+                588, 
+                515
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Cancel", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 0, 
+                    "enabled": true, 
+                    "hwnd": 2752988, 
+                    "rect": {
+                        "bottom": 599, 
+                        "left": 726, 
+                        "right": 802, 
+                        "top": 576
+                    }, 
+                    "text": "Cancel", 
+                    "wm text": "Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "user_account_control_settings.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                594, 
+                492, 
+                670, 
+                515
+            ]
+        }
+    }
+}

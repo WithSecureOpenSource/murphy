@@ -1,0 +1,63 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "User Access Control_5", 
+        "reference screenshots": [
+            {
+                "file": "node_11.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_11.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": ""
+    }, 
+    "V_ELEM_00": {
+        "desc": "Element 0", 
+        "goes to": "User Access Control_5", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_11.edge.Element 0.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                32, 
+                39, 
+                78, 
+                54
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Element 1", 
+        "goes to": "User Access Control_4", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_11.edge.Element 1.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                346, 
+                483, 
+                418, 
+                503
+            ]
+        }
+    }
+}

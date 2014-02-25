@@ -1,0 +1,63 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "User Access Control", 
+        "reference screenshots": [
+            {
+                "file": "node_01.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_01.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": ""
+    }, 
+    "V_ELEM_00": {
+        "desc": "Element 2", 
+        "goes to": "Choose Install Location", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Element 2.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                292, 
+                178, 
+                364, 
+                200
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Element 3", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_01.edge.Element 3.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                373, 
+                178, 
+                445, 
+                200
+            ]
+        }
+    }
+}

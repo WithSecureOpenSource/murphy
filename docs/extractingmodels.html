@@ -1,0 +1,100 @@
+<html>
+<title>Your first model extraction scripts</title>
+<body>
+<h3>Starting from the samples</h3>
+<h4>Short explanation</h4>
+Create a dir 7zip_mine, copy extract_7zip_win_scraper.py inside of it.<br>
+In the line <pre>extractor = base_extractor.BaseExtractor('7zipWinScraper',</pre> change 7zipWinScraper for 7zip_mine<br>
+Add the new project to web_workbench/project.json files the following line:<br>
+<pre>,{"file": "../samples/7zip_mine/7zip_mine/7zip_mine.json"}</pre>
+Run extract_7zip_win_scraper.py<br>
+
+<h4>Longer explanation</h4>
+It is ofthen easier to start with an existing script and adjust rather than totally from scratch.<br>
+For that purpose, create a folder called 7zip_mine (in the directory where you had murphy, for example: c:\git_projects\murphy_sdk\samples\7zip_mine<br>
+Copy the file extract_7zip_win_scraper.py from the samples\7zip into the new folder.<br>
+<br>
+The code of that file looks like this:<br>
+<pre>
+from model_extraction import base_extractor, configuration
+from model_extraction.ui import window_scrap
+    
+if __name__ == '__main__':
+    test_files = configuration.get_default_config()["test files"]
+    extractor = base_extractor.BaseExtractor('7zipWinScraper',
+                                             '\\utils\\runurl.py ' + test_files + '7z920.exe')
+
+    #Ignore 'Browse For Folder' dialog as we dont care for windows native dialog
+    extractor.add_boundary_node('Browse For Folder')
+    
+    extractor.scrap_method = lambda node, world, scraper_hints, node_hints: window_scrap.custom_scraper(node, world)
+    
+    extractor.crawl_application()
+</pre>
+We care about this line:<br>
+<pre>
+    extractor = base_extractor.BaseExtractor('7zipWinScraper',
+                                             '\\utils\\runurl.py ' + test_files + '7z920.exe')
+</pre>
+The first parameter is the name we give to the model, so lets start by changing it to 7zip_mine<br>
+The second parameter is the 1st action to perform when murphy starts crawling the application, we're not going to change it now but all you need to know for now is that
+it will be a command that when build will look like: <pre>\utils\runurl.py http://192.168.56.1:8901/files/7z920.exe</pre>
+In essence, it will download that url and then execute 7z920.exe<br>
+Once we modified that line it should look like:<br>
+<pre>
+    extractor = base_extractor.BaseExtractor('7zip_mine',
+                                             '\\utils\\runurl.py ' + test_files + '7z920.exe')
+</pre>
+We're ready to run it now, however we wont see it in the web workbench yet, we have to configure it, for doing so, open the file config.json that is located in the web_workbench directory.<br>
+It should look like this:<br>
+<pre>
+[
+  {
+    "file": "../samples/7zip/7zip/7zip.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zip_newer/7zip_newer.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zipWinScraper/7zipWinScraper.json"
+  }
+]
+</pre>
+It is pretty self described, we need to copy the last entry and add our new model, you should modify it as:<br>
+<pre>
+[
+  {
+    "file": "../samples/7zip/7zip/7zip.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zip_newer/7zip_newer.json"
+  }, 
+  {
+    "file": "../samples/7zip/7zipWinScraper/7zipWinScraper.json"
+  },
+  {
+    "file": "../samples/7zip_mine/7zip_mine.json"
+  }
+]
+</pre>
+If you dont have the workbench running, launch it now (for example: C:\git-projects\murphy_sdk\web_workbench>workbench.py)<br>
+Open a browser to http://127.0.0.1:8090 and enter your name, the project should appear in the dropdown list of models, of course it will still display a blank model.<br>
+(if you had a browser opened then reload the page so you'll get the new project)<br>
+So from a command line do:<br>
+<pre>C:\git-projects\murphy_sdk\samples\7zip_mine>extract_7zip_win_scraper.py</pre>
+In a few seconds you should see:
+<pre>
+2014-01-27 15:20:29,338 - root.model_extraction.crawler - INFO - Started exploration, current node is None, current edge is None
+2014-01-27 15:20:29,556 - root.model_extraction.crawler - INFO - Node created for state Node Node 0 (1)
+        ->Launch application->None
+2014-01-27 15:20:29,571 - root.model_extraction.ui.edge - INFO - Performing Edge Launch application (Node 0)
+2014-01-27 15:20:29,782 - root.murphy.user_simulation.helpers - INFO - Waiting for a stable screen
+...
+</pre>
+Go now to the web workbench page and select the model from the dropdown list, you may have to wait a little until first images are viewable.<br>
+<br>
+<h4>If something went wrong</h4>
+Make sure you had PYTHONPATH set (for example set PYTHONPATH=C:\git-projects\murphy_sdk).<br>
+Ensure that when you are going to execute the script (extract_7zip_win_scraper.py) the virtual machine IS NOT RUNNING in virtualbox.<br>
+</body>
+</html>

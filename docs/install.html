@@ -1,0 +1,82 @@
+<html>
+<title>Installing murphy</title>
+<body>
+<br>
+<strong>WARNING</strong><br>
+Murphy will launch a web server in the machine it is installed and will listen for connections in port 8090, care has been taken as this to be as safe as possible, however it
+is recommended that you disable inbound connections to that port in your firewall unless you know and are sure of what you're doing.<br>
+<h3>Platforms</h3>
+Windows 7 (should work in Vista and windows 8, maybe xp, never tested with Metro apps)<br>
+There's interest in making it work under Linux and we're almost there, if you know linux you can probably make it work.<br>
+<h3>Dependencies</h3>
+Python 2.7.3 or newer (32 bits), wont probably work on python 3.x and I havent tested with pre 2.7.3. It can be found <a href="http://www.python.org/download/releases/2.7/">here</a><br>
+There's a small dll written in c and compiled for 32 bits platform so it wont work on python 64 bits, however the work needed to support it is minimal<br>
+Python PIL (be sure to install the one that matches your python version, including 32 or 64 bits...), it can be found <a href="http://www.pythonware.com/products/pil/">here</a><br>
+The included vnc library uses Twisted (download twisted for python), which can be found <a href="https://twistedmatrix.com">here</a><br>
+Twisted needs zope (4.0.6 seems to work fine), and can be found <a href="https://pypi.python.org/pypi/zope.interface">here</a><br>
+Graphviz, which is used for the flow graphs can be found <a href="http://www.graphviz.org/">here</a> (Note: latest versions has some issues with the generated SVG, version 2.32 is known to work fine)<br>
+You'll need Bottle, you can get it from <a href="http://bottlepy.org/">here</a>, just drop the file in the web_workbench directory (it is known to work with version 0.11)<br>
+VirtualBox, it can be found <a href="https://www.virtualbox.org/">here</a><br>
+Other virtualization tools like Kvm, VmWare, Dvmps, etc. can be used but need a small and simple adapter, take a look at virtualbox.py and rules_vbox.py in the model_extraction directory for that matter.<br>
+7zip is used in some examples / exercises, get 7z920.exe and put it in the directory model_extraction_helpers/files (newer versions may work but I haven't tested them)<br>
+
+
+<h3>Murphy</h3>
+Since you're reading this, you already have this or know how to get this.<br>
+You can copy murphy to any directory, you'll need to set your PYTHONPATH to that directory, so if you did a git clone to say c:\git_projects\murphy_sdk then do set PYTHONPATH=c:\git_projects\murphy_sdk<br>
+Note that PYTHONPATH is needed for the model extraction scripts, the web workbench doesn't need it.<br>
+
+<h3>Virtual machines</h3>
+Murphy uses virtual machines to run the applications it will crawl and extract their models, it will not run the applications locally (unless you modify murphy to do so)<br>
+See <a href="virtual machine.html">here</a> on instructions on how to create a virtual machine that murphy can use.<br>
+<h3>Checking the installation</h3>
+Last but not least, in the murphy folder, there's a file graphviz.py, change the line:
+<pre>
+_GRAPHVIZ_EXE = (r'\Program Files (x86)\Graphviz2.32\bin\dot.exe')
+</pre>
+As to point to the version of graphviz you installed<br>
+After taking care of the dependencies, creating and configuring a virtual machine, be sure the virtual machine image you're going to use is not running!<br>
+<br>
+Assuming that your installation directory is c:\git_projects\murphy_sdk, do:<br>
+<pre>
+c:\git_projects\murphy_sdk\web_workbench>python workbench.py
+Workbench running on pid 736
+Bottle v0.11.rc1 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:8090/
+Hit Ctrl-C to quit.
+</pre>
+Open the browser of your choice, I use chrome and every now and then test that it works in FF, no clue if it even works in IE.<br>
+Point your browser to http://127.0.0.1:8090/<br>
+When asked about your user name you can put whatever you want as it does not do any authentication, press the login button.<br>
+At the top-left corner you should see a dropdown with the models, choose one from the list.<br>
+After a few seconds you should see a statechart loaded in the browser, if not take a look a the console output as something went bad.<br>
+Launch the webserver that provides the test files:<br>
+<pre>C:\git-projects\murphy_sdk\model_extraction_helpers>python -m SimpleHTTPServer 8901</pre>
+<h4>Last but not least, test that the model extraction works</h4>
+From a console, do (remember to set the PYTHONPATH var!)<br>
+<pre>
+C:\git-projects\murphy_sdk\samples\7zip>extract_7zip_win_scraper.py
+</pre>
+After a few seconds you should see something similar to this:<br>
+<pre>
+C:\git-projects\murphy_sdk\samples\7zip>extract_7zip_win_scraper.py
+2014-01-26 12:59:07,364 - root.model_extraction.crawler - INFO - Started exploration, current node is None, current edge is None
+2014-01-26 12:59:07,641 - root.model_extraction.crawler - INFO - Node created for state Node Node 0 (1)
+        ->Launch application->None
+2014-01-26 12:59:07,654 - root.model_extraction.ui.edge - INFO - Performing Edge Launch application (Node 0)
+2014-01-26 12:59:07,897 - root.murphy.user_simulation.helpers - INFO - Waiting for a stable screen
+2014-01-26 12:59:15,072 - root.murphy.user_simulation.vnc.vncdotool.vnc_wrapper - INFO - Sending keystrokes {+ctrl}{esc}{-ctrl}
+2014-01-26 12:59:15,842 - root.murphy.user_simulation.vnc.vncdotool.vnc_wrapper - INFO - Sending keystrokes \utils\runurl.py http://192.168.56.1:8901/files/7z920.exe{enter}
+2014-01-26 12:59:31,237 - root.murphy.user_simulation.vnc.vncdotool.vnc_wrapper - INFO - moving mouse to 1 1
+2014-01-26 12:59:31,453 - root.model_extraction.virtualbox - INFO - Wait for remote machine to be idle...
+2014-01-26 12:59:31,456 - root.murphy.user_simulation.helpers - INFO - Waiting for a stable screen
+2014-01-26 12:59:39,292 - root.model_extraction.ui.node - DEBUG - Checking if i'm in Node 0
+...
+</pre>
+It will take something between 5 and 10 minutes to extract the model, depending on many many many factors but it should finish, if you notice
+in the log output that got stuck for more than a couple of minutes then something is definitively wrong.<br>
+After (or while) the model is extracted, you can check the progress in the workbench tool.<br>
+The models are already extracted in the git version so you can see the flows in the workbench but they wont work interactively or thru scripting if you dont rebuild them,
+now is a good time to build the other provided examples (or you're doomed to forget it :))<br>
+</body>
+</html>

@@ -1,0 +1,44 @@
+Crash course on model extraction
+
+Create a virtual machine and configure it as stated in virtual machine.txt
+
+set PYTHONPATH to where your murphy packages are, for example c:\git_projects
+(assuming it contains the directories murphy, 7zip_modeller, web_workbench, etc
+
+Edit web_workbench/projects.json and add (if it does not already have) the
+project directory of the model you want to extract, for example:
+  {
+    "file": "../7zip_modeller/7zipWinScraper/7zipWinScraper.json"
+  }, 
+
+Launch the web workbench, for example:
+...>set PYTHONPATH=c:\git-projects
+...>cd \git-projects\web_workbench
+C:\git-projects\web_workbench>workbench.py
+
+In another command prompt, start the web server that provides test files to the
+virtual machine, for example:
+C:\git-projects\model_extraction_helpers\serve_locally.bat
+
+Launch the model extraction script, for example:
+...>set PYTHONPATH=c:\git-projects
+...>cd \git-projects\7zip_modeller
+C:\git-projects\7zip_modeller>extract_7zip_win_scraper.py
+
+You can view the progress in the web workbench, to do so open a web browser and
+direct it to the url http://127.0.0.1:8090/murphy/main.html, the user name is
+whatever you want, it does not authenticating as it merely a name at this point
+The user interface has various options as to see the flow in images or text and
+other goodies.
+
+The extract_7zip_win_scraper script will use a ui inspector component that uses
+windows API for analyzing the running application, other ui inspectors are
+provided (an experimental one that analyzes screen changes) and others can be
+easily created using other techonologies, for example windows accessibility.
+
+Much more complex extractions can be done but for the time being 'code is the
+documentation' until more documentation is provided. Start by looking the code
+in extract_7zip_win_scraper.py, extract_7zip.py and 
+model_extraction/base_extractor.py for some ideas.
+
+

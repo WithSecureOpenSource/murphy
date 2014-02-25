@@ -1,0 +1,100 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 1245568, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 539, 
+                            "right": 627, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 3277154, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 409, 
+                            "right": 598, 
+                            "top": 368
+                        }, 
+                        "text": "We're sorry you did not installed us.", 
+                        "wm text": "We're sorry you did not installed us."
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 721230, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 394, 
+                    "right": 638, 
+                    "top": 317
+                }, 
+                "text": "Bye"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Were Sorry You Did Not Installed Us", 
+        "reference screenshots": [
+            {
+                "file": "were_sorry_you_did_not_installed_us.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "were_sorry_you_did_not_installed_us.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Bye"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 1245568, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 539, 
+                        "right": 627, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "were_sorry_you_did_not_installed_us.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                145, 
+                104, 
+                233, 
+                130
+            ]
+        }
+    }
+}

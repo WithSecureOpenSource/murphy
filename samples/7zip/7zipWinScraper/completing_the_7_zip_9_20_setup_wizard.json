@@ -1,0 +1,212 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 3, 
+                        "enabled": false, 
+                        "hwnd": 262558, 
+                        "rect": {
+                            "bottom": 544, 
+                            "left": 512, 
+                            "right": 587, 
+                            "top": 521
+                        }, 
+                        "text": "< &Back", 
+                        "wm text": "< &Back"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 1, 
+                        "enabled": true, 
+                        "hwnd": 2490852, 
+                        "rect": {
+                            "bottom": 544, 
+                            "left": 587, 
+                            "right": 662, 
+                            "top": 521
+                        }, 
+                        "text": "&Finish", 
+                        "wm text": "&Finish"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": false, 
+                        "hwnd": 2359774, 
+                        "rect": {
+                            "bottom": 544, 
+                            "left": 673, 
+                            "right": 748, 
+                            "top": 521
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1036, 
+                        "enabled": true, 
+                        "hwnd": 2556400, 
+                        "rect": {
+                            "bottom": 253, 
+                            "left": 263, 
+                            "right": 771, 
+                            "top": 251
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1045, 
+                        "enabled": true, 
+                        "hwnd": 2359764, 
+                        "rect": {
+                            "bottom": 510, 
+                            "left": 263, 
+                            "right": 771, 
+                            "top": 508
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1034, 
+                        "enabled": true, 
+                        "hwnd": 328100, 
+                        "rect": {
+                            "bottom": 251, 
+                            "left": 263, 
+                            "right": 761, 
+                            "top": 194
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "#32770", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 655880, 
+                        "rect": {
+                            "bottom": 508, 
+                            "left": 263, 
+                            "right": 760, 
+                            "top": 194
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1200, 
+                        "enabled": true, 
+                        "hwnd": 262590, 
+                        "rect": {
+                            "bottom": 508, 
+                            "left": 263, 
+                            "right": 427, 
+                            "top": 194
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1201, 
+                        "enabled": true, 
+                        "hwnd": 262580, 
+                        "rect": {
+                            "bottom": 256, 
+                            "left": 443, 
+                            "right": 736, 
+                            "top": 210
+                        }, 
+                        "text": "Completing the 7-Zip 9.20 Setup Wizard", 
+                        "wm text": "Completing the 7-Zip 9.20 Setup Wizard"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1202, 
+                        "enabled": true, 
+                        "hwnd": 262582, 
+                        "rect": {
+                            "bottom": 495, 
+                            "left": 443, 
+                            "right": 736, 
+                            "top": 267
+                        }, 
+                        "text": "7-Zip 9.20 has been installed on your computer.\r\n\r\nClick Finish to close this wizard.", 
+                        "wm text": "7-Zip 9.20 has been installed on your computer.\r\n\r\nClick Finish to close this wizard."
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 2621928, 
+                "rect": {
+                    "bottom": 558, 
+                    "left": 260, 
+                    "right": 763, 
+                    "top": 169
+                }, 
+                "text": "7-Zip 9.20 Setup "
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Completing The 7_Zip 9_20 Setup Wizard", 
+        "reference screenshots": [
+            {
+                "file": "completing_the_7_zip_9_20_setup_wizard.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "completing_the_7_zip_9_20_setup_wizard.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "7-Zip 9.20 Setup "
+    }, 
+    "V_ELEM_00": {
+        "desc": "Finish", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1, 
+                    "enabled": true, 
+                    "hwnd": 2490852, 
+                    "rect": {
+                        "bottom": 544, 
+                        "left": 587, 
+                        "right": 662, 
+                        "top": 521
+                    }, 
+                    "text": "&Finish", 
+                    "wm text": "&Finish"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "completing_the_7_zip_9_20_setup_wizard.edge.Finish.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                327, 
+                352, 
+                402, 
+                375
+            ]
+        }
+    }
+}

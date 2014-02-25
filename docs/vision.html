@@ -1,0 +1,55 @@
+<html>
+<body>
+What is murphy? what tries to archieve?<br>
+<br>
+Automatically use a (graphical) application with little or no previous knowledge about it and describe it in a way that can be programmatically used.<br>
+To do so it will 'walk around' the application and generate (or extract) a model out of it (see model based testing for some background info)<br>
+<br>
+For example:<br>
+<br>
+Tell murphy what executable you're interested in and let murphy navigate around the application as much as possible.<br>
+(see overview.html to get an idea, see some screenshots will help clear up things a bit)<br>
+<br>
+<br>
+Programmatically used? model?<br>
+<br>
+The model is a computer readable representation of the application, the model is used in murphy to do things like generating a flow graph,
+understand how to go from one state to another one, simulate a user using the application (testautomation), etc.<br>
+<br>
+<br>
+How detailed is the model?<br>
+<br>
+It will never be complete, murphy by default will not try to navigate all the possible screens of an application in all the possible orders with all the possible values,
+instead, it tries to visit most screens while being as less exhaustive as possible.<br>
+The user needs to fine-tune to it's own needs how exhaustive it wants the extracted model, the default exploration is programmatically and customizable
+so user can adjust anything in the model, for example the exploration could try to use every user element with the network connection on and also try out what would happen if the network connection is down.<br>
+It is also theoretically possible to try to explore all possible states in all possible orders however it will most likely be non economically viable since the number of combinations tends to be astronomical.<br>
+<br>
+<br>
+Basic strategy, separation of concerns.<br>
+<br>
+This are some of the basic components in which murphy is based on:<br>
+<br>
+A machine object<br>
+Responsible for communicating and managing the machine where the application of interest is going to be analyzed, it can be a phisical machine or a virtual machine.<br>
+This is typically a wrapper around VirtualBox, Kvm, VmWare, etc. that knowns and can create, instantiate and dispose virtual machines on the fly.<br>
+<br>
+A user object<br>
+Encapsulates the implementation of how to simulate user actions like moving the mouse, type some keys and so.<br>
+A user object is obtained thru a machine object since it is dependant of it, there are implementations that simulates the user thru a vnc connection and also thru windows API calls of a locally running agents.<br>
+<br>
+A scraper object<br>
+Encapsulates the implementation on how to 'discover' what the user can do, there are different scrappers that works with different technologies, for example one scraper uses windows API's for discovering
+the active window, what controls the user sees (buttons, text fields, etc). There's also an experimental scraper that analyzes the screen by sending tab key events and seeing how and where the focus jumps.<br>
+Other scrapers will be written for more specific purposes, for example one using windows accessibility (ui automation) API, which is capable to discover things like html content inside the major browsers for crawling html pages.<br>
+<br>
+A crawler object<br>
+Abstracts the logic, implementation and strategy of how to crawl the application.<br>
+<br>
+A model extraction object<br>
+Provides basic capabilities for extracting and customizing a model, it works as a bridge between the user created extraction script and the crawler.<br>
+Normally a user creates an extraction script that interacts with the model extraction object (model_extraction.base_extractor.BaseExtractor) and customizes the behaviour thru it.<br>
+<br>
+...more to come...<br>
+</body>
+</html>

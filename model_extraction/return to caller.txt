@@ -1,0 +1,32 @@
+Popups or modal dialogs can be reused, for example an exit confirmation dialog that can be prompted from different places
+
+For reducing the overall complexity of the model it is desirable to parametrize them instead of handling as separate
+nodes on the graph, this poses some challenges.
+
+An edge can be "return_to_caller='Yes'" as to inform that this edge returns to the node who was active before
+the node with such edge, for example:
+Node "Confirmation Dialog"
+    edge "Yes" -> "Clean Machine"
+    edge "No" -> "Welcome Dialog" (return_to_caller='Yes')
+    edge "No (2)" -> "Installation Dialog" (return_to_caller='Yes')
+    
+In the given example, the 2nd edge is valid only if "Confirmation Dialog" node was entered thru an edge of
+the "Welcome Dialog" node.
+Same logic applies to the edge "No (2)", is valid only if "Confirmation Dialog" node was entered thru an edge of
+the "Installation Dialog" node
+
+This extra bit of information allows simple path validation for such edges for those 'reusable' dialogs
+
+There are more complex scenarios that go beyond simple popup/modal dialogs that are not handled at the moment
+
+Discovery of those 'return to caller' edges can be time consuming, for automatically detect them a node has
+to be enter and exited thru all the possible combinations of entry/exit routes to confirm if it is the case.
+
+For now, no attempt will be done to try detect them automatically but there's interest to add it in the future,
+instead for now they'll be manually created.
+At this very moment, accidentally discovered ones are created automatically.
+
+
+
+
+

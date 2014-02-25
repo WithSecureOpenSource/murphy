@@ -1,0 +1,100 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 2687306, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 544, 
+                            "right": 632, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 2883920, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 402, 
+                            "right": 603, 
+                            "top": 368
+                        }, 
+                        "text": "Thans for installing our demo version!", 
+                        "wm text": "Thans for installing our demo version!"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 1180032, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 387, 
+                    "right": 643, 
+                    "top": 317
+                }, 
+                "text": "Demo installation"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Thans For Installing Our Demo Version", 
+        "reference screenshots": [
+            {
+                "file": "thans_for_installing_our_demo_version.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "thans_for_installing_our_demo_version.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Demo installation"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 2687306, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 544, 
+                        "right": 632, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "thans_for_installing_our_demo_version.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                157, 
+                104, 
+                245, 
+                130
+            ]
+        }
+    }
+}

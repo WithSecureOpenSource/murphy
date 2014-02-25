@@ -1,0 +1,1 @@
+import logging.config, osif len(logging.getLogger().handlers) == 0:    conf_file = os.path.dirname(os.path.dirname(__file__)) + "/logging.conf"    print "Initializing logging from %s" % conf_file    logging.config.fileConfig(conf_file) 

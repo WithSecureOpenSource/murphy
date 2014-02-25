@@ -1,0 +1,105 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "User Access Control_3", 
+        "reference screenshots": [
+            {
+                "file": "node_08.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_08.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": ""
+    }, 
+    "V_ELEM_00": {
+        "desc": "Element 0", 
+        "goes to": null, 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_08.edge.Element 0.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                236, 
+                205, 
+                447, 
+                219
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Element 1", 
+        "goes to": "User Access Control_4", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_08.edge.Element 1.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                17, 
+                164, 
+                107, 
+                182
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Element 2", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_08.edge.Element 2.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                292, 
+                161, 
+                364, 
+                183
+            ]
+        }
+    }, 
+    "V_ELEM_03": {
+        "desc": "Element 3", 
+        "goes to": "User Account Control Settings", 
+        "how": {
+            "custom": {}, 
+            "screenshots": [
+                {
+                    "file": "node_08.edge.Element 3.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "other", 
+            "visual": [
+                373, 
+                161, 
+                445, 
+                183
+            ]
+        }
+    }
+}

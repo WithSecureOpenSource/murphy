@@ -1,0 +1,47 @@
+<html>
+<body>
+<title>Murphy</title>
+
+Murphy is a set of tools oriented to help in automation, be it for testing, regression testing, application analysis, documentation, etc.<br>
+<br>
+It contains many powerfull features and can be used in many different ways, for many different purposes, among them you can:<br>
+<br>
+Automatically extract a model of an application, it looks like<br>
+<img src="img/7zip-flow.png"> also visible as <img src="img/7zip-desc.png"><br>
+<br>
+<br>
+Write powerfull and short test scripts (or generate them automatically from the model)<br>
+<pre>
+worker.In("Node 0").GoTo("Completing The 7_Zip 9_20 Setup Wizard").Then("Finish")
+</pre>
+Or more verbose tests
+<pre>
+worker.In("Node 0")
+worker.Do("Launch application")
+worker.Do("Install")
+worker.Do("Finish")
+</pre>
+Compare 2 releases of an application and see what changed, for example<br>
+<br>
+<!--<img src="img/diff.png"><br>-->
+<div style="white-space: nowrap;">Old version<img src="img/old_model.png">New version<img src="img/new_model.png">Changes reported<img src="img/diff2.png"></div><br>
+<br>
+Friendly thowards continuous integration:<br>
+In addition to more traditional test automation scripts, we set up in our build automation tool a job that extracts the model 3 times a day with the latest application binaries, the model was then compared automatically
+against a reference model, each time the comparison detected changes a notification was triggered and the differences reported automatically, the reference model was then updated to be the latest extracted model.<br>
+<br>
+<br>
+Export the model into a zip file so others can view the files with only a web browser (Very handy for translators as they can have context information of what they're working on)<br>
+<br>
+<img src="img/export.png"><br>
+<br>
+Can assists manual testing tedious and repetitive actions since the model is interactive<br>
+<br>
+<div style="white-space: nowrap;"><img src="img/planning.png"><img src="img/route.png"><img src="img/runlog.png"></div><br>
+<br>
+It can also input values for you<br>
+<br>
+<img src="img/inputs.png"><br>
+<br>
+</body>
+</html>

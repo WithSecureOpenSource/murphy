@@ -1,0 +1,100 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 459144, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 608, 
+                            "right": 696, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 328120, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 335, 
+                            "right": 668, 
+                            "top": 368
+                        }, 
+                        "text": "Installation is completed, only the core modules were installed.", 
+                        "wm text": "Installation is completed, only the core modules were installed."
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 262564, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 320, 
+                    "right": 708, 
+                    "top": 317
+                }, 
+                "text": "Installation completed"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Installation Is Completed Only The Core Modules Were Installed", 
+        "reference screenshots": [
+            {
+                "file": "installation_is_completed_only_the_core_modules_were_installed.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "installation_is_completed_only_the_core_modules_were_installed.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Installation completed"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 459144, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 608, 
+                        "right": 696, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "installation_is_completed_only_the_core_modules_were_installed.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                288, 
+                104, 
+                376, 
+                130
+            ]
+        }
+    }
+}

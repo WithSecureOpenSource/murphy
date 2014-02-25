@@ -1,0 +1,21 @@
+{
+    "business rules": "rules", 
+    "coverage": "coverage.json", 
+    "global timeout": 90, 
+    "images dir": "img", 
+    "modules": [
+        "node_00", 
+        "please_select_type_of_installation", 
+        "please_select_type_of_installation_2", 
+        "installation_is_completed_only_the_core_modules_were_installed", 
+        "installation_is_completed_for_the_full_product"
+    ], 
+    "namespace": "click_for_next.click_for_next", 
+    "tags": [], 
+    "views": [
+        {
+            "name": "All", 
+            "starts at": "Node 0"
+        }
+    ]
+}

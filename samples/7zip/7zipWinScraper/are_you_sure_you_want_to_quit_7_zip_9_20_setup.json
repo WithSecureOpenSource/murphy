@@ -1,0 +1,164 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 6, 
+                        "enabled": true, 
+                        "hwnd": 197040, 
+                        "rect": {
+                            "bottom": 455, 
+                            "left": 498, 
+                            "right": 586, 
+                            "top": 429
+                        }, 
+                        "text": "&Yes", 
+                        "wm text": "&Yes"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 7, 
+                        "enabled": true, 
+                        "hwnd": 262574, 
+                        "rect": {
+                            "bottom": 455, 
+                            "left": 595, 
+                            "right": 683, 
+                            "top": 429
+                        }, 
+                        "text": "&No", 
+                        "wm text": "&No"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 20, 
+                        "enabled": true, 
+                        "hwnd": 196974, 
+                        "rect": {
+                            "bottom": 391, 
+                            "left": 364, 
+                            "right": 396, 
+                            "top": 359
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 197052, 
+                        "rect": {
+                            "bottom": 384, 
+                            "left": 404, 
+                            "right": 654, 
+                            "top": 367
+                        }, 
+                        "text": "Are you sure you want to quit 7-Zip 9.20 Setup?", 
+                        "wm text": "Are you sure you want to quit 7-Zip 9.20 Setup?"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 262578, 
+                "rect": {
+                    "bottom": 469, 
+                    "left": 336, 
+                    "right": 694, 
+                    "top": 308
+                }, 
+                "text": "7-Zip 9.20 Setup"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Are You Sure You Want To Quit 7_Zip 9_20 Setup", 
+        "reference screenshots": [
+            {
+                "file": "are_you_sure_you_want_to_quit_7_zip_9_20_setup.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "are_you_sure_you_want_to_quit_7_zip_9_20_setup.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "7-Zip 9.20 Setup"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Yes", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 6, 
+                    "enabled": true, 
+                    "hwnd": 197040, 
+                    "rect": {
+                        "bottom": 455, 
+                        "left": 498, 
+                        "right": 586, 
+                        "top": 429
+                    }, 
+                    "text": "&Yes", 
+                    "wm text": "&Yes"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "are_you_sure_you_want_to_quit_7_zip_9_20_setup.edge.Yes.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                162, 
+                121, 
+                250, 
+                147
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "No", 
+        "goes to": "Choose Install Location", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 7, 
+                    "enabled": true, 
+                    "hwnd": 262574, 
+                    "rect": {
+                        "bottom": 455, 
+                        "left": 595, 
+                        "right": 683, 
+                        "top": 429
+                    }, 
+                    "text": "&No", 
+                    "wm text": "&No"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "are_you_sure_you_want_to_quit_7_zip_9_20_setup.edge.No.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                259, 
+                121, 
+                347, 
+                147
+            ]
+        }
+    }
+}

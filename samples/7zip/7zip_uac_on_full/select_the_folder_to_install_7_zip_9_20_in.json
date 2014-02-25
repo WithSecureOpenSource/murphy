@@ -1,0 +1,242 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Static", 
+                        "control id": 14146, 
+                        "enabled": true, 
+                        "hwnd": 1180054, 
+                        "rect": {
+                            "bottom": 281, 
+                            "left": 368, 
+                            "right": 656, 
+                            "top": 242
+                        }, 
+                        "text": "Select the folder to install 7-Zip 9.20 in:", 
+                        "wm text": "Select the folder to install 7-Zip 9.20 in:"
+                    }, 
+                    {
+                        "class": "SHBrowseForFolder ShellNameSpace Control", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 262606, 
+                        "rect": {
+                            "bottom": 472, 
+                            "left": 368, 
+                            "right": 656, 
+                            "top": 288
+                        }, 
+                        "text": "Select the folder to install 7-Zip 9.20 in:", 
+                        "wm text": "Select the folder to install 7-Zip 9.20 in:"
+                    }, 
+                    {
+                        "class": "SysTreeView32", 
+                        "control id": 100, 
+                        "enabled": true, 
+                        "hwnd": 590224, 
+                        "rect": {
+                            "bottom": 471, 
+                            "left": 369, 
+                            "right": 655, 
+                            "top": 289
+                        }, 
+                        "text": "Tree View", 
+                        "wm text": "Tree View"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 14150, 
+                        "enabled": true, 
+                        "hwnd": 786886, 
+                        "rect": {
+                            "bottom": 508, 
+                            "left": 368, 
+                            "right": 473, 
+                            "top": 485
+                        }, 
+                        "text": "&Make New Folder", 
+                        "wm text": "&Make New Folder"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 1, 
+                        "enabled": true, 
+                        "hwnd": 655818, 
+                        "rect": {
+                            "bottom": 508, 
+                            "left": 500, 
+                            "right": 575, 
+                            "top": 485
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 721396, 
+                        "rect": {
+                            "bottom": 508, 
+                            "left": 581, 
+                            "right": 656, 
+                            "top": 485
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }, 
+                    {
+                        "class": "ScrollBar", 
+                        "control id": 14151, 
+                        "enabled": true, 
+                        "hwnd": 1245548, 
+                        "rect": {
+                            "bottom": 519, 
+                            "left": 654, 
+                            "right": 671, 
+                            "top": 502
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 197060, 
+                "rect": {
+                    "bottom": 527, 
+                    "left": 345, 
+                    "right": 679, 
+                    "top": 201
+                }, 
+                "text": "Browse For Folder"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Select The Folder To Install 7_Zip 9_20 In", 
+        "reference screenshots": [
+            {
+                "file": "select_the_folder_to_install_7_zip_9_20_in.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "select_the_folder_to_install_7_zip_9_20_in.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Browse For Folder"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Make new folder", 
+        "goes to": null, 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 14150, 
+                    "enabled": true, 
+                    "hwnd": 786886, 
+                    "rect": {
+                        "bottom": 508, 
+                        "left": 368, 
+                        "right": 473, 
+                        "top": 485
+                    }, 
+                    "text": "&Make New Folder", 
+                    "wm text": "&Make New Folder"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "select_the_folder_to_install_7_zip_9_20_in.edge.Make new folder.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                23, 
+                284, 
+                128, 
+                307
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Ok", 
+        "goes to": null, 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1, 
+                    "enabled": true, 
+                    "hwnd": 655818, 
+                    "rect": {
+                        "bottom": 508, 
+                        "left": 500, 
+                        "right": 575, 
+                        "top": 485
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "select_the_folder_to_install_7_zip_9_20_in.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                155, 
+                284, 
+                230, 
+                307
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Cancel", 
+        "goes to": null, 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 721396, 
+                    "rect": {
+                        "bottom": 508, 
+                        "left": 581, 
+                        "right": 656, 
+                        "top": 485
+                    }, 
+                    "text": "Cancel", 
+                    "wm text": "Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "select_the_folder_to_install_7_zip_9_20_in.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                236, 
+                284, 
+                311, 
+                307
+            ]
+        }
+    }
+}

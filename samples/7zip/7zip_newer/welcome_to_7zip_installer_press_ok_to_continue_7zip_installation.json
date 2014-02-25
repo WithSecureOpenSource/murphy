@@ -1,0 +1,150 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 1, 
+                        "enabled": true, 
+                        "hwnd": 2425310, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 514, 
+                            "right": 602, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 2753002, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 610, 
+                            "right": 698, 
+                            "top": 421
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 2425368, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 335, 
+                            "right": 669, 
+                            "top": 368
+                        }, 
+                        "text": "Welcome to 7zip installer, press OK to continue 7zip installation", 
+                        "wm text": "Welcome to 7zip installer, press OK to continue 7zip installation"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 262558, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 320, 
+                    "right": 709, 
+                    "top": 317
+                }, 
+                "text": "7-Zip 9.90 Setup"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Welcome To 7Zip Installer Press Ok To Continue 7Zip Installation", 
+        "reference screenshots": [
+            {
+                "file": "welcome_to_7zip_installer_press_ok_to_continue_7zip_installation.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "welcome_to_7zip_installer_press_ok_to_continue_7zip_installation.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "7-Zip 9.90 Setup"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Choose Install Location", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1, 
+                    "enabled": true, 
+                    "hwnd": 2425310, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 514, 
+                        "right": 602, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "welcome_to_7zip_installer_press_ok_to_continue_7zip_installation.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                194, 
+                104, 
+                282, 
+                130
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Cancel", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 2753002, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 610, 
+                        "right": 698, 
+                        "top": 421
+                    }, 
+                    "text": "Cancel", 
+                    "wm text": "Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "welcome_to_7zip_installer_press_ok_to_continue_7zip_installation.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                290, 
+                104, 
+                378, 
+                130
+            ]
+        }
+    }
+}

@@ -1,0 +1,74 @@
+<html>
+<title>Murphy virtual machines</title>
+<body>
+<h3>Virtual machines</h3>
+The prefered way to use murphy is against a virtual machine, this means that when you're extracting a model or running a test, the application being analyzed / tested will run inside a virtual
+machine, while the controller runs in another machine (where you actually installed murphy).<br>
+
+<h3>Virtualization</h3>
+
+Murphy can use any virtualization, however it needs a small wrapper class that isolates the virtualization, there is already a VirtualBox wrapper provided in Murphy.<br>
+
+
+<h3>Security</h3>
+
+The steps described below will create a virtual machine without any kind of security, it is up to you if you need / want to fine tune the settings to
+match your security policy, in general security in a test environment is at least partially provided by infrastructure (corporate firewall, the host
+firewall and a dozen of other things)<br>
+Please note, the virtual machine will listen to connections on ports 8080 and 5900, also by default will try to connect to a remote machine at port 8901 for downloading files (usually the host), 
+a good starting point for securing your virtual machines is to limit thru the firewall what addresses are allowed to connect to those ports.<br>
+
+<h3>Preparing a machine image</h3>
+
+This steps apply to a VirtualBox image, nearly the same steps apply for other virtualization tools. All installations and configurations mentioned below applies <strong>TO THE VIRTUAL MACHINE</strong>.<br>
+Use a recent version of VirtualBox (4.3.6 is known to work well with murphy), some old versions are known to have issues with murphy.<br>
+<ul>
+<li>Install Windows 7 64 bits (or your OS of choice, note that is only tested on win 7 at the moment, your milleage may vary).</li>
+<li>Install all the updates for the operating system.</li>
+<li>Install the guest additions, be sure you use the version that matches virtualbox version, mixing different versions of the guest additions is known to cause problems.</li>
+<li>Take a snapshot of the virtual machine (so you can go back to this point if something goes wrong, call it 'clean' or something like that).</li>
+<li>In the desktop, right click, select Personalize, select the windows 7 basic theme (it will remove transparencies in the title bars and other fx), also set the desktop background to white.</li>
+<li>It is recommended to set the resolution to 1024x768x32</li>
+<li>In start menu, computer, right click / properties, go to advance system settings, in the Advanced tab, click on the Performance / Settings button.<br>
+    In the visual effects tab, select custom, then check only "Use visual styles on windows and buttons", uncheck everything else.</li>
+<li>In control panel / System and security / User accounts and family Safety / User Accounts, click on Change user account control settings, lower the notification slider to never notify.</li>
+<li>Deactivate the firewall in Control Panel\System and Security\Windows Firewall.</li>
+<li>Deactivate windows notifications (in Control Panel\System and Security\Action Center, Change action center settings, uncheck all messages) so they wont popup affecting your automation.</li>
+<li>Open Keyboard Properties in Control Panel (In the control panel search box, type keyboard), set Cursor blink rate to none by moving the slider to the left.</li>
+<li>It is good to also deactivate windows updates, otherwise it may trigger itself while murphy is extracting a model or running a test, but dont forget to periodically update the machine manually.</li>
+<li>Install python 2.7.x (32 or 64 bits, doesnt matter).</li>
+<li>Install python PIL (if python 64 bits was installed, you'll need the 64 bits versions of python PIL, there are some unnoficial ports floating around).</li>
+<li>Install a vnc server if the virtualization tool does not provide a vnc interface (Kvm does, VirtualBox does not), for example tightvnc and configure it without password.<br>
+    <strong>WARNING</strong>: latest version of tightvnc and realvnc do not seems to work properly with the vnc library inside murphy, personally I found tightvnc 2.0.4 works ok, other versions may or may not work.</li>
+<li>Create a folder called c:\utils, copy there runurl.py and wget.py from the model_extraction_helper dir.</li>
+</ul>
+If the virtual machine network is configured as NAT, you need to modify the configuration so as to make ports 8080, 5900 and 8901 accessible, this is done in virtual machine settings / network / adapter 1 / advanced / port forwarding
+button.<br>
+In there add 3 rules, setting host port and guest port as 8080, then another with 5900 and another for 8901.<br>
+<br>
+At this point it is wise to test that you can connect with a vnc client, start your vnc client and connect to the virtual machine, by default it should be 192.168.56.1:5900
+(or your custom config if you use a fixed IP or other configuration for the virtual machine network interface)<br>
+<br>
+Once the vnc server is up'n running and tested, take another snapshot of the virtual machine, name it something like 'configured' or so (take the snapshot with the machine running and the windows user logged in).<br>
+<br>
+<h3>Optimizing a bit</h3>
+Murphy will use the runurl.py utility provided to set up some additional components later (and before launching your custom apps), this is called the
+preparation step of the virtual machine.<br>
+It is possible to speed up things a bit by launching the preparation step and taking a snapshot of it, in that way you can instantiate a prepared machine and save a few seconds, they will add up the more
+you use murphy so it is advisable to do so.<br>
+To save such a snapshot, 1st ensure you're serving files locally (run model_extraction_helpers\serve_locally.bat) and then from the start menu or the command line, run the following command:<br>
+<pre>\utils\runurl.py http://192.168.56.1:8901/prepare_for_scrap.bat"</pre>
+This will launch some local processes, leave those windows opened, close everything else, minimize all windows, CLICK ON THE DESKTOP (top right corner for example, this is to ensure where the focus is) and then take a snapshot, name
+it 'prepared' or so (you'll use later in the main config file).<br>
+It is important to remember than if later you update windows, you may have to update your snapshots or there will be mismatches with the files!<br>
+<br>
+There's some cluttered code in the core murphy classes in this regard and, in retrospective seems to have been a bad idea, the whole concept of the prepared / unprepared machine will most likely dissapear.<br>
+<br>
+<h3>Configuring Murphy to use a specific virtual machine</h3>
+
+There's a file named default_config.json in the model_extraction directory, you can edit it directly and change for example the "image name" and/or "snapshot" values to your own.<br>
+You can also copy the default_config.json file as custom_config.json and change values there instead, Murphy will load the default_config.json file and merge it with the values in custom_config.json.<br>
+Set the value of "default configuration" to the configuration name of your choice.<br>
+If there is a prepared image as described in 'Optimizing a bit' then ensure that in the configuration file the value "already prepared": must be set to true, otherwise it MUST be set to false.<br>
+</body>
+</html>

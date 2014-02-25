@@ -1,0 +1,418 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 1, 
+                        "enabled": true, 
+                        "hwnd": 393630, 
+                        "rect": {
+                            "bottom": 544, 
+                            "left": 587, 
+                            "right": 662, 
+                            "top": 521
+                        }, 
+                        "text": "&Install", 
+                        "wm text": "&Install"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 2818538, 
+                        "rect": {
+                            "bottom": 544, 
+                            "left": 673, 
+                            "right": 748, 
+                            "top": 521
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1035, 
+                        "enabled": true, 
+                        "hwnd": 2621936, 
+                        "rect": {
+                            "bottom": 510, 
+                            "left": 271, 
+                            "right": 751, 
+                            "top": 508
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1036, 
+                        "enabled": true, 
+                        "hwnd": 721424, 
+                        "rect": {
+                            "bottom": 253, 
+                            "left": 263, 
+                            "right": 771, 
+                            "top": 251
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1256, 
+                        "enabled": true, 
+                        "hwnd": 4129290, 
+                        "rect": {
+                            "bottom": 513, 
+                            "left": 271, 
+                            "right": 754, 
+                            "top": 500
+                        }, 
+                        "text": "www.7-zip.org ", 
+                        "wm text": "www.7-zip.org "
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1028, 
+                        "enabled": false, 
+                        "hwnd": 2490874, 
+                        "rect": {
+                            "bottom": 513, 
+                            "left": 271, 
+                            "right": 754, 
+                            "top": 500
+                        }, 
+                        "text": "www.7-zip.org", 
+                        "wm text": "www.7-zip.org"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1034, 
+                        "enabled": true, 
+                        "hwnd": 328100, 
+                        "rect": {
+                            "bottom": 251, 
+                            "left": 263, 
+                            "right": 761, 
+                            "top": 194
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1037, 
+                        "enabled": true, 
+                        "hwnd": 262638, 
+                        "rect": {
+                            "bottom": 218, 
+                            "left": 278, 
+                            "right": 698, 
+                            "top": 202
+                        }, 
+                        "text": "Choose Install Location", 
+                        "wm text": "Choose Install Location"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1038, 
+                        "enabled": true, 
+                        "hwnd": 393728, 
+                        "rect": {
+                            "bottom": 246, 
+                            "left": 286, 
+                            "right": 699, 
+                            "top": 220
+                        }, 
+                        "text": "Choose the folder in which to install 7-Zip 9.20.", 
+                        "wm text": "Choose the folder in which to install 7-Zip 9.20."
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1039, 
+                        "enabled": true, 
+                        "hwnd": 328196, 
+                        "rect": {
+                            "bottom": 239, 
+                            "left": 713, 
+                            "right": 745, 
+                            "top": 207
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "#32770", 
+                        "control id": 0, 
+                        "enabled": true, 
+                        "hwnd": 328162, 
+                        "rect": {
+                            "bottom": 495, 
+                            "left": 286, 
+                            "right": 736, 
+                            "top": 267
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Edit", 
+                        "control id": 1019, 
+                        "enabled": true, 
+                        "hwnd": 524808, 
+                        "rect": {
+                            "bottom": 425, 
+                            "left": 301, 
+                            "right": 616, 
+                            "top": 405
+                        }, 
+                        "text": "", 
+                        "wm text": "C:\\Program Files (x86)\\7-Zip"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 1001, 
+                        "enabled": true, 
+                        "hwnd": 393730, 
+                        "rect": {
+                            "bottom": 426, 
+                            "left": 628, 
+                            "right": 718, 
+                            "top": 402
+                        }, 
+                        "text": "B&rowse...", 
+                        "wm text": "B&rowse..."
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1024, 
+                        "enabled": true, 
+                        "hwnd": 524790, 
+                        "rect": {
+                            "bottom": 483, 
+                            "left": 286, 
+                            "right": 511, 
+                            "top": 470
+                        }, 
+                        "text": "Space available: 7.3GB", 
+                        "wm text": "Space available: 7.3GB"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1023, 
+                        "enabled": true, 
+                        "hwnd": 590246, 
+                        "rect": {
+                            "bottom": 467, 
+                            "left": 286, 
+                            "right": 511, 
+                            "top": 454
+                        }, 
+                        "text": "Space required: 3.3MB", 
+                        "wm text": "Space required: 3.3MB"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 1006, 
+                        "enabled": true, 
+                        "hwnd": 197084, 
+                        "rect": {
+                            "bottom": 365, 
+                            "left": 286, 
+                            "right": 736, 
+                            "top": 267
+                        }, 
+                        "text": "Setup will install 7-Zip 9.20 in the following folder. To install in a different folder, click Browse and select another folder. Click Install to start the installation.", 
+                        "wm text": "Setup will install 7-Zip 9.20 in the following folder. To install in a different folder, click Browse and select another folder. Click Install to start the installation."
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 1020, 
+                        "enabled": true, 
+                        "hwnd": 197056, 
+                        "rect": {
+                            "bottom": 438, 
+                            "left": 286, 
+                            "right": 736, 
+                            "top": 381
+                        }, 
+                        "text": "Destination Folder", 
+                        "wm text": "Destination Folder"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 2753000, 
+                "rect": {
+                    "bottom": 558, 
+                    "left": 260, 
+                    "right": 763, 
+                    "top": 169
+                }, 
+                "text": "7-Zip 9.20 Setup "
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Choose Install Location", 
+        "reference screenshots": [
+            {
+                "file": "choose_install_location.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "choose_install_location.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "7-Zip 9.20 Setup "
+    }, 
+    "V_ELEM_00": {
+        "desc": "Install", 
+        "goes to": "Completing The 7_Zip 9_20 Setup Wizard", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1, 
+                    "enabled": true, 
+                    "hwnd": 393630, 
+                    "rect": {
+                        "bottom": 544, 
+                        "left": 587, 
+                        "right": 662, 
+                        "top": 521
+                    }, 
+                    "text": "&Install", 
+                    "wm text": "&Install"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "choose_install_location.edge.Install.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                327, 
+                352, 
+                402, 
+                375
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Cancel", 
+        "goes to": "Are You Sure You Want To Quit 7_Zip 9_20 Setup", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 2818538, 
+                    "rect": {
+                        "bottom": 544, 
+                        "left": 673, 
+                        "right": 748, 
+                        "top": 521
+                    }, 
+                    "text": "Cancel", 
+                    "wm text": "Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "choose_install_location.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                413, 
+                352, 
+                488, 
+                375
+            ]
+        }
+    }, 
+    "V_ELEM_02": {
+        "desc": "Text input", 
+        "goes to": "Choose Install Location", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Edit", 
+                    "control id": 1019, 
+                    "enabled": true, 
+                    "hwnd": 524808, 
+                    "rect": {
+                        "bottom": 425, 
+                        "left": 301, 
+                        "right": 616, 
+                        "top": 405
+                    }, 
+                    "text": "", 
+                    "wm text": "C:\\Program Files (x86)\\7-Zip"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "choose_install_location.edge.Text input.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "text", 
+            "visual": [
+                41, 
+                236, 
+                356, 
+                256
+            ]
+        }
+    }, 
+    "V_ELEM_03": {
+        "desc": "Browse", 
+        "goes to": "Select The Folder To Install 7_Zip 9_20 In", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1001, 
+                    "enabled": true, 
+                    "hwnd": 393730, 
+                    "rect": {
+                        "bottom": 426, 
+                        "left": 628, 
+                        "right": 718, 
+                        "top": 402
+                    }, 
+                    "text": "B&rowse...", 
+                    "wm text": "B&rowse..."
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "choose_install_location.edge.Browse.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                368, 
+                233, 
+                458, 
+                257
+            ]
+        }
+    }
+}

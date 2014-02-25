@@ -1,0 +1,1 @@
+"""Copyright (c) 2011-2014 F-SecureSee LICENSE for details"""import logging, logging.config, osif len(logging.getLogger().handlers) == 0:    conf_file = os.path.dirname(os.path.dirname(__file__)) + "/logging.conf"    print "Initializing logging from %s" % conf_file    logging.config.fileConfig(conf_file)

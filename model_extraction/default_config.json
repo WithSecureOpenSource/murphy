@@ -1,0 +1,23 @@
+{
+	"configurations": {
+		"vbox": {
+			"module": "rules_vbox.py",
+			"setup files": "http://192.168.56.1:8901/",
+			"test files": "http://192.168.56.1:8901/files/",
+			"image name": "MurphyWin7",
+			"snapshot": "runurl py",
+			"already prepared": false,
+			"prepare command": "\\utils\\runurl.py http://192.168.56.1:8901/prepare_for_scrap.bat"
+		},
+		"vbox prepared": {
+			"module": "rules_vbox.py",
+			"setup files": "http://192.168.56.1:8901/",
+			"test files": "http://192.168.56.1:8901/files/",
+			"image name": "MurphyWin7",
+			"snapshot": "prepared",
+			"already prepared": true,
+			"prepare command": "\\utils\\runurl.py http://192.168.56.1:8901/prepare_for_scrap.bat"
+		}
+	},
+	"default configuration": "vbox prepared"
+}

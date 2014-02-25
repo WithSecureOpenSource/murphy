@@ -1,0 +1,65 @@
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<html>
+<!--
+Copyright (c) 2011-2013 F-Secure
+See LICENSE for details
+-->
+<head>
+
+<!--<script src='utils.js'> </script>-->
+<script>
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+};
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++) {
+        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name) {
+            return unescape(y);
+        }
+    }
+};
+</script>
+</head>
+<body>
+<table width='100%' height='100%'>
+    <tr>
+        <td align='center'>
+            <div>Welcome to MurphyWorld<br><br></div>
+            <div>Enter your user name: <input type=text id='user' onkeydown="if (event.keyCode == 13) document.getElementById('login').click()"><br>(hint: use your account name)<br><br></div>
+            <div><input type=button id='login' value='Login' onclick='do_login();'></div>
+        </td>
+    </tr>
+</body>
+<script>
+String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g, "");
+};
+
+var user = getCookie("username");
+if (user)
+    document.getElementById("user").value = user;
+
+function do_login() {
+    var user_name = document.getElementById('user').value;
+    user_name = user_name.trim().toLowerCase();
+    //fixme: validate non harmfull things, only letters, numbers, - and _ are allowed
+    if (user_name === "") {
+        alert("Please enter a user name");
+    } else {
+        setCookie('username', user_name, 30);
+        window.location.replace('main.html');
+    }
+}
+document.getElementById("user").focus();
+</script>
+</html>
