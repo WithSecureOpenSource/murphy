@@ -11,3 +11,4 @@ https://github.com/sibson/vncdotool
 
 Murphy contains images pulled from The Tango Desktop project, see LICENSE-tango.txt
 
+Murphy includes requirejs, see LICENSE-requirejs.txt
