@@ -4,7 +4,7 @@ See LICENSE for details
 '''
 
 from multiprocessing import Process, Queue
-import traceback
+import sys, json, traceback
 
 def _solve_route(steps, model_file_name, tags, response):
     '''
@@ -49,19 +49,11 @@ def _run_plan(model_file_name, plan, out_file_name):
     import logging
     from murphy.model import Model
     fileHandler = logging.FileHandler(out_file_name + '.bsy', mode='a', encoding=None, delay=False)
-    root_logger = logging.getLogger('root')
+    root_logger = logging.getLogger()
     root_logger.addHandler(fileHandler)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     fileHandler.setFormatter(formatter)
     logging.getLogger().removeHandler(logging.getLogger().handlers[0])
-    #fileHandler.setFormatter(format)
-
-    #root_logger.level = logging.DEBUG
-    #root_logger.format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    #logging.basicConfig(level=logging.DEBUG,
-    #                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    #                    filename=out_file_name + '.bsy',
-    #                    filemode='w')
     LOGGER = logging.getLogger('root.' + __name__)
     LOGGER.info("Run request runs on pid " + str(os.getpid()))
     remoting = None
@@ -101,6 +93,8 @@ def _run_plan(model_file_name, plan, out_file_name):
                 pass
         try:
             LOGGER.info("Run finished.")
+            fileHandler.close()
+            root_logger.removeHandler(fileHandler)
             logging.shutdown()
         except:
             pass
@@ -127,7 +121,6 @@ def solve_route(model_file_name, steps, tags):
         raise Exception("Failed to solve the route %s for model %s" % (str(steps), model_file_name))
     return response.get()
     
-    
 def find_needed_params(model_file_name, steps):
     '''
     Given a series of unconnected points to visit, returns a list of each edge
@@ -140,7 +133,6 @@ def find_needed_params(model_file_name, steps):
     if proc.exitcode != 0:
         raise Exception("Failed to solve needed params for path %s in model %s" % (str(steps), model_file_name))
     return response.get()
-    
 
 def run_plan(model_file_name, plan, username):
     '''
@@ -157,7 +149,62 @@ def run_plan(model_file_name, plan, username):
     proc = None
     return uid
 
+def _get_graph_logs(model_file_name, response):
+    try:
+        from murphy.model import Model
+        model = Model(model_file_name)
+        worker = model.new_worker()
+        views = worker.get_views()
+        ret = {}
+        for node in views.keys():
+            for edge in views[node]['verbs'].keys():
+                edge_def = views[node]['verbs'][edge]
+                log = worker.get_verb_logs(node, edge)
+                if log != "":
+                    with open(model.working_dir + "/" + log, "r") as the_log:
+                        log = the_log.read()
+                    ret["%s.%s" % (node, edge)] = json.loads(log)
+                    
+        response.put(json.dumps(ret))
+    except Exception, ex:
+        traceback.print_exc(file=sys.stdout)
+        print "Problem: %s" % str(ex)
+        response.put("Error while getting graph logs: %s" % str(ex))
     
+def get_graph_logs(model_file_name):
+    '''
+    Returns the logs of the given edge
+    '''
+    response = Queue()
+    proc = Process(target=_get_graph_logs, args=(model_file_name, response,))
+    proc.start()
+    return response.get()
+    
+def _get_edge_logs(model_file_name, node_name, edge_name, response):
+    try:
+        from murphy.model import Model
+        model = Model(model_file_name)
+        worker = model.new_worker()
+        ret = worker.get_verb_logs(node_name, edge_name)
+        if ret != "":
+            with open(model.working_dir + "/" + ret, "r") as the_log:
+                ret = the_log.read()
+
+        response.put(ret)
+    except Exception, ex:
+        traceback.print_exc(file=sys.stdout)
+        print "Problem: %s" % str(ex)
+        response.put("Error while getting edge logs: %s" % str(ex))
+    
+def get_edge_logs(model_file_name, node_name, edge_name):
+    '''
+    Returns the logs of the given edge
+    '''
+    response = Queue()
+    proc = Process(target=_get_edge_logs, args=(model_file_name, node_name, edge_name, response,))
+    proc.start()
+    return response.get()
+        
 def _compare_models(model_file_name, reference_model_file_name, response):
     import sys, traceback
     from murphy import model_comparison
@@ -168,7 +215,6 @@ def _compare_models(model_file_name, reference_model_file_name, response):
         print "Problem: %s" % str(ex)
         response.put("Error while comparing: %s" % str(ex))
     
-
 def compare_models(model_file_name, reference_model_file_name):
     '''
     Executes the given plan, returns a file

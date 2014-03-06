@@ -1,0 +1,1857 @@
+{
+    "filename": "log-6212159e-a2cb-11e3-846e-028037ec0200.json", 
+    "instrumentation": {
+        "RegSetValue": {
+            "6": [
+                [
+                    "13:46:19,8466625", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:46:19,8468760", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 312, Data: 46 00 00 00 20 00 00 00 09 00 00 00 00 00 00 00"
+                ], 
+                [
+                    "13:46:19,8507466", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 2, Data: "
+                ], 
+                [
+                    "13:46:19,8535992", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 16, Data: Cookie:"
+                ], 
+                [
+                    "13:46:19,8556934", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 18, Data: Visited:"
+                ], 
+                [
+                    "13:46:22,5572587", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:46:22,5572756", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:46:22,5603927", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:46:22,5604034", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:46:22,7425610", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:46:22,7425722", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: EC BF 42 33 D6 36 CF 01"
+                ], 
+                [
+                    "13:46:22,7425920", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:46:22,7426086", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadNetworkName", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 26, Data: F-Secure.com"
+                ], 
+                [
+                    "13:46:22,7426905", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:46:22,7426992", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: EC BF 42 33 D6 36 CF 01"
+                ], 
+                [
+                    "13:46:22,7427096", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:46:22,7429686", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:46:22,7429777", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: EC BF 42 33 D6 36 CF 01"
+                ], 
+                [
+                    "13:46:22,7429860", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ]
+            ], 
+            "13": [
+                [
+                    "13:49:53,0045430", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:49:53,0048070", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 312, Data: 46 00 00 00 20 00 00 00 09 00 00 00 00 00 00 00"
+                ], 
+                [
+                    "13:49:53,0086084", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 2, Data: "
+                ], 
+                [
+                    "13:49:53,0107481", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 16, Data: Cookie:"
+                ], 
+                [
+                    "13:49:53,0128589", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 18, Data: Visited:"
+                ], 
+                [
+                    "13:49:55,6229679", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:49:55,6229861", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:49:55,6260167", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:49:55,6260341", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:49:55,8279289", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:49:55,8279397", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 2A 91 4A B2 D6 36 CF 01"
+                ], 
+                [
+                    "13:49:55,8279604", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:49:55,8279773", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadNetworkName", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 26, Data: F-Secure.com"
+                ], 
+                [
+                    "13:49:55,8280597", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:49:55,8280684", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 2A 91 4A B2 D6 36 CF 01"
+                ], 
+                [
+                    "13:49:55,8280812", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:49:55,8282715", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:49:55,8282802", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 2A 91 4A B2 D6 36 CF 01"
+                ], 
+                [
+                    "13:49:55,8282885", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ]
+            ], 
+            "20": [
+                [
+                    "13:53:48,5371592", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:53:48,5373354", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 312, Data: 46 00 00 00 20 00 00 00 09 00 00 00 00 00 00 00"
+                ], 
+                [
+                    "13:53:48,5413215", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 2, Data: "
+                ], 
+                [
+                    "13:53:48,5436345", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 16, Data: Cookie:"
+                ], 
+                [
+                    "13:53:48,5456691", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 18, Data: Visited:"
+                ], 
+                [
+                    "13:53:51,2122606", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:53:51,2122999", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:53:51,2194547", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:53:51,2194916", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:53:51,4308725", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:53:51,4309006", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 80 AF B2 3E D7 36 CF 01"
+                ], 
+                [
+                    "13:53:51,4309200", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:53:51,4309358", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadNetworkName", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 26, Data: F-Secure.com"
+                ], 
+                [
+                    "13:53:51,4310669", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:53:51,4310756", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 80 AF B2 3E D7 36 CF 01"
+                ], 
+                [
+                    "13:53:51,4310856", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:53:51,4312453", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:53:51,4312536", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 80 AF B2 3E D7 36 CF 01"
+                ], 
+                [
+                    "13:53:51,4312614", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ]
+            ], 
+            "28": [
+                [
+                    "13:57:20,0059443", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:57:20,0061483", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 312, Data: 46 00 00 00 20 00 00 00 09 00 00 00 00 00 00 00"
+                ], 
+                [
+                    "13:57:20,0106350", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 2, Data: "
+                ], 
+                [
+                    "13:57:20,0126824", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 16, Data: Cookie:"
+                ], 
+                [
+                    "13:57:20,0148333", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History\\CachePrefix", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 18, Data: Visited:"
+                ], 
+                [
+                    "13:57:22,6790649", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:57:22,6790968", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:57:22,6842998", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:57:22,6843383", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:57:22,9000718", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:57:22,9000825", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 70 99 BE BC D7 36 CF 01"
+                ], 
+                [
+                    "13:57:22,9001053", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:57:22,9001516", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{330EF1B2-8175-4D97-896C-A34CDA6C44D2}\\WpadNetworkName", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 26, Data: F-Secure.com"
+                ], 
+                [
+                    "13:57:22,9002418", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:57:22,9002518", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 70 99 BE BC D7 36 CF 01"
+                ], 
+                [
+                    "13:57:22,9002629", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ], 
+                [
+                    "13:57:22,9006842", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionReason", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 1"
+                ], 
+                [
+                    "13:57:22,9006929", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecisionTime", 
+                    "SUCCESS", 
+                    "Type: REG_BINARY, Length: 8, Data: 70 99 BE BC D7 36 CF 01"
+                ], 
+                [
+                    "13:57:22,9007011", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-12-35-02\\WpadDecision", 
+                    "SUCCESS", 
+                    "Type: REG_DWORD, Length: 4, Data: 0"
+                ]
+            ]
+        }, 
+        "TCP Connect": {
+            "6": [
+                [
+                    "13:46:22,8116615", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,8820136", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "13": [
+                [
+                    "13:49:55,8838060", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f105.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9274895", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "20": [
+                [
+                    "13:53:51,5131256", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,5572978", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "28": [
+                [
+                    "13:57:22,9584390", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f106.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,0773102", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Connect", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, mss: 960, sackopt: 0, tsopt: 0, wsopt: 0, rcvwin: 65280, rcvwinscale: 0, sndwinscale: 0, seqnum: 0, connid: 0"
+                ]
+            ]
+        }, 
+        "TCP Receive": {
+            "6": [
+                [
+                    "13:46:22,8355643", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,8356028", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 239, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9243391", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9243673", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9246346", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9246511", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9246586", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9248452", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9248601", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9248667", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9248725", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9250537", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9250682", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9342142", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 3472, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9342609", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 65, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,9345464", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 65, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "13": [
+                [
+                    "13:49:55,9045462", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f105.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 517, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9610096", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9610435", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9614569", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9614673", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9614731", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9618591", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9618794", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9618873", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9618935", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9620602", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9620768", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9878897", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 3472, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9879373", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 47, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9882273", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 47, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "20": [
+                [
+                    "13:53:51,5334843", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 517, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6191214", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6191607", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6200090", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6200350", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6200462", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6202320", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6204707", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6204877", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6206627", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6206793", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6206876", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6658082", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 3472, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6658707", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 27, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,6662845", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 27, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "28": [
+                [
+                    "13:57:22,9833842", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f106.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:22,9835013", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f106.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 239, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1359522", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1360213", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1368195", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1368845", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1369163", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1372821", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1373206", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1373367", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1373521", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1376425", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1376769", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 920, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1619410", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 3472, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1620026", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 37, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,1623816", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Receive", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 37, seqnum: 0, connid: 0"
+                ]
+            ]
+        }, 
+        "TCP Send": {
+            "6": [
+                [
+                    "13:46:22,8122660", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 297, startime: 9412, endtime: 9412, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:46:22,8823724", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 131, startime: 9413, endtime: 9413, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "13": [
+                [
+                    "13:49:55,8841552", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f105.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 297, startime: 9606, endtime: 9606, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:49:55,9278325", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 119, startime: 9607, endtime: 9607, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "20": [
+                [
+                    "13:53:51,5135261", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f103.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 297, startime: 9412, endtime: 9412, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:53:51,5816538", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 119, startime: 9412, endtime: 9412, seqnum: 0, connid: 0"
+                ]
+            ], 
+            "28": [
+                [
+                    "13:57:22,9589091", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f106.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 297, startime: 9410, endtime: 9410, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:57:23,0777517", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "TCP Send", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 131, startime: 9411, endtime: 9411, seqnum: 0, connid: 0"
+                ]
+            ]
+        }, 
+        "WriteFile": {
+            "6": [
+                [
+                    "13:46:22,8520533", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\15RIQIE7.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 194, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,8521017", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\15RIQIE7.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 194, Length: 159"
+                ], 
+                [
+                    "13:46:22,8521121", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\15RIQIE7.txt", 
+                    "SUCCESS", 
+                    "Offset: 194, Length: 159, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,8572522", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\PRTQ8OA1.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 213, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,8572993", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\PRTQ8OA1.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 213, Length: 159"
+                ], 
+                [
+                    "13:46:22,8573093", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\PRTQ8OA1.txt", 
+                    "SUCCESS", 
+                    "Offset: 213, Length: 159, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,9271359", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\87N97UUT.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 133, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,9299497", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\JX4DIT3H.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 133, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,9299960", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\JX4DIT3H.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 133, Length: 193"
+                ], 
+                [
+                    "13:46:22,9300059", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\JX4DIT3H.txt", 
+                    "SUCCESS", 
+                    "Offset: 133, Length: 193, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,9346780", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,9348390", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096"
+                ], 
+                [
+                    "13:46:22,9348481", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:46:22,9356202", 
+                    "instrumentation.exe", 
+                    "3272", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 8\u00a0192, Length: 3\u00a0721"
+                ]
+            ], 
+            "13": [
+                [
+                    "13:49:55,9785745", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\FEYYKMPJ.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 135, Priority: Normal"
+                ], 
+                [
+                    "13:49:55,9833661", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\C56UYEDI.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 135, Priority: Normal"
+                ], 
+                [
+                    "13:49:55,9834191", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\C56UYEDI.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 135, Length: 192"
+                ], 
+                [
+                    "13:49:55,9834295", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\C56UYEDI.txt", 
+                    "SUCCESS", 
+                    "Offset: 135, Length: 192, Priority: Normal"
+                ], 
+                [
+                    "13:49:55,9883539", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:49:55,9885170", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096"
+                ], 
+                [
+                    "13:49:55,9885261", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:49:55,9895899", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 8\u00a0192, Length: 3\u00a0703"
+                ]
+            ], 
+            "20": [
+                [
+                    "13:53:51,6535204", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\GD8AR9OC.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 134, Priority: Normal"
+                ], 
+                [
+                    "13:53:51,6582669", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\XS6O7F3E.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 134, Priority: Normal"
+                ], 
+                [
+                    "13:53:51,6583331", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\XS6O7F3E.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 134, Length: 194"
+                ], 
+                [
+                    "13:53:51,6583468", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\XS6O7F3E.txt", 
+                    "SUCCESS", 
+                    "Offset: 134, Length: 194, Priority: Normal"
+                ], 
+                [
+                    "13:53:51,6664591", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:53:51,6666676", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096"
+                ], 
+                [
+                    "13:53:51,6666801", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:53:51,6677145", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 8\u00a0192, Length: 3\u00a0683"
+                ]
+            ], 
+            "28": [
+                [
+                    "13:57:23,0453832", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\LW5FI0WK.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 194, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,0454366", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\LW5FI0WK.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 194, Length: 161"
+                ], 
+                [
+                    "13:57:23,0455347", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\LW5FI0WK.txt", 
+                    "SUCCESS", 
+                    "Offset: 194, Length: 161, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,0516782", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\RFH8XL3X.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 213, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,0517262", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\RFH8XL3X.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 213, Length: 161"
+                ], 
+                [
+                    "13:57:23,0517357", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\RFH8XL3X.txt", 
+                    "SUCCESS", 
+                    "Offset: 213, Length: 161, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,1522575", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\VV86E4T2.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 135, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,1565828", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\PTE7EQN3.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 135, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,1566474", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\PTE7EQN3.txt", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 135, Length: 193"
+                ], 
+                [
+                    "13:57:23,1566610", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\Users\\testuser\\AppData\\Roaming\\Microsoft\\Windows\\Cookies\\PTE7EQN3.txt", 
+                    "SUCCESS", 
+                    "Offset: 135, Length: 193, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,1625923", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,1628037", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "FAST IO DISALLOWED", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096"
+                ], 
+                [
+                    "13:57:23,1628161", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 4\u00a0096, Length: 4\u00a0096, Priority: Normal"
+                ], 
+                [
+                    "13:57:23,1638734", 
+                    "instrumentation.exe", 
+                    "4000", 
+                    "WriteFile", 
+                    "C:\\utils\\test.html", 
+                    "SUCCESS", 
+                    "Offset: 8\u00a0192, Length: 3\u00a0693"
+                ]
+            ]
+        }, 
+        "traces": {
+            "6": [
+                "Node 0.Launch application", 
+                "Welcome To Superapp.Next"
+            ], 
+            "13": [
+                "Node 0.Launch application", 
+                "Welcome To Superapp.Cancel", 
+                "Are You Sure You Dont Want To Install This Supper Application.Cancel", 
+                "Welcome To Superapp.Next"
+            ], 
+            "20": [
+                "Node 0.Launch application", 
+                "Welcome To Superapp.Next"
+            ], 
+            "28": [
+                "Node 0.Launch application", 
+                "Welcome To Superapp.Next"
+            ]
+        }
+    }
+}

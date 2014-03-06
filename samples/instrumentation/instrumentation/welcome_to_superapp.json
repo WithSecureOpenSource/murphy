@@ -1,0 +1,165 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Static", 
+                        "control id": 3, 
+                        "enabled": true, 
+                        "hwnd": 1114314, 
+                        "rect": {
+                            "bottom": 321, 
+                            "left": 288, 
+                            "right": 613, 
+                            "top": 266
+                        }, 
+                        "text": "Welcome to SuperApp!", 
+                        "wm text": "Welcome to SuperApp!"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 4, 
+                        "enabled": true, 
+                        "hwnd": 852006, 
+                        "rect": {
+                            "bottom": 366, 
+                            "left": 288, 
+                            "right": 613, 
+                            "top": 311
+                        }, 
+                        "text": "To install superapp please press next.", 
+                        "wm text": "To install superapp please press next."
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 5, 
+                        "enabled": true, 
+                        "hwnd": 655976, 
+                        "rect": {
+                            "bottom": 482, 
+                            "left": 296, 
+                            "right": 400, 
+                            "top": 454
+                        }, 
+                        "text": "&Cancel", 
+                        "wm text": "&Cancel"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 6, 
+                        "enabled": true, 
+                        "hwnd": 590358, 
+                        "rect": {
+                            "bottom": 482, 
+                            "left": 628, 
+                            "right": 732, 
+                            "top": 454
+                        }, 
+                        "text": "&Next >>", 
+                        "wm text": "&Next >>"
+                    }
+                ], 
+                "class": "AutoIt v3 GUI", 
+                "hwnd": 852294, 
+                "rect": {
+                    "bottom": 499, 
+                    "left": 275, 
+                    "right": 751, 
+                    "top": 231
+                }, 
+                "text": "SuperApp Installer"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Welcome To Superapp", 
+        "reference screenshots": [
+            {
+                "file": "welcome_to_superapp.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "welcome_to_superapp.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "SuperApp Installer"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Cancel", 
+        "goes to": "Are You Sure You Dont Want To Install This Supper Application", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 5, 
+                    "enabled": true, 
+                    "hwnd": 655976, 
+                    "rect": {
+                        "bottom": 482, 
+                        "left": 296, 
+                        "right": 400, 
+                        "top": 454
+                    }, 
+                    "text": "&Cancel", 
+                    "wm text": "&Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "welcome_to_superapp.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                21, 
+                223, 
+                125, 
+                251
+            ]
+        }
+    }, 
+    "V_ELEM_01": {
+        "desc": "Next", 
+        "goes to": "Welcome To Superapp_2", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 6, 
+                    "enabled": true, 
+                    "hwnd": 590358, 
+                    "rect": {
+                        "bottom": 482, 
+                        "left": 628, 
+                        "right": 732, 
+                        "top": 454
+                    }, 
+                    "text": "&Next >>", 
+                    "wm text": "&Next >>"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "welcome_to_superapp.edge.Next.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                353, 
+                223, 
+                457, 
+                251
+            ]
+        }, 
+        "logs": "log-6212159e-a2cb-11e3-846e-028037ec0200.json"
+    }
+}

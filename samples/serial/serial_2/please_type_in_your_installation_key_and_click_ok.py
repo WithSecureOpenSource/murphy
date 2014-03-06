@@ -10,7 +10,7 @@ HERE = {'desc': 'Please Type In Your Installation Key And Click Ok',
         'snapshots': ['please_type_in_your_installation_key_and_click_ok.0.bmp'],
         'snapshots mask': [3978044416],
         'reference snapshots': ['please_type_in_your_installation_key_and_click_ok.0.ref.bmp'],
-        'custom': {"scrap": {"hwnd": 524622, "childs": [{"hwnd": 1114496, "control id": 1002, "wm text": "Please type in your installation key and click OK", "rect": {"top": 354, "right": 634, "left": 390, "bottom": 393}, "text": "Please type in your installation key and click OK", "class": "Static", "enabled": true}, {"hwnd": 3146082, "control id": 1001, "wm text": "", "rect": {"top": 388, "right": 634, "left": 390, "bottom": 408}, "text": "", "class": "Edit", "enabled": true}, {"hwnd": 2818384, "control id": 1, "wm text": "OK", "rect": {"top": 413, "right": 489, "left": 414, "bottom": 436}, "text": "OK", "class": "Button", "enabled": true}, {"hwnd": 2621770, "control id": 2, "wm text": "Cancel", "rect": {"top": 413, "right": 611, "left": 536, "bottom": 436}, "text": "Cancel", "class": "Button", "enabled": true}], "class": "#32770", "rect": {"top": 314, "right": 652, "left": 372, "bottom": 454}, "text": "Welcome to superapp"}, "scraper": "windows api"}}
+        'custom': {"scrap": {"hwnd": 262800, "childs": [{"hwnd": 1245656, "control id": 1002, "wm text": "Please type in your installation key and click OK", "rect": {"top": 354, "right": 634, "left": 390, "bottom": 393}, "text": "Please type in your installation key and click OK", "class": "Static", "enabled": true}, {"hwnd": 4588068, "control id": 1001, "wm text": "", "rect": {"top": 388, "right": 634, "left": 390, "bottom": 408}, "text": "", "class": "Edit", "enabled": true}, {"hwnd": 3735956, "control id": 1, "wm text": "OK", "rect": {"top": 413, "right": 489, "left": 414, "bottom": 436}, "text": "OK", "class": "Button", "enabled": true}, {"hwnd": 983440, "control id": 2, "wm text": "Cancel", "rect": {"top": 413, "right": 611, "left": 536, "bottom": 436}, "text": "Cancel", "class": "Button", "enabled": true}], "class": "#32770", "rect": {"top": 314, "right": 652, "left": 372, "bottom": 454}, "text": "Welcome to superapp"}, "scraper": "windows api"}}
 
 
 WORKER = None
@@ -58,17 +58,17 @@ V_ELEM_00 = {'desc': 'Text input',
              'goes to': 'Please Type In Your Installation Key And Click Ok',
              'how': ELEM_00,
              'uses': 'value for Please Type In Your Installation Key And Click Ok.Text input',
-             'custom': {"window": {"hwnd": 3146082, "control id": 1001, "wm text": "", "rect": {"top": 388, "right": 634, "left": 390, "bottom": 408}, "text": "", "class": "Edit", "enabled": true}}}
+             'custom': {"window": {"hwnd": 4588068, "control id": 1001, "wm text": "", "rect": {"top": 388, "right": 634, "left": 390, "bottom": 408}, "text": "", "class": "Edit", "enabled": true}}}
 
 V_ELEM_01 = {'desc': 'Ok',
              'goes to': 'Invalid Key Please Try Again',
              'how': ELEM_01,
-             'custom': {"window": {"hwnd": 2818384, "control id": 1, "wm text": "OK", "rect": {"top": 413, "right": 489, "left": 414, "bottom": 436}, "text": "OK", "class": "Button", "enabled": true}}}
+             'custom': {"window": {"hwnd": 3735956, "control id": 1, "wm text": "OK", "rect": {"top": 413, "right": 489, "left": 414, "bottom": 436}, "text": "OK", "class": "Button", "enabled": true}}}
 
 V_ELEM_02 = {'desc': 'Cancel',
              'goes to': 'Were Sorry You Did Not Installed Us',
              'how': ELEM_02,
-             'custom': {"window": {"hwnd": 2621770, "control id": 2, "wm text": "Cancel", "rect": {"top": 413, "right": 611, "left": 536, "bottom": 436}, "text": "Cancel", "class": "Button", "enabled": true}}}
+             'custom': {"window": {"hwnd": 983440, "control id": 2, "wm text": "Cancel", "rect": {"top": 413, "right": 611, "left": 536, "bottom": 436}, "text": "Cancel", "class": "Button", "enabled": true}}}
 
 V_ELEM_03 = {'desc': 'Valid serial',
              'goes to': 'Thans For Installing Our Full Version',

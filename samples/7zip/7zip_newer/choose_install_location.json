@@ -7,7 +7,7 @@
                         "class": "Button", 
                         "control id": 1, 
                         "enabled": true, 
-                        "hwnd": 393630, 
+                        "hwnd": 1048922, 
                         "rect": {
                             "bottom": 544, 
                             "left": 587, 
@@ -21,7 +21,7 @@
                         "class": "Button", 
                         "control id": 2, 
                         "enabled": true, 
-                        "hwnd": 2818538, 
+                        "hwnd": 4653604, 
                         "rect": {
                             "bottom": 544, 
                             "left": 673, 
@@ -35,7 +35,7 @@
                         "class": "Static", 
                         "control id": 1035, 
                         "enabled": true, 
-                        "hwnd": 2621936, 
+                        "hwnd": 1311034, 
                         "rect": {
                             "bottom": 510, 
                             "left": 271, 
@@ -49,7 +49,7 @@
                         "class": "Static", 
                         "control id": 1036, 
                         "enabled": true, 
-                        "hwnd": 721424, 
+                        "hwnd": 1048976, 
                         "rect": {
                             "bottom": 253, 
                             "left": 263, 
@@ -63,7 +63,7 @@
                         "class": "Static", 
                         "control id": 1256, 
                         "enabled": true, 
-                        "hwnd": 4129290, 
+                        "hwnd": 197262, 
                         "rect": {
                             "bottom": 513, 
                             "left": 271, 
@@ -77,7 +77,7 @@
                         "class": "Static", 
                         "control id": 1028, 
                         "enabled": false, 
-                        "hwnd": 2490874, 
+                        "hwnd": 1114538, 
                         "rect": {
                             "bottom": 513, 
                             "left": 271, 
@@ -91,7 +91,7 @@
                         "class": "Static", 
                         "control id": 1034, 
                         "enabled": true, 
-                        "hwnd": 328100, 
+                        "hwnd": 1376510, 
                         "rect": {
                             "bottom": 251, 
                             "left": 263, 
@@ -105,7 +105,7 @@
                         "class": "Static", 
                         "control id": 1037, 
                         "enabled": true, 
-                        "hwnd": 262638, 
+                        "hwnd": 1245508, 
                         "rect": {
                             "bottom": 218, 
                             "left": 278, 
@@ -119,7 +119,7 @@
                         "class": "Static", 
                         "control id": 1038, 
                         "enabled": true, 
-                        "hwnd": 393728, 
+                        "hwnd": 5439930, 
                         "rect": {
                             "bottom": 246, 
                             "left": 286, 
@@ -133,7 +133,7 @@
                         "class": "Static", 
                         "control id": 1039, 
                         "enabled": true, 
-                        "hwnd": 328196, 
+                        "hwnd": 1835482, 
                         "rect": {
                             "bottom": 239, 
                             "left": 713, 
@@ -147,7 +147,7 @@
                         "class": "#32770", 
                         "control id": 0, 
                         "enabled": true, 
-                        "hwnd": 328162, 
+                        "hwnd": 1507720, 
                         "rect": {
                             "bottom": 495, 
                             "left": 286, 
@@ -161,7 +161,7 @@
                         "class": "Edit", 
                         "control id": 1019, 
                         "enabled": true, 
-                        "hwnd": 524808, 
+                        "hwnd": 1638836, 
                         "rect": {
                             "bottom": 425, 
                             "left": 301, 
@@ -175,7 +175,7 @@
                         "class": "Button", 
                         "control id": 1001, 
                         "enabled": true, 
-                        "hwnd": 393730, 
+                        "hwnd": 6750566, 
                         "rect": {
                             "bottom": 426, 
                             "left": 628, 
@@ -189,21 +189,21 @@
                         "class": "Static", 
                         "control id": 1024, 
                         "enabled": true, 
-                        "hwnd": 524790, 
+                        "hwnd": 1311050, 
                         "rect": {
                             "bottom": 483, 
                             "left": 286, 
                             "right": 511, 
                             "top": 470
                         }, 
-                        "text": "Space available: 7.3GB", 
-                        "wm text": "Space available: 7.3GB"
+                        "text": "Space available: 10.9GB", 
+                        "wm text": "Space available: 10.9GB"
                     }, 
                     {
                         "class": "Static", 
                         "control id": 1023, 
                         "enabled": true, 
-                        "hwnd": 590246, 
+                        "hwnd": 2097686, 
                         "rect": {
                             "bottom": 467, 
                             "left": 286, 
@@ -217,7 +217,7 @@
                         "class": "Static", 
                         "control id": 1006, 
                         "enabled": true, 
-                        "hwnd": 197084, 
+                        "hwnd": 1901014, 
                         "rect": {
                             "bottom": 365, 
                             "left": 286, 
@@ -231,7 +231,7 @@
                         "class": "Button", 
                         "control id": 1020, 
                         "enabled": true, 
-                        "hwnd": 197056, 
+                        "hwnd": 983500, 
                         "rect": {
                             "bottom": 438, 
                             "left": 286, 
@@ -243,7 +243,7 @@
                     }
                 ], 
                 "class": "#32770", 
-                "hwnd": 2753000, 
+                "hwnd": 2032112, 
                 "rect": {
                     "bottom": 558, 
                     "left": 260, 
@@ -280,7 +280,7 @@
                     "class": "Button", 
                     "control id": 1, 
                     "enabled": true, 
-                    "hwnd": 393630, 
+                    "hwnd": 1048922, 
                     "rect": {
                         "bottom": 544, 
                         "left": 587, 
@@ -316,7 +316,7 @@
                     "class": "Button", 
                     "control id": 2, 
                     "enabled": true, 
-                    "hwnd": 2818538, 
+                    "hwnd": 4653604, 
                     "rect": {
                         "bottom": 544, 
                         "left": 673, 
@@ -352,7 +352,7 @@
                     "class": "Edit", 
                     "control id": 1019, 
                     "enabled": true, 
-                    "hwnd": 524808, 
+                    "hwnd": 1638836, 
                     "rect": {
                         "bottom": 425, 
                         "left": 301, 
@@ -388,7 +388,7 @@
                     "class": "Button", 
                     "control id": 1001, 
                     "enabled": true, 
-                    "hwnd": 393730, 
+                    "hwnd": 6750566, 
                     "rect": {
                         "bottom": 426, 
                         "left": 628, 

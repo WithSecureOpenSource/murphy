@@ -1,0 +1,30 @@
+{
+    "filename": "log-621745c0-a2cb-11e3-ad89-028037ec0200.json", 
+    "instrumentation": {
+        "TCP Disconnect": {
+            "18": [
+                [
+                    "13:50:42,9593309", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Disconnect", 
+                    "testuser-PC.F-Secure.com:49209 -> lb-in-f105.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, seqnum: 0, connid: 0"
+                ], 
+                [
+                    "13:50:42,9595655", 
+                    "instrumentation.exe", 
+                    "3308", 
+                    "TCP Disconnect", 
+                    "testuser-PC.F-Secure.com:49210 -> lb-in-f94.1e100.net:http", 
+                    "SUCCESS", 
+                    "Length: 0, seqnum: 0, connid: 0"
+                ]
+            ]
+        }, 
+        "traces": {
+            "18": []
+        }
+    }
+}

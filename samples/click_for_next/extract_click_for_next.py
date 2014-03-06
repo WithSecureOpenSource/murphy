@@ -6,15 +6,6 @@ See LICENSE for details
 from model_extraction import base_extractor, configuration, image2
 from model_extraction.ui import hybrid_scraper
 
-
-def customize_root_node(base_function, node, world):
-    #after standard creation of root node, we want to add a custom reference img
-    base_function(node, world)
-    from PIL import Image
-    desktop = Image.open("../desktop.bmp")
-    node.reference_images.append(image2.Image2(image=desktop))
-    
-    
 if __name__ == '__main__':
     test_files = configuration.get_default_config()["test files"]
     extractor = base_extractor.BaseExtractor('click_for_next',
@@ -22,8 +13,8 @@ if __name__ == '__main__':
 
     #Customize look of desktop node for small icon
     extractor.scrap_method = hybrid_scraper.scrap
-    initial_node_call = extractor.initial_node
-    extractor.initial_node = lambda node, world: customize_root_node(initial_node_call, node, world)
+    #style the root node image
+    extractor.root_node_image = "../desktop.png"
     
     extractor.crawl_application()
     

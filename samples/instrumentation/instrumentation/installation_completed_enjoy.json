@@ -1,0 +1,101 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 524816, 
+                        "rect": {
+                            "bottom": 447, 
+                            "left": 523, 
+                            "right": 611, 
+                            "top": 421
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 786966, 
+                        "rect": {
+                            "bottom": 385, 
+                            "left": 425, 
+                            "right": 583, 
+                            "top": 368
+                        }, 
+                        "text": "Installation completed, enjoy!", 
+                        "wm text": "Installation completed, enjoy!"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 1376458, 
+                "rect": {
+                    "bottom": 461, 
+                    "left": 410, 
+                    "right": 623, 
+                    "top": 317
+                }, 
+                "text": "Installation"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Installation Completed Enjoy", 
+        "reference screenshots": [
+            {
+                "file": "installation_completed_enjoy.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "installation_completed_enjoy.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Installation"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 524816, 
+                    "rect": {
+                        "bottom": 447, 
+                        "left": 523, 
+                        "right": 611, 
+                        "top": 421
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "installation_completed_enjoy.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                113, 
+                104, 
+                201, 
+                130
+            ]
+        }, 
+        "logs": "log-6218090f-a2cb-11e3-8d56-028037ec0200.json"
+    }
+}

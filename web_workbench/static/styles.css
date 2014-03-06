@@ -89,3 +89,31 @@ body,html{
     background-color: #000000;
     opacity: 0.5;
 }
+
+.window_class {
+    position: absolute;
+    background-color: #c0c0c0;
+    border: 3px solid #000080;
+    display: flex;
+}
+
+.title_bar_class {
+    background-color: #000080;
+    color: #ffffff;
+    cursor: default;
+}
+
+.client_area_class {
+    background-color: #ffffff;
+    cursor: default;
+}
+.layout_panel_class {
+    flex-direction: row;
+}
+.layout_element_compact_class {
+    display: flex;
+}
+.layout_element_stretch_class {
+    display: flex;
+    flex: 1.0;
+}

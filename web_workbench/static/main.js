@@ -73,6 +73,9 @@ function Application() {
     var route_view, screens_view, thumbnails_view;
     
     var show_route_view, show_thumbnails_view, show_screens_view, show_simple_flow_view, hide_simple_flow_view, run_plan_view;
+
+    var live_receiver = null;
+
     var that;
     
     model = null;
@@ -104,6 +107,10 @@ function Application() {
         clear_content();
         runs_list.reload(name);
         route_plan.init();
+        if (live_receiver !== null) {
+            live_receiver.dispose();
+            live_receiver = null;
+        }
         if (name === '') {
             model = null;
             var view_list = document.getElementById("views");
@@ -124,6 +131,30 @@ function Application() {
         models_list = document.getElementById('models');
         model_name = models_list.options[models_list.selectedIndex].text;
         that.load_model(model_name);
+    }
+
+    this.toggle_live_transmission = function () {
+        if (document.getElementById('autorefresh').checked === true) {
+            if (model !== null) {
+                if (live_receiver === null) {
+                    var channel = model.get_live_channel();
+                    if (channel !== "") {
+                        live_receiver = new ChannelView(model.getName());
+                        live_receiver.show();
+                    }
+                } else {
+                    alert("not handled 1");
+                }
+            } else {
+                live_receiver.dispose();
+                live_receiver = null;
+            }
+        } else {
+            if (live_receiver !== null) {
+                live_receiver.dispose();
+                live_receiver = null;
+            }
+        }
     }
 
     this.reload_and_schedule = function () {
@@ -193,7 +224,7 @@ function Application() {
             model.getView(selected_view,
                           view_type,
                           function(svg) {
-                              route_view.draw(svg.responseXML, show_tooltips, true);
+                              route_view.draw(svg.responseXML, show_tooltips, true, model, view_type === 'flow-images');
                               route_plan.init(view_start_node);
                           });
         }
@@ -221,7 +252,7 @@ function Application() {
             model.getView(selected_view,
                   view_type,
                   function(svg) {
-                      route_view.draw(svg.responseXML, false, false);
+                      route_view.draw(svg.responseXML, false, false, model);
                       route_plan.init(view_start_node);
                   });
             document.getElementById('download').style.visibility = 'visible';
@@ -277,6 +308,7 @@ function Application() {
     document.getElementById('download').addEventListener('click', this.download_simplified_view);
     
     document.getElementById('autorefresh').addEventListener('change', this.reload_and_schedule);
+    document.getElementById('autorefresh').addEventListener('change', this.toggle_live_transmission);
     
     document.getElementById('compare').addEventListener('click', this.compare_model);
 

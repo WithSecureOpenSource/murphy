@@ -77,21 +77,76 @@ function Model(model_name, error_callback) {
         fetchAjax('compare', callback, JSON.stringify(request));
     }
     
-	this.create = function(request, callback) {
-	    /*
-		    Request a model creation
-		    This is very specific to f-secure so needs to be considered
-		 */
-		fetchAjax('create_model', callback, request);
-	}
-	
-	this.delete_model = function(callback) {
-		/*
-		 	Requests this model to be permanently deleted
-		 */
-		fetchAjax('delete_model?model_name=' + name, callback);
-	}
-	
+    this.create = function(request, callback) {
+        /*
+            Request a model creation
+            This is very specific to f-secure so needs to be considered
+         */
+        fetchAjax('create_model', callback, request);
+    }
+
+    this.delete_model = function(callback) {
+        /*
+            Requests this model to be permanently deleted
+         */
+        fetchAjax('delete_model?model_name=' + name, callback);
+    }
+
+    this.get_edge_logs = function (node_name, edge_name) {
+        var xhr = new XMLHttpRequest(),
+            log_data = null;
+        xhr.open('POST', 'get_edge_logs', false);
+        xhr.send(JSON.stringify({'model': name, 'node': node_name, 'edge': edge_name}));
+        if (xhr.status === 200) {
+            log_data = JSON.parse(xhr.responseText);
+            if (log_data.status === "ok") {
+                return new EdgeLog(log_data.response);
+            } else {
+                return new EdgeLog(null);
+            }
+        } else {
+            console.log("Error: " + xhr.statusText);
+        }
+    };
+
+    this.get_live_channel = function () {
+        var xhr = new XMLHttpRequest(),
+            response = null;
+        xhr.open('GET', 'get_model_live_channel/' + name, false);
+        xhr.send();
+        if (xhr.status === 200) {
+            response = JSON.parse(xhr.responseText);
+            if (response.status === "ok") {
+                return response.response;
+            } else {
+                return response.text;
+            }
+        } else {
+            console.log("Error: " + xhr.statusText);
+        }
+    };
+    
+    this.get_graph_logs = function () {
+        var xhr = new XMLHttpRequest(),
+            log_data = null;
+        xhr.open('POST', 'get_graph_logs', false);
+        xhr.send(JSON.stringify({'model': name}));
+        if (xhr.status === 200) {
+            log_data = JSON.parse(xhr.responseText);
+            if (log_data.status === "ok") {
+                var result = [];
+                for (var key in log_data.response) {
+                    result[key] = new EdgeLog(log_data.response[key]);
+                }
+                return result;
+            } else {
+                return [];
+            }
+        } else {
+            console.log("Error: " + xhr.statusText);
+        }
+    };
+    
     var fetchAjax = function(url, callback, content) {
         /*
             Internal use only, fetches an ajax response from te server and

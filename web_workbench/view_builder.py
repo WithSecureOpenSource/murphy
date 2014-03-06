@@ -16,7 +16,7 @@ def _build_dot_with_screenshots(dot, worker, directory, images_dir):
     new_dot_lines = dot_lines[:]
     simplified_dot_lines = dot_lines[:]
     nodes = worker.get_views()
-    edge_image = '<<TABLE BORDER="0"><TR><TD><IMG SRC="%s"/></TD></TR></TABLE>>'
+    edge_image = '<<TABLE BORDER="0"><TR><TD WIDTH="%dpx" HEIGHT="%dpx"><IMG SRC="%s" SCALE="FALSE"/></TD></TR></TABLE>>'
     destination_count = {}
     end_of_definitions_index = 0
     is_definition = False
@@ -39,10 +39,15 @@ def _build_dot_with_screenshots(dot, worker, directory, images_dir):
                     reference_image = node['self'].HERE['snapshots'][0]
                     
                 if reference_image:
-                    line = line[:-2] + ' shape=rectangle image="%s/%s" label=""];' % (directory, reference_image[:-4] + ".png")
-                    img = Image.open('%s/%s' % (images_dir, reference_image))
-                    img.save(directory + "/" + reference_image[:-4] + '.png')
-                        
+                    if reference_image[-4:] == '.svg':
+                        img_file_name = directory + "/" + reference_image
+                        shutil.copyfile('%s/%s' % (images_dir, reference_image), img_file_name)
+                        line = line[:-2] + ' shape=none margin=0 label=%s];' % (edge_image % (164, 124, img_file_name)).replace('SCALE="FALSE"','')
+                    else:
+                        img_file_name = directory + "/" + reference_image[:-4] + '.png'
+                        img = Image.open('%s/%s' % (images_dir, reference_image))
+                        img.save(img_file_name)
+                        line = line[:-2] + ' shape=none margin=0 label=%s];' % (edge_image % (img.size[0], img.size[1], img_file_name))
                     new_dot_lines[i] = "\t" + line
                     simplified_dot_lines[i] = new_dot_lines[i]
         elif len(parts) == 7: #??? node
@@ -64,9 +69,17 @@ def _build_dot_with_screenshots(dot, worker, directory, images_dir):
                     if type(how) is dict and 'snapshots' in how and len(how['snapshots']) > 0:
                         img = Image.open(images_dir + "/" + how['snapshots'][0])
                         img_name = directory + "/" + how['snapshots'][0][:-4] + '.png'
+                        if 'logs' in verb and verb['logs'] != "":
+                            #reserve space for all icons so it wont overlap
+                            new_width = img.size[0] + 3 + 16 + 3 + 8 + 3 + 16
+                            new_height = img.size[1] + 18 
+                            collage = Image.new("RGB", (new_width, new_height), "white")
+                            collage.paste(img, (0, new_height - img.size[1]))
+                            img = collage
                         img.save(img_name)
-                        new_dot_lines[i] = '\t' + line.replace('label="%s"' % parts[5], 'label=%s' % (edge_image % img_name))
-
+                        new_dot_lines[i] = '\t' + line.replace('label="%s"' % parts[5], 'label=%s' % (edge_image % (img.size[0], img.size[1], img_name)))
+                    
+                
                 if parts[1] == parts[3]:
                     simplified_dot_lines[i] = ''
                 else:
@@ -139,7 +152,7 @@ def _build_dot_with_screenshots(dot, worker, directory, images_dir):
     utils.save_file(simplified_dot, simple_temp_file)
     graphviz.generate_svg(simple_temp_file)
     os.rename('%s.svg' % simple_temp_file, simple_target_file)
-    os.remove(simple_temp_file)
+    #os.remove(simple_temp_file)
 
 
 def _build_view(model_file_name, view_name, view_type, output_dir):

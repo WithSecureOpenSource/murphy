@@ -1,0 +1,42 @@
+<svg width="640" height="550" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <path fill="none" stroke="#000000" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" d="m159.298996,497.907013l-0.098999,0.097992l0,0.89801l0.884003,0.001984l0.112,-0.101013l0,-0.896973l-0.897003,0l0,0zm0.791,0.096985l0,0.901001m0,-0.901001l0.111008,-0.098999m-0.111008,0.102997l-0.888992,-0.003998" id="svg_7"/>
+  <rect stroke="#000000" id="svg_1" height="100" width="100" y="450" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" fill="#00ffff" x="0"/>
+  <rect id="svg_2" stroke="#000000" height="100" width="100" y="450" x="100" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" fill="#00ffff"/>
+  <rect id="svg_3" stroke="#000000" height="100" width="100" y="450" x="200" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" fill="#00ffff"/>
+  <rect id="svg_4" stroke="#000000" height="100" width="100" y="350" x="100" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" fill="#00ffff"/>
+  <rect id="svg_5" stroke="#000000" height="100" width="100" y="350" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" fill="#00ffff"/>
+  <rect id="svg_6" stroke="#000000" height="100" width="100" y="250" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" fill="#00ffff" x="0"/>
+  <path id="svg_20" d="m0,249l19.832399,-20.112l99.999601,0l-19.832001,20.112l-100,0z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_21" d="m100,350l19.832001,-20.112l0,-100l-19.832001,20.112l0,100z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_22" d="m200,349l19.832001,-20.112l-100,0l-19.832001,20.112l100,0z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_23" d="m220,330l-0.167999,99.888l-19.832001,20.112l0,-100l20,-20z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_24" d="m320,429l-100.167999,-0.112l-19.832001,20.112l100,0l20,-20z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_25" d="m300,550l19.832001,-20.112l0,-100l-19.832001,20.112l0,100z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_26" d="m20,229l19.664799,-20.223007l100.000195,0l-20.111984,20.111008l-99.553009,0.112z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_27" d="m140,210l-0.335007,99.776978l-20.111992,20.111023l0,-100l20.446999,-19.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_29" d="m140,309l99.664993,-0.223022l-20.112,20.111023l-99.999992,0l20.446999,-19.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_32" d="m340,410c1.341003,2.570007 1.341003,97.541992 -0.334991,99.777008c-1.675995,2.233978 -20.671021,20.110992 -20.112,20.110992c0.55899,0 -0.559021,-100.558014 0,-100c0.55899,0.55899 20.446991,-19.888 20.446991,-19.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_33" d="m40,209l19.776501,-20.334991l100.000492,0l-20.112,20.111984l-99.664993,0.223007z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_35" d="m140,210l99.944,-0.223007l0,99.999985l-100,0l0.056,-99.776978z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00c8c8"/>
+  <path id="svg_36" d="m160,189l99.777008,-0.056l-19.833008,19.832993l-100,0l20.056,-19.776993z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_39" d="m240,209l99.944,-0.223007c0,0 19.161987,-18.882996 20.056,-19.776993c0.894012,-0.893997 -99.665009,-0.893997 -100.222992,-0.056c-0.559021,0.837997 -19.777008,20.056 -19.777008,20.056z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_40" d="m220,330l99.944,-0.222992l0,-100.000015l-100,0l0.056,100.223007z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00dcdc"/>
+  <path id="svg_41" d="m340,310l19.777008,-20.056l0,-100l-19.833008,19.832993l0.056,100.223007z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_42" d="m340,310l19.777008,-20.056l0,100l-19.833008,19.833008l0.056,-99.777008z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_43" d="m340,510l19.777008,-20.056l0,-100l-19.833008,19.833008l0.056,100.222992z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path id="svg_44" d="m220,330l99.553009,-0.112c0,0 1.453003,100.782013 0.446991,100.112c-1.006012,-0.670013 -101.563995,-0.670013 -100.447006,-0.112c1.117004,0.55899 0.447006,-99.888 0.447006,-99.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00dcdc"/>
+  <path id="svg_46" d="m320,330l19.665009,-20.223022l0,100.000031l-20.112,20.110992l0.446991,-99.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path d="m320,229l19.665009,-20.223007l-100.000015,0l-20.112,20.111008l100.447006,0.112z" id="svg_47" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0"/>
+  <path id="svg_50" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007f3f"/>
+  <path id="svg_51" d="m320,230l19.944,-20.223007l0,99.999985l-20.112,20.111023l0.167999,-99.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878"/>
+  <path transform="rotate(40 465.912 180.733)" d="m415.967682,230.844574l99.944,-0.222992l0,-100.001007l-100,0l0.056,100.223999z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00ffff" id="svg_8"/>
+  <path transform="rotate(40 512.139 141.198)" d="m552.530396,151.309784l19.665039,-20.223999l-100.000061,0l-20.112,20.112l100.447021,0.112z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0" id="svg_9"/>
+  <path transform="rotate(40 518.302 211.639)" d="m508.414215,171.807373l19.944061,-20.223999l0,100l-20.112091,20.112l0.16803,-99.888z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878" id="svg_10"/>
+  <path transform="rotate(20 267.183 100.477)" d="m217.238876,150.58873l99.943985,-0.222992l0,-100.000515l-99.999985,0l0.056,100.223507z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00ffff" id="svg_13"/>
+  <path transform="rotate(20 297.101 47.5154)" d="m337.492096,57.626884l19.665009,-20.223l-100,0l-20.112015,20.111l100.447006,0.112z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#00a0a0" id="svg_14"/>
+  <path transform="rotate(20 326.985 111.601)" d="m317.096619,71.768509l19.944,-20.223l0,99.999504l-20.112,20.112l0.167999,-99.888504z" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#007878" id="svg_15"/>
+ </g>
+</svg>

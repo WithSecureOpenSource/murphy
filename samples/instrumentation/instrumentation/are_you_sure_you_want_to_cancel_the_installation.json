@@ -1,0 +1,165 @@
+{
+    "HERE": {
+        "custom": {
+            "scrap": {
+                "childs": [
+                    {
+                        "class": "Button", 
+                        "control id": 1, 
+                        "enabled": true, 
+                        "hwnd": 983500, 
+                        "rect": {
+                            "bottom": 455, 
+                            "left": 501, 
+                            "right": 589, 
+                            "top": 429
+                        }, 
+                        "text": "OK", 
+                        "wm text": "OK"
+                    }, 
+                    {
+                        "class": "Button", 
+                        "control id": 2, 
+                        "enabled": true, 
+                        "hwnd": 262822, 
+                        "rect": {
+                            "bottom": 455, 
+                            "left": 599, 
+                            "right": 687, 
+                            "top": 429
+                        }, 
+                        "text": "Cancel", 
+                        "wm text": "Cancel"
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 20, 
+                        "enabled": true, 
+                        "hwnd": 327744, 
+                        "rect": {
+                            "bottom": 391, 
+                            "left": 361, 
+                            "right": 393, 
+                            "top": 359
+                        }, 
+                        "text": "", 
+                        "wm text": ""
+                    }, 
+                    {
+                        "class": "Static", 
+                        "control id": 65535, 
+                        "enabled": true, 
+                        "hwnd": 655858, 
+                        "rect": {
+                            "bottom": 384, 
+                            "left": 401, 
+                            "right": 658, 
+                            "top": 367
+                        }, 
+                        "text": "Are you sure you want to cancel the installation?", 
+                        "wm text": "Are you sure you want to cancel the installation?"
+                    }
+                ], 
+                "class": "#32770", 
+                "hwnd": 524552, 
+                "rect": {
+                    "bottom": 469, 
+                    "left": 333, 
+                    "right": 698, 
+                    "top": 308
+                }, 
+                "text": "Installation"
+            }, 
+            "scraper": "windows api"
+        }, 
+        "desc": "Are You Sure You Want To Cancel The Installation", 
+        "reference screenshots": [
+            {
+                "file": "are_you_sure_you_want_to_cancel_the_installation.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "are_you_sure_you_want_to_cancel_the_installation.0.bmp", 
+                "image": null, 
+                "mask": 3978044416
+            }
+        ], 
+        "title": "Installation"
+    }, 
+    "V_ELEM_00": {
+        "desc": "Ok", 
+        "goes to": "Node 0", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 1, 
+                    "enabled": true, 
+                    "hwnd": 983500, 
+                    "rect": {
+                        "bottom": 455, 
+                        "left": 501, 
+                        "right": 589, 
+                        "top": 429
+                    }, 
+                    "text": "OK", 
+                    "wm text": "OK"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "are_you_sure_you_want_to_cancel_the_installation.edge.Ok.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                168, 
+                121, 
+                256, 
+                147
+            ]
+        }, 
+        "logs": "log-621745c0-a2cb-11e3-ad89-028037ec0200.json"
+    }, 
+    "V_ELEM_01": {
+        "desc": "Cancel", 
+        "goes to": "Welcome To Superapp_3", 
+        "how": {
+            "custom": {
+                "window": {
+                    "class": "Button", 
+                    "control id": 2, 
+                    "enabled": true, 
+                    "hwnd": 262822, 
+                    "rect": {
+                        "bottom": 455, 
+                        "left": 599, 
+                        "right": 687, 
+                        "top": 429
+                    }, 
+                    "text": "Cancel", 
+                    "wm text": "Cancel"
+                }
+            }, 
+            "screenshots": [
+                {
+                    "file": "are_you_sure_you_want_to_cancel_the_installation.edge.Cancel.0.bmp", 
+                    "image": null, 
+                    "mask": null
+                }
+            ], 
+            "type": "normal", 
+            "visual": [
+                266, 
+                121, 
+                354, 
+                147
+            ]
+        }
+    }
+}

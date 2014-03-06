@@ -23,15 +23,18 @@ if not MURPHY_DIR in sys.path:
     sys.path.append(MURPHY_DIR)
 
     
-from web_workbench.bottle import route, run, static_file, request, redirect
+from web_workbench.bottle import route, run, static_file, request, redirect, response, HTTPResponse
 
-import json, traceback, time, datetime, uuid
+import json, traceback, time, datetime, uuid, StringIO
+from PIL import Image
 
 from web_workbench import utils
 from murphy.model import Model
 from web_workbench.view_builder import build_view
 from web_workbench.planner import (solve_route, find_needed_params, run_plan,
-                                   compare_models)
+                                   compare_models,
+                                   get_edge_logs as _get_edge_logs,
+                                   get_graph_logs as _get_graph_logs)
 from web_workbench.custom_model import create_custom_model,\
     remove_model_from_workbench
 import subprocess
@@ -123,7 +126,63 @@ def get_model_views(model_name):
         return {"status": "fail",
                 "text": "Error when loading model: %s" % str(ex)}
 
+@route('/murphy/get_model_live_channel/:model_name')
+def get_model_live_channel(model_name):
+    '''
+    Returns a live channel if there's one
+    '''
+    try:
+        model_file = _get_model_file_name(model_name)
+        model_dict = {}
+        with open(model_file, 'rb') as the_file:
+            model_dict = json.load(the_file)
+        return {"status": "ok",
+                "response": model_dict.get("live broadcast", "")}
+    except Exception, ex:  # pylint: disable=W0703
+        return {"status": "fail",
+                "text": "Error when loading model: %s" % str(ex)}
 
+@route('/channel')
+def get_live_channel():
+    try:
+        model_file = _get_model_file_name(request.query.model)
+        with open(model_file, 'rb') as the_file:
+            model_dict = json.load(the_file)
+        broadcasts = model_dict.get("live broadcast", "")
+        if broadcasts == "":
+            raise RuntimeError("Requested broadcast of non broadcasting model")
+                
+        max_retries = 3
+        for i in range(max_retries):
+            try:
+                with open(broadcasts, 'rb') as a_file:
+                    content = a_file.read()
+                #test is valid...
+                Image.open(StringIO.StringIO(content))
+                break
+            except:
+                if i < max_retries -1:
+                    time.sleep(0.1)
+                else:
+                    raise
+            
+        headers = {'Content-Length': len(content),
+                   'Content-Type': "image/png",
+                   'Accept-Ranges': "bytes",
+                   'Cache-Control': "no-cache"}
+        return HTTPResponse(content, **headers)
+            
+    except Exception, ex:
+        print "Problem: %s" % str(ex)
+        with open('static/x-space.png', 'rb') as a_file:
+            content = a_file.read()
+        headers = {'Content-Length': len(content),
+                   'Content-Type': "image/png",
+                   'Accept-Ranges': "bytes",
+                   'Cache-Control': "no-cache"}
+        return HTTPResponse(content, **headers)
+
+                
 @route('/murphy/model/:model_name/:view_name')
 def get_view(model_name, view_name):
     '''
@@ -193,7 +252,28 @@ def get_view(model_name, view_name):
         return {"status": "fail",
                 "text": "Error when creating the model graph: %s" % str(ex)}
 
+@route('/murphy/get_edge_logs', method='POST')
+def get_edge_logs():
+    obj = json.load(request.body)
+    model_file = _get_model_file_name(obj['model'])
+    ret = _get_edge_logs(model_file, obj['node'], obj['edge'])
+    if ret != "":
+        return {'status': 'ok', 'response': json.loads(ret)}
+    else:
+        return {'status': 'no data'}
 
+
+@route('/murphy/get_graph_logs', method='POST')
+def get_graph_logs():
+    obj = json.load(request.body)
+    model_file = _get_model_file_name(obj['model'])
+    ret = _get_graph_logs(model_file)
+    if ret != "":
+        return {'status': 'ok', 'response': json.loads(ret)}
+    else:
+        return {'status': 'no data'}
+    
+        
 @route('/murphy/solve_route', method='POST')
 def solve_route_request():
     '''
@@ -411,6 +491,10 @@ def server_project_files(project_name, view_name, file_name):
                        root='projects/%s/%s' % (project_name, view_name))
 
 
+@route('/murphy/scripts/<filename>')
+def server_static2(filename):
+    return static_file(filename, root='static/scripts')
+    
 @route('/murphy/<filename>')
 def server_static(filename):
     '''
@@ -423,7 +507,6 @@ def server_static(filename):
         return redirect("/murphy/login2.html")
     else:
         return static_file(filename, root='static')
-
 
 @route('/')
 def index():

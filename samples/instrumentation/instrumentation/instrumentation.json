@@ -1,0 +1,24 @@
+{
+    "business rules": "rules", 
+    "coverage": "coverage.json", 
+    "global timeout": 90, 
+    "images dir": "img", 
+    "modules": [
+        "node_00", 
+        "welcome_to_superapp", 
+        "are_you_sure_you_dont_want_to_install_this_supper_application", 
+        "welcome_to_superapp_2", 
+        "are_you_sure_you_dont_accept_our_fair_and_simple_license_terms", 
+        "welcome_to_superapp_3", 
+        "are_you_sure_you_want_to_cancel_the_installation", 
+        "installation_completed_enjoy"
+    ], 
+    "namespace": "instrumentation.instrumentation", 
+    "tags": [], 
+    "views": [
+        {
+            "name": "All", 
+            "starts at": "Node 0"
+        }
+    ]
+}

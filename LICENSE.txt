@@ -9,3 +9,5 @@ murphy\user_simulation\vnc\vncdotool:
 See LICENSE-vncdotool.txt for license information, website can be found at
 https://github.com/sibson/vncdotool
 
+Murphy contains images pulled from The Tango Desktop project, see LICENSE-tango.txt
+

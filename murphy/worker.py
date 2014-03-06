@@ -570,3 +570,21 @@ class Worker(object):
             
         return params
         
+    def get_verb_logs(self, view_name, verb_name):
+        '''
+        Returns the file name of the logs if there are some
+        '''
+        if not view_name in self._views:
+            raise Exception("Requested view '%s' is not defined" % view_name)
+        view = self._views[view_name]
+        
+        if 'verbs' in view:
+            verbs = view['verbs']
+            if not verb_name in verbs:
+                raise Exception(("Requested verb '%s' in view '%s' is not " +
+                                 "defined") % (view_name, verb_name))
+            verb = verbs[verb_name]
+            if 'logs' in verb:
+                return verb['logs']
+            
+        return ''

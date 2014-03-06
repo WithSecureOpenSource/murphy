@@ -13,8 +13,7 @@ Most parametrized values of a dialog would be represented as edges of it
 
 '''
 
-import json
-import StringIO
+import json, uuid, StringIO
 
 from model_extraction import graph
 from model_extraction.ui.utils import dump_array
@@ -299,7 +298,16 @@ class Node(graph.Node):
             content['V_ELEM_%s' % str(index).zfill(2)] = verb
             edge.save_screenshots()
             index += 1
-        
+
+            if len(edge.logs) > 0:
+                #save as separate file
+                log_name = "log-%s.json" % str(uuid.uuid1())
+                edge.logs['filename'] = log_name
+                encoded = json.dumps(edge.logs, sort_keys=True, indent=4)
+                with open(self.directory + "/" + log_name, "w") as the_file:
+                    the_file.write(encoded)
+                verb['logs'] = log_name
+            
         encoded = json.dumps(content, sort_keys=True, indent=4)
         json_file_name = "%s/%s.json" % (self.directory, self.file_name)
         with open(json_file_name, "w") as the_file:
@@ -389,6 +397,10 @@ class Node(graph.Node):
             encoded = json.dumps(edge.custom)
             output.write(",\n%s'custom': %s" % (spacing, encoded))
      
+            if len(edge.logs) > 0:
+                log_name = json.dumps(edge.logs['filename'])
+                output.write(",\n%s'logs': %s" % (spacing, log_name))
+                
             output.write("}\n\n")
             index += 1
         

@@ -2,7 +2,6 @@
 Copyright (c) 2011-2013 F-Secure
 See LICENSE for details
 """
-
 import ctypes, base64, subprocess, json
 
 import screen_grab
@@ -258,11 +257,38 @@ def execute(query):
                                    shell=True)
         pout, perr = process.communicate()
         process.wait()
-        return {'status': 'ok', 'stdout': pout, 'stderr': perr}
+        return {'status': 'ok',
+                'stdout': pout,
+                'stderr': perr,
+                'returned': process.returncode}
     except Exception, ex:
         return {'status': 'fail', 'message': str(ex)}
     
 SERVICES['/execute'] = execute
+
+
+#@route('/launch')
+def launch(query):
+    '''
+    Launch the given command, dont wait for it
+    This method will hide any command window if the given process will show
+    one
+    '''
+    command = query['command'] #request.query.command
+    startupinfo = subprocess.STARTUPINFO()
+    subprocess.STARTF_USESHOWWINDOW = 1
+    startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+    try:
+        process = subprocess.Popen(command,
+                                   startupinfo=startupinfo,
+                                   cwd='c:\\utils',
+                                   shell=True)
+        return {'status': 'ok'}
+    except Exception, ex:
+        return {'status': 'fail', 'message': str(ex)}
+    
+SERVICES['/launch'] = launch
+
 
 def get_file(query):
     try:

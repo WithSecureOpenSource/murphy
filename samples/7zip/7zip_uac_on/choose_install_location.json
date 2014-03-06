@@ -21,7 +21,7 @@
                         "class": "Button", 
                         "control id": 2, 
                         "enabled": true, 
-                        "hwnd": 2556310, 
+                        "hwnd": 524684, 
                         "rect": {
                             "bottom": 544, 
                             "left": 673, 
@@ -49,7 +49,7 @@
                         "class": "Static", 
                         "control id": 1036, 
                         "enabled": true, 
-                        "hwnd": 590254, 
+                        "hwnd": 786824, 
                         "rect": {
                             "bottom": 253, 
                             "left": 263, 
@@ -133,7 +133,7 @@
                         "class": "Static", 
                         "control id": 1039, 
                         "enabled": true, 
-                        "hwnd": 3670596, 
+                        "hwnd": 328110, 
                         "rect": {
                             "bottom": 239, 
                             "left": 713, 
@@ -147,7 +147,7 @@
                         "class": "#32770", 
                         "control id": 0, 
                         "enabled": true, 
-                        "hwnd": 393720, 
+                        "hwnd": 262580, 
                         "rect": {
                             "bottom": 495, 
                             "left": 286, 
@@ -161,7 +161,7 @@
                         "class": "Edit", 
                         "control id": 1019, 
                         "enabled": true, 
-                        "hwnd": 262580, 
+                        "hwnd": 3670486, 
                         "rect": {
                             "bottom": 425, 
                             "left": 301, 
@@ -196,14 +196,14 @@
                             "right": 511, 
                             "top": 470
                         }, 
-                        "text": "Space available: 7.2GB", 
-                        "wm text": "Space available: 7.2GB"
+                        "text": "Space available: 8.3GB", 
+                        "wm text": "Space available: 8.3GB"
                     }, 
                     {
                         "class": "Static", 
                         "control id": 1023, 
                         "enabled": true, 
-                        "hwnd": 459190, 
+                        "hwnd": 2687464, 
                         "rect": {
                             "bottom": 467, 
                             "left": 286, 
@@ -217,7 +217,7 @@
                         "class": "Static", 
                         "control id": 1006, 
                         "enabled": true, 
-                        "hwnd": 3670486, 
+                        "hwnd": 459190, 
                         "rect": {
                             "bottom": 365, 
                             "left": 286, 
@@ -231,7 +231,7 @@
                         "class": "Button", 
                         "control id": 1020, 
                         "enabled": true, 
-                        "hwnd": 262568, 
+                        "hwnd": 590308, 
                         "rect": {
                             "bottom": 438, 
                             "left": 286, 
@@ -316,7 +316,7 @@
                     "class": "Button", 
                     "control id": 2, 
                     "enabled": true, 
-                    "hwnd": 2556310, 
+                    "hwnd": 524684, 
                     "rect": {
                         "bottom": 544, 
                         "left": 673, 
@@ -352,7 +352,7 @@
                     "class": "Edit", 
                     "control id": 1019, 
                     "enabled": true, 
-                    "hwnd": 262580, 
+                    "hwnd": 3670486, 
                     "rect": {
                         "bottom": 425, 
                         "left": 301, 

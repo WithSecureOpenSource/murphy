@@ -1,0 +1,34 @@
+{
+    "HERE": {
+        "custom": {}, 
+        "desc": "Node 0", 
+        "reference screenshots": [
+            {
+                "file": "node_00.0.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }, 
+            {
+                "file": "node_00.1.ref.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "screenshots": [
+            {
+                "file": "node_00.0.bmp", 
+                "image": null, 
+                "mask": null
+            }
+        ], 
+        "title": ""
+    }, 
+    "V_ELEM_00": {
+        "desc": "Launch application", 
+        "goes to": "Welcome To Superapp", 
+        "how": [
+            "launch_application", 
+            "def launch_application():\n    '''\n    Launches the desired application\n    '''\n    import time\n\n    use_command = WORKER.properties.get('command to launch', '')\n    if use_command == '':\n        use_command = r'\\utils\\runurl.py http://192.168.56.1:8901/files/instrumentation.exe'\n\n    WORKER.Wait(HERE['desc'])\n    #We need a bit more time to finish booting...\n    time.sleep(3)\n\n    WORKER.input.keyboard.enters('{+ctrl}{esc}{-ctrl}')\n    WORKER.input.keyboard.enters(use_command)\n    WORKER.input.keyboard.enters('{enter}')\n"
+        ]
+    }
+}

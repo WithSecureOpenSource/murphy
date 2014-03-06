@@ -29,6 +29,7 @@ class Edge(graph.Edge):
         self.method = None
         self.method_source_code = None
         self.custom = {}
+        self.logs = {}
 
 
     def clone(self):

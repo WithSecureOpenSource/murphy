@@ -1,0 +1,41 @@
+{
+    "filename": "log-62165b61-a2cb-11e3-a0f9-028037ec0200.json", 
+    "instrumentation": {
+        "RegSetValue": {
+            "24": [
+                [
+                    "13:54:36,2000915", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "RegSetValue", 
+                    "HKCU\\Software\\Test\\TestKey", 
+                    "SUCCESS", 
+                    "Type: REG_SZ, Length: 42, Data: Hello this is a test"
+                ]
+            ]
+        }, 
+        "WriteFile": {
+            "24": [
+                [
+                    "13:54:36,1990004", 
+                    "instrumentation.exe", 
+                    "3916", 
+                    "WriteFile", 
+                    "C:\\Program Files\\Here\\readme.txt", 
+                    "SUCCESS", 
+                    "Offset: 0, Length: 6, Priority: Normal"
+                ]
+            ]
+        }, 
+        "traces": {
+            "24": [
+                "Node 0.Launch application", 
+                "Welcome To Superapp.Next", 
+                "Welcome To Superapp_2.Cancel", 
+                "Are You Sure You Dont Accept Our Fair And Simple License Terms.Cancel", 
+                "Welcome To Superapp_2.Next", 
+                "Welcome To Superapp_3.Next"
+            ]
+        }
+    }
+}

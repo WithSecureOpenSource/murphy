@@ -7,7 +7,7 @@
                         "class": "Button", 
                         "control id": 2, 
                         "enabled": true, 
-                        "hwnd": 459144, 
+                        "hwnd": 1376510, 
                         "rect": {
                             "bottom": 447, 
                             "left": 561, 
@@ -21,7 +21,7 @@
                         "class": "Static", 
                         "control id": 65535, 
                         "enabled": true, 
-                        "hwnd": 328120, 
+                        "hwnd": 1245508, 
                         "rect": {
                             "bottom": 385, 
                             "left": 384, 
@@ -33,7 +33,7 @@
                     }
                 ], 
                 "class": "#32770", 
-                "hwnd": 262564, 
+                "hwnd": 1114538, 
                 "rect": {
                     "bottom": 461, 
                     "left": 369, 
@@ -70,7 +70,7 @@
                     "class": "Button", 
                     "control id": 2, 
                     "enabled": true, 
-                    "hwnd": 459144, 
+                    "hwnd": 1376510, 
                     "rect": {
                         "bottom": 447, 
                         "left": 561, 

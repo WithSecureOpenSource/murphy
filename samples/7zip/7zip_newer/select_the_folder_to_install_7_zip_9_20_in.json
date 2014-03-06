@@ -7,7 +7,7 @@
                         "class": "Static", 
                         "control id": 14146, 
                         "enabled": true, 
-                        "hwnd": 197002, 
+                        "hwnd": 2359630, 
                         "rect": {
                             "bottom": 281, 
                             "left": 368, 
@@ -21,7 +21,7 @@
                         "class": "SHBrowseForFolder ShellNameSpace Control", 
                         "control id": 0, 
                         "enabled": true, 
-                        "hwnd": 197050, 
+                        "hwnd": 1311202, 
                         "rect": {
                             "bottom": 472, 
                             "left": 368, 
@@ -35,7 +35,7 @@
                         "class": "SysTreeView32", 
                         "control id": 100, 
                         "enabled": true, 
-                        "hwnd": 328086, 
+                        "hwnd": 2228636, 
                         "rect": {
                             "bottom": 471, 
                             "left": 369, 
@@ -49,7 +49,7 @@
                         "class": "Button", 
                         "control id": 14150, 
                         "enabled": true, 
-                        "hwnd": 197040, 
+                        "hwnd": 4260370, 
                         "rect": {
                             "bottom": 508, 
                             "left": 368, 
@@ -63,7 +63,7 @@
                         "class": "Button", 
                         "control id": 1, 
                         "enabled": true, 
-                        "hwnd": 262574, 
+                        "hwnd": 4915726, 
                         "rect": {
                             "bottom": 508, 
                             "left": 500, 
@@ -77,7 +77,7 @@
                         "class": "Button", 
                         "control id": 2, 
                         "enabled": true, 
-                        "hwnd": 196974, 
+                        "hwnd": 3342888, 
                         "rect": {
                             "bottom": 508, 
                             "left": 581, 
@@ -91,7 +91,7 @@
                         "class": "ScrollBar", 
                         "control id": 14151, 
                         "enabled": true, 
-                        "hwnd": 197052, 
+                        "hwnd": 2032050, 
                         "rect": {
                             "bottom": 519, 
                             "left": 654, 
@@ -103,7 +103,7 @@
                     }
                 ], 
                 "class": "#32770", 
-                "hwnd": 393682, 
+                "hwnd": 3539476, 
                 "rect": {
                     "bottom": 527, 
                     "left": 345, 
@@ -140,7 +140,7 @@
                     "class": "Button", 
                     "control id": 14150, 
                     "enabled": true, 
-                    "hwnd": 197040, 
+                    "hwnd": 4260370, 
                     "rect": {
                         "bottom": 508, 
                         "left": 368, 
@@ -176,7 +176,7 @@
                     "class": "Button", 
                     "control id": 1, 
                     "enabled": true, 
-                    "hwnd": 262574, 
+                    "hwnd": 4915726, 
                     "rect": {
                         "bottom": 508, 
                         "left": 500, 
@@ -212,7 +212,7 @@
                     "class": "Button", 
                     "control id": 2, 
                     "enabled": true, 
-                    "hwnd": 196974, 
+                    "hwnd": 3342888, 
                     "rect": {
                         "bottom": 508, 
                         "left": 581, 

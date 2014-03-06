@@ -35,7 +35,7 @@
                         "class": "Button", 
                         "control id": 2, 
                         "enabled": false, 
-                        "hwnd": 2556310, 
+                        "hwnd": 524684, 
                         "rect": {
                             "bottom": 544, 
                             "left": 673, 
@@ -49,7 +49,7 @@
                         "class": "Static", 
                         "control id": 1036, 
                         "enabled": true, 
-                        "hwnd": 590254, 
+                        "hwnd": 786824, 
                         "rect": {
                             "bottom": 253, 
                             "left": 263, 
@@ -91,7 +91,7 @@
                         "class": "#32770", 
                         "control id": 0, 
                         "enabled": true, 
-                        "hwnd": 393652, 
+                        "hwnd": 3801558, 
                         "rect": {
                             "bottom": 508, 
                             "left": 263, 
@@ -105,7 +105,7 @@
                         "class": "Static", 
                         "control id": 1200, 
                         "enabled": true, 
-                        "hwnd": 328112, 
+                        "hwnd": 328104, 
                         "rect": {
                             "bottom": 508, 
                             "left": 263, 
@@ -119,7 +119,7 @@
                         "class": "Static", 
                         "control id": 1201, 
                         "enabled": true, 
-                        "hwnd": 721338, 
+                        "hwnd": 393624, 
                         "rect": {
                             "bottom": 256, 
                             "left": 443, 
@@ -133,7 +133,7 @@
                         "class": "Static", 
                         "control id": 1202, 
                         "enabled": true, 
-                        "hwnd": 1048948, 
+                        "hwnd": 1376630, 
                         "rect": {
                             "bottom": 495, 
                             "left": 443, 

@@ -25,5 +25,8 @@
   },
   {
     "file": "../samples/click_for_next/click_for_next/click_for_next.json"
+  },
+  {
+    "file": "../samples/instrumentation/instrumentation/instrumentation.json"
   }
 ]

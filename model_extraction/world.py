@@ -6,9 +6,17 @@ Abstract world class, override as appropriate
 '''
 
 class World(object):
-    
+    '''
+    The world as a whole and it's 3 main characteristics for crawling:
+    create (init)
+    reset (back to initial state)
+    dispose
+    '''
     def __init__(self):
-        pass
+        #directory where to save related files
+        self.output_dir = None
+        #array of log file names collected during crawling
+        self.event_logs = []
         
     def reset(self):
         '''

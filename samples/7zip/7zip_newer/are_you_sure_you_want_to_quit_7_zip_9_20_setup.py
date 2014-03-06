@@ -10,7 +10,7 @@ HERE = {'desc': 'Are You Sure You Want To Quit 7_Zip 9_20 Setup',
         'snapshots': ['are_you_sure_you_want_to_quit_7_zip_9_20_setup.0.bmp'],
         'snapshots mask': [3978044416],
         'reference snapshots': ['are_you_sure_you_want_to_quit_7_zip_9_20_setup.0.ref.bmp'],
-        'custom': {"scrap": {"hwnd": 524786, "childs": [{"hwnd": 721358, "control id": 6, "wm text": "&Yes", "rect": {"top": 429, "right": 586, "left": 498, "bottom": 455}, "text": "&Yes", "class": "Button", "enabled": true}, {"hwnd": 590276, "control id": 7, "wm text": "&No", "rect": {"top": 429, "right": 683, "left": 595, "bottom": 455}, "text": "&No", "class": "Button", "enabled": true}, {"hwnd": 655840, "control id": 20, "wm text": "", "rect": {"top": 359, "right": 396, "left": 364, "bottom": 391}, "text": "", "class": "Static", "enabled": true}, {"hwnd": 721422, "control id": 65535, "wm text": "Are you sure you want to quit 7-Zip 9.20 Setup?", "rect": {"top": 367, "right": 654, "left": 404, "bottom": 384}, "text": "Are you sure you want to quit 7-Zip 9.20 Setup?", "class": "Static", "enabled": true}], "class": "#32770", "rect": {"top": 308, "right": 694, "left": 336, "bottom": 469}, "text": "7-Zip 9.20 Setup"}, "scraper": "windows api"}}
+        'custom': {"scrap": {"hwnd": 1311060, "childs": [{"hwnd": 3539476, "control id": 6, "wm text": "&Yes", "rect": {"top": 429, "right": 586, "left": 498, "bottom": 455}, "text": "&Yes", "class": "Button", "enabled": true}, {"hwnd": 2359630, "control id": 7, "wm text": "&No", "rect": {"top": 429, "right": 683, "left": 595, "bottom": 455}, "text": "&No", "class": "Button", "enabled": true}, {"hwnd": 1835386, "control id": 20, "wm text": "", "rect": {"top": 359, "right": 396, "left": 364, "bottom": 391}, "text": "", "class": "Static", "enabled": true}, {"hwnd": 1180050, "control id": 65535, "wm text": "Are you sure you want to quit 7-Zip 9.20 Setup?", "rect": {"top": 367, "right": 654, "left": 404, "bottom": 384}, "text": "Are you sure you want to quit 7-Zip 9.20 Setup?", "class": "Static", "enabled": true}], "class": "#32770", "rect": {"top": 308, "right": 694, "left": 336, "bottom": 469}, "text": "7-Zip 9.20 Setup"}, "scraper": "windows api"}}
 
 
 WORKER = None
@@ -28,10 +28,10 @@ ELEM_01 = {'visual': (259, 121, 347, 147),
 V_ELEM_00 = {'desc': 'Yes',
              'goes to': 'Node 0',
              'how': ELEM_00,
-             'custom': {"window": {"hwnd": 721358, "control id": 6, "wm text": "&Yes", "rect": {"top": 429, "right": 586, "left": 498, "bottom": 455}, "text": "&Yes", "class": "Button", "enabled": true}}}
+             'custom': {"window": {"hwnd": 3539476, "control id": 6, "wm text": "&Yes", "rect": {"top": 429, "right": 586, "left": 498, "bottom": 455}, "text": "&Yes", "class": "Button", "enabled": true}}}
 
 V_ELEM_01 = {'desc': 'No',
              'goes to': 'Choose Install Location',
              'how': ELEM_01,
-             'custom': {"window": {"hwnd": 590276, "control id": 7, "wm text": "&No", "rect": {"top": 429, "right": 683, "left": 595, "bottom": 455}, "text": "&No", "class": "Button", "enabled": true}}}
+             'custom': {"window": {"hwnd": 2359630, "control id": 7, "wm text": "&No", "rect": {"top": 429, "right": 683, "left": 595, "bottom": 455}, "text": "&No", "class": "Button", "enabled": true}}}
 

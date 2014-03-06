@@ -5,9 +5,9 @@
                 "childs": [
                     {
                         "class": "HelpPane.WebBrowser", 
-                        "control id": 3124256, 
+                        "control id": 4107296, 
                         "enabled": true, 
-                        "hwnd": 721390, 
+                        "hwnd": 655802, 
                         "rect": {
                             "bottom": 598, 
                             "left": 522, 
@@ -21,7 +21,7 @@
                         "class": "Shell Embedding", 
                         "control id": 0, 
                         "enabled": true, 
-                        "hwnd": 655818, 
+                        "hwnd": 786886, 
                         "rect": {
                             "bottom": 598, 
                             "left": 522, 
@@ -61,9 +61,9 @@
                     }, 
                     {
                         "class": "HelpPane.Navigation", 
-                        "control id": 2979968, 
+                        "control id": 2128000, 
                         "enabled": true, 
-                        "hwnd": 2752984, 
+                        "hwnd": 1966494, 
                         "rect": {
                             "bottom": 76, 
                             "left": 522, 
@@ -75,9 +75,9 @@
                     }, 
                     {
                         "class": "ATL:ReBarWindow32", 
-                        "control id": 2980072, 
+                        "control id": 2128104, 
                         "enabled": true, 
-                        "hwnd": 590224, 
+                        "hwnd": 393648, 
                         "rect": {
                             "bottom": 440, 
                             "left": 522, 
@@ -89,9 +89,9 @@
                     }, 
                     {
                         "class": "ATL:ToolbarWindow32", 
-                        "control id": 2980152, 
+                        "control id": 2128184, 
                         "enabled": true, 
-                        "hwnd": 459190, 
+                        "hwnd": 2687464, 
                         "rect": {
                             "bottom": 80, 
                             "left": 522, 
@@ -103,9 +103,9 @@
                     }, 
                     {
                         "class": "HelpPane.Search", 
-                        "control id": 2980496, 
+                        "control id": 2128528, 
                         "enabled": true, 
-                        "hwnd": 3670486, 
+                        "hwnd": 459190, 
                         "rect": {
                             "bottom": 110, 
                             "left": 522, 
@@ -117,9 +117,9 @@
                     }, 
                     {
                         "class": "ATL:ReBarWindow32", 
-                        "control id": 2980760, 
+                        "control id": 2128792, 
                         "enabled": true, 
-                        "hwnd": 262568, 
+                        "hwnd": 590308, 
                         "rect": {
                             "bottom": 476, 
                             "left": 522, 
@@ -131,9 +131,9 @@
                     }, 
                     {
                         "class": "ATL:STATIC", 
-                        "control id": 2980680, 
+                        "control id": 2128712, 
                         "enabled": true, 
-                        "hwnd": 262576, 
+                        "hwnd": 262568, 
                         "rect": {
                             "bottom": 105, 
                             "left": 604, 
@@ -145,9 +145,9 @@
                     }, 
                     {
                         "class": "ATL:EDIT", 
-                        "control id": 2980944, 
+                        "control id": 2128976, 
                         "enabled": true, 
-                        "hwnd": 1311094, 
+                        "hwnd": 721390, 
                         "rect": {
                             "bottom": 105, 
                             "left": 604, 
@@ -159,9 +159,9 @@
                     }, 
                     {
                         "class": "ATL:ToolbarWindow32", 
-                        "control id": 2980856, 
+                        "control id": 2128888, 
                         "enabled": true, 
-                        "hwnd": 590308, 
+                        "hwnd": 787012, 
                         "rect": {
                             "bottom": 103, 
                             "left": 908, 
@@ -173,9 +173,9 @@
                     }, 
                     {
                         "class": "HelpPane.Escalation", 
-                        "control id": 2984048, 
+                        "control id": 2132080, 
                         "enabled": true, 
-                        "hwnd": 2687464, 
+                        "hwnd": 524688, 
                         "rect": {
                             "bottom": 620, 
                             "left": 522, 
@@ -187,7 +187,7 @@
                     }, 
                     {
                         "class": "ATL:ReBarWindow32", 
-                        "control id": 2984152, 
+                        "control id": 2132184, 
                         "enabled": true, 
                         "hwnd": 852424, 
                         "rect": {
@@ -201,9 +201,9 @@
                     }, 
                     {
                         "class": "ATL:ToolbarWindow32", 
-                        "control id": 2984232, 
+                        "control id": 2132264, 
                         "enabled": true, 
-                        "hwnd": 721396, 
+                        "hwnd": 328184, 
                         "rect": {
                             "bottom": 624, 
                             "left": 522, 
@@ -215,7 +215,7 @@
                     }, 
                     {
                         "class": "HelpPane.Connection", 
-                        "control id": 2984528, 
+                        "control id": 2132560, 
                         "enabled": true, 
                         "hwnd": 393712, 
                         "rect": {
@@ -229,7 +229,7 @@
                     }, 
                     {
                         "class": "ATL:ReBarWindow32", 
-                        "control id": 2984632, 
+                        "control id": 2132664, 
                         "enabled": true, 
                         "hwnd": 262604, 
                         "rect": {
@@ -243,7 +243,7 @@
                     }, 
                     {
                         "class": "ATL:ToolbarWindow32", 
-                        "control id": 2984712, 
+                        "control id": 2132744, 
                         "enabled": true, 
                         "hwnd": 262630, 
                         "rect": {
@@ -257,7 +257,7 @@
                     }
                 ], 
                 "class": "HelpPane", 
-                "hwnd": 2032022, 
+                "hwnd": 2097642, 
                 "rect": {
                     "bottom": 650, 
                     "left": 514, 
