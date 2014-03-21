@@ -1,0 +1,7 @@
+21/3/2014
+Heavy refactor on the web workbench, moving stuff to more adecuated directories, usage of requirejs on the javascript side and so
+Several small bugfixes all around
+Added new model creation from workbench itself, still in an early stage and has known issues (like project names with dots are not supported)
+Added initial dismantler view, again, very early preview
+Modified how uac prompts are scraped, however a lot of more work is needed
+Live preview window, vnc links and few other minor additions

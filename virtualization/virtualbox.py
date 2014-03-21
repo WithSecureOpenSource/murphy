@@ -5,7 +5,7 @@ See LICENSE for details
 Simple wrap around virtualbox for instantiating and restoring virtual machines
 '''
 
-import subprocess, logging, time, datetime
+import subprocess, logging, time, datetime, re
 from virtualization import virtual_machine
 
 LOGGER = logging.getLogger('root.' + __name__)
@@ -66,7 +66,6 @@ class VirtualBoxMachine(virtual_machine.VirtualMachine):
         if self.helper is None:
             return
 
-        time_in_sync = False
         for _ in range(60):
             stdout, stderr, retcode = self.helper.execute("echo %time%")
             if retcode == 0:
@@ -84,12 +83,11 @@ class VirtualBoxMachine(virtual_machine.VirtualMachine):
                 else:
                     LOGGER.debug("Clocks synced: (remote %s, local %s)",
                                  stdout.strip(), timestamp)
-                    time_in_sync = True
                     break
-                    
+
         if self.remote_instrumentation_file:
             self.helper.launch(("\\utils\\procmon\\procmon.exe /Minimized "
-                                "/Quiet /BackingFile %s") % 
+                                "/Quiet /BackingFile %s") %
                                self.remote_instrumentation_file)
             launch_command = "\\utils\\procmon\\procmon.exe /WaitForIdle"
             stdout, stderr, retcode = self.helper.execute(launch_command)
@@ -132,10 +130,64 @@ class VirtualBoxMachine(virtual_machine.VirtualMachine):
                                  stderr=subprocess.STDOUT)
         return ret_val
 
+    def _get_machine_workload(self):
+        '''
+        Reports some performance information in the remote machine to get some hint
+        if it get's clogged due to high load or pending I/O operations
+        '''
+        command = ('typeperf "\\LogicalDisk(_Total)\\Current Disk Queue Length" '
+                   '"\\system\\Processor Queue Length" '
+                   '"\\processor(_Total)\\% Idle Time" '
+                   '-sc 1 -si 3')
+        try:
+            (stdout, stderr, retcode) = self.helper.execute(command)
+            if stderr != '':
+                LOGGER.error('Got some error! %s' % str(stderr))
+            else:
+                perf = stdout.strip()
+                lines = perf.split('\n')
+                data = lines[1]
+                results = re.search('^"(.*)","(.*)","(.*)","(.*)"$',
+                                    data.strip())
+                if results:
+                    return {'disk': float(results.groups()[1]),
+                            'processor queue': float(results.groups()[2]),
+                            'idle': float(results.groups()[3])}
+                else:
+                    raise RuntimeError('Failed parsing output line, output is:\n%s', perf)
+        except Exception, ex:  # pylint: disable=W0703
+            LOGGER.error('Something went wrong with command: %s' % str(ex))
+
+        return None
+
     def wait_idling(self):
         '''
-        Experimental synchronization against machine load and screen changes
-        FIXME: todo... perf counters are different than a real machine or kvm
+        Experimental synchronization against machine load and screen changesas
+        TODO: optimize: if low load: if last screen received is at least 3 seconds old OR if it is blinking type, then we're idling 
         '''
         LOGGER.info("Wait for remote machine to be idle...")
         self.automation.wait_stable_screen()
+
+        failures = 0
+        while True:
+            try:
+                perf = self._get_machine_workload()
+                if (perf['disk'] < 1.0 and 
+                  perf['processor queue'] < 5.0 and 
+                  perf['idle'] > 90.0):
+                    break
+                else:
+                    LOGGER.info(("Too busy, waiting... (Disk %f Proc Queue %f "
+                                 "Idle %f)"),
+                                perf['disk'],
+                                perf['processor queue'],
+                                perf['idle'])
+            except Exception, ex: # pylint: disable=W0703
+                LOGGER.warn("problem while waiting: %s", str(ex))
+                failures += 1
+
+            if failures > 3:
+                LOGGER.error(("Too many failures already (%d), resorting to "
+                              "screen stability instead"), failures)
+                self.automation.wait_stable_screen()
+                break

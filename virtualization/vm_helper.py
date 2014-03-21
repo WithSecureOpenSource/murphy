@@ -11,6 +11,21 @@ from peasy.io import esocket
 
 LOGGER = logging.getLogger('root.' + __name__)
 
+def _decompress(filename):
+    import gzip
+    dest = filename.replace(".gzXX", "")
+    fin = gzip.open(filename, 'rb')
+    fout = open(dest, 'wb')
+    chunk_size = 1024 * 1024 * 1
+    while True:
+        chunk = fin.read(chunk_size)
+        fout.write(chunk)
+        if len(chunk) < chunk_size:
+            break
+    fout.close()
+    fin.close()
+
+    
 class RemoteHelper(object):
     '''
     Helper class that encapsulates extra functionality for remoting a machine
@@ -84,6 +99,7 @@ class RemoteHelper(object):
         '''
         Returns a screenshot from the remote machine current state
         '''
+        obj = None
         try:
             if self._last_screen is None or self._screen_changed() == True:
                 LOGGER.debug("Fetching image from helper")
@@ -104,6 +120,8 @@ class RemoteHelper(object):
         except Exception, ex: # pylint: disable=W0703
             LOGGER.warning("attempt to fetch screenshot from helper failed: %s",
                            str(ex))
+            if obj:
+                print "response is: %s" % str(obj)
             traceback.print_exc()
             return None
 
@@ -275,16 +293,17 @@ class RemoteHelper(object):
                                  'filename': remote_file})
             total_size = obj['size']
 
-            with open(local_file, 'wb') as received:
+            with open(local_file + ".gzXX", 'wb') as received:
                 remaining = total_size + 0.0
                 while remaining > 0:
                     #TODO: esocket still lacks stream receive thingy for large
                     #transfers
                     chunk = self._connection.socket.recv(64 * 1024)
-                    print "%f%%\r" % ((1 - (remaining / total_size)) * 100),
+                    print "%f%% (%d - %d)\r" % ((1 - (remaining / total_size)) * 100, total_size - remaining, total_size),
                     remaining -= len(chunk)
                     received.write(chunk)
-            print "\rFile received"
+            print "\rFile received, decompressing                 "
+            _decompress(local_file + ".gzXX")
             return True
         except Exception, ex: # pylint: disable=W0703
             traceback.print_exc(file=sys.stdout)

@@ -2,7 +2,7 @@
 Copyright (c) 2011-2014 F-Secure
 See LICENSE for details
 '''
-import os
+import os, shutil
 from model_extraction.world import World
 
 class VmWorld(World):
@@ -18,7 +18,15 @@ class VmWorld(World):
         #last image before performing an edge, each edge to be performed saves
         #the current screenshot here
         self.last_screen = None
-        self.live_broadcast = None
+        self._live_broadcast = None
+
+    @property
+    def live_broadcast(self):
+        return self._live_broadcast
+
+    @live_broadcast.setter
+    def live_broadcast(self, filename):
+        self._live_broadcast = filename
 
     def reset(self):
         '''
@@ -26,20 +34,20 @@ class VmWorld(World):
         '''
         if self._machine:
             self.dispose()
-            
-        if self.live_broadcast:
-            if os.path.isfile(self.live_broadcast):
+
+        if self._live_broadcast:
+            if os.path.isfile(self._live_broadcast):
                 try:
-                    os.remove(self.live_broadcast)
+                    os.remove(self._live_broadcast)
                 except Exception, ex:
                     print "problem cleaning broadcasted image: %s" % str(ex)
-        
+
         output = self.output_dir + '/misc'
         if os.path.exists(output) == False:
             os.makedirs(output)
         self._machine = self._allocator()
         self._machine.output_dir = output
-        self._machine.live_broadcast = self.live_broadcast
+        self._machine.live_broadcast = self._live_broadcast
         self._machine.prepare()
 
     def dispose(self):

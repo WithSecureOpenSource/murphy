@@ -30,43 +30,46 @@ Reference model: <select id='models'></select><br>
 </script>
 </body>
 <script src='query_string.js'></script>
-<script src='model.js'></script>
+<script src="scripts/require.js"></script>
 <script>
 
-var model = new Model(QueryString.model, function (err) { alert(err);});
+require(["scripts/murphy/model.js", "scripts/murphy/utils.js"], function (models, utils) {
+    var model = new models.Model(utils.QueryString().model, function (err) { alert(err);}),
+        source = document.createTextNode("Model: " + utils.QueryString().model);
+        
+    document.body.insertBefore(source, document.body.firstChild);
 
-var source = document.createTextNode("Model: " + QueryString.model);
-document.body.insertBefore(source, document.body.firstChild);
-
-Model.getModels(function (models) {
-    var i, select_elem = document.getElementById('models');
-    for (i = 0; i < models.length; i += 1) {
-        if (models[i] !== QueryString.model) {
-            option = document.createElement("option");
-            option.text = models[i];
-            select_elem.add(option);
+    models.getModels(function (models) {
+        var i, select_elem = document.getElementById('models');
+        for (i = 0; i < models.length; i += 1) {
+            if (models[i] !== utils.QueryString().model) {
+                option = document.createElement("option");
+                option.text = models[i];
+                select_elem.add(option);
+            }
         }
+    });
+
+    function compare() {
+        var reference = document.getElementById('models');
+        reference = reference.options[reference.selectedIndex].text;
+        model.compare(reference, function(result) {
+            var container = document.getElementById('comparison results');
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            var tweaked = result[1].replace('<html>', '');
+            tweaked = tweaked.replace('<body>', '');
+            tweaked = tweaked.replace('</body>', '');
+            tweaked = tweaked.replace('</html>', '');
+            //var text = document.createElement('div');
+            //text.innerHTML = result[1];
+            //container.appendChild(text);
+            document.body.innerHTML = tweaked;
+        }, function (err) { alert(err);});
     }
+    document.getElementById('compare').addEventListener('click', compare);
 });
 
-function compare() {
-    var reference = document.getElementById('models');
-    reference = reference.options[reference.selectedIndex].text;
-    model.compare(reference, function(result) {
-        var container = document.getElementById('comparison results');
-        while (container.hasChildNodes()) {
-            container.removeChild(container.lastChild);
-        }
-        var tweaked = result[1].replace('<html>', '');
-        tweaked = tweaked.replace('<body>', '');
-        tweaked = tweaked.replace('</body>', '');
-        tweaked = tweaked.replace('</html>', '');
-        //var text = document.createElement('div');
-        //text.innerHTML = result[1];
-        //container.appendChild(text);
-        document.body.innerHTML = tweaked;
-    }, function (err) { alert(err);});
-}
-document.getElementById('compare').addEventListener('click', compare);
 </script>
 </html>

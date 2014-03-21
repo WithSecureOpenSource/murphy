@@ -28,12 +28,9 @@ Base logic:
     if there's no uninvestigated edge left
         we're done
 
-TODO: return to caller logic could be implemented in derived class as to keep
-the core implementation simple and as generic as possible
 '''
 
 import json, datetime, logging
-from model_extraction import csv_unicode
 
 LOGGER = logging.getLogger('root.' + __name__)
 
@@ -117,24 +114,26 @@ def log_invalid_path(a_path):
                                       a_step.name,
                                       a_step.head.name)
 
-def _procmon_time_to_timestamp(time_as_string):
+def _qualified_edge_name(edge, base_names):
     '''
-    Convenient converter from process monitor time string to python time
+    Store original names and derive destinations based on the original
+    names, otherwise an edge name will end up like cancel__welcome__eula
+    but instead we want cancel__welcome and cancel__eula
     '''
-    hour, mins, secs = time_as_string.split(":")
-    secs, millis = secs.split(",")
-    millis = millis[:6]
-    return datetime.time(int(hour), int(mins), int(secs), int(millis))
+    base_name = base_names.get(edge.name, edge.name)
+    if edge.head:
+        qualified_name = ("%s__%s" % (base_name, edge.head.name)).capitalize()
+    else:
+        qualified_name = edge.name
+    base_names[qualified_name] = base_name
+    return qualified_name
 
 class Crawler(object):
     '''
     Current limitations:
-        it cannot identify when same state can be reached from different points
-        and from that state will return to different places depending on
-        where does it comes from, for example a popup dialog that can be
-        launched from different places and returns to the caller.
-        for now, avoid such situations by ignoring the edge that would trigger
-        the recognition of it
+        it will do a 'light pass' trying to visit every node and trigger every
+        edge, however it wont be exhaustive as to for example try same edge but
+        coming from different paths
     '''
 
     def __init__(self, world, graph):
@@ -153,15 +152,17 @@ class Crawler(object):
                 return node
         return None
 
-
-    def create_node(self):
+    def create_node(self, current_path):
         '''
         Shorthand for creating a node that represents the current state of the
         world
         '''
-        node = self._graph.create_node(self._world)
+        node = self._graph.create_node(name=None, world=self._world)
+        if len(current_path) > 0:
+            for edge in node.edges:
+                edge.add_known_path(current_path)
+        LOGGER.info("Node created for state %s", str(node))
         return node
-
 
     def _filter_edges(self, edges):
         '''
@@ -175,27 +176,15 @@ class Crawler(object):
         node_index = self._graph.nodes.index(edge.tail)
         edge_index = self._graph.nodes[node_index].edges.index(edge)
 
-        # FIXME: remove the return to caller as it is...
-        '''
-        if edge.return_to_caller == 'Yes':
-            predecessor_edge = _find_predecessor_in_edge_array(edges)
-            if predecessor_edge and edge.head is predecessor_edge.tail:
-                pass
-            else:
-                LOGGER.debug(("will ignore edge %s (%s) as it is a return to "
-                              "caller scenario") % (edge.name, edge.head.name))
-                return True
-        '''
         if edges in edge.known_invalid_paths:
             print "Invalid path rejected."
-            return False
+            return True
 
         if (node_index, edge_index) in self.ignorable_edges:
             LOGGER.debug("will ignore edge %s", str((node_index, edge_index)))
             return True
         else:
             return False
-
 
     def _notify_update(self, node):
         '''
@@ -205,6 +194,13 @@ class Crawler(object):
         update_notify = getattr(self._graph, 'on_update', None)
         if update_notify:
             update_notify(node)
+
+    def _dump_path(self, path):
+        '''
+        Debug print a path
+        '''
+        for edge in path:
+            print "\t%s->%s" % (edge.tail.name, edge.name)
 
     def save_timeline(self, where):
         '''
@@ -230,6 +226,95 @@ class Crawler(object):
         with open(where + '/timeline.json', 'wb') as the_file:
             json.dump(events, the_file)
 
+
+    def _get_path_to_unexplored_edge(self, current_node):
+        '''
+        Returns a path (array of edges) to an unexplored edge
+        Returns an empty array if no path is found
+        '''
+        unexplored_edges = []
+        for node_index in range(len(self._graph.nodes)):
+            for edge_index in range(len(self._graph.nodes[node_index].edges)):
+                edge = self._graph.nodes[node_index].edges[edge_index]
+                if edge.head is None:
+                    if not (node_index, edge_index) in self.ignorable_edges:
+                        unexplored_edges.append(edge)
+
+        needs_reset = False
+        path = current_node.path_to(None, self._filter_edges)
+        if len(path) == 0:
+            needs_reset = True
+        for candidate_edge in path:
+            if candidate_edge.tail is self._graph.nodes[0]:
+                needs_reset = True
+                break
+        #no path from current node, try from start
+        if needs_reset:
+            path = self._graph.nodes[0].path_to(None, self._filter_edges)
+
+        if len(path) == 0 and len(unexplored_edges) > 0:
+            #if there are known paths to them it should use it, as the breadth
+            #first can miss paths with the blacklisting logic
+            #the fact that the edge exists means that there is a route to it
+            path = (unexplored_edges[0].shortest_known_path() +
+                    [unexplored_edges[0]])
+            LOGGER.info("No more paths solved by breadthfirst, returning "
+                        "known one to %s->%s",
+                        unexplored_edges[0].tail.name,
+                        unexplored_edges[0].name)
+            if len(path) == 0:
+                raise RuntimeError("Known path to node is not know, "
+                                   "internal inconsistency error")
+            else:
+                self._dump_path(path)
+
+        return path
+
+    def _traverse_path(self, path, history, current_path):
+        '''
+        Perform each edge in the given path (an array of edges), verifies that
+        each edge head is reached.
+        Adds the given path to the edge list of known invalid paths
+        Returns True if successfully traversed all the path, if something
+        unexpected happened it returns the last performed edge and current
+        node
+        '''
+        for edge in path[:-1]:
+            event = {'departure': datetime.datetime.now(),
+                     'from': edge}
+            self.timeline.append(event)
+            edge.perform(self._world)
+            history.append(edge.head)
+            if edge.head.is_in(self._world):
+                current_path.append(edge)
+                edge.add_known_path(current_path)
+            else:
+                # paranoia: if current path is a known path to this edge
+                # then is an undeterministic behaviour, abort
+                actual_node = self.where_am_i()
+                if current_path in edge.known_paths:
+                    _log_unexpected_destination(edge,
+                                                actual_node,
+                                                current_path)
+                    raise Exception("Unexpected / undetermined node")
+                LOGGER.debug("Edge %s has invalid path %s",
+                             edge,
+                             str(current_path))
+                LOGGER.debug("Current state after invalid path is %s",
+                             str(actual_node))
+                log_invalid_paths(edge)
+                log_invalid_path(current_path)
+                edge.add_known_invalid_path(current_path + [edge])
+                return edge, actual_node
+
+        event = {'departure': datetime.datetime.now(),
+                 'from': path[-1]}
+        self.timeline.append(event)
+        path[-1].perform(self._world)
+        current_path.append(path[-1])
+
+        return True
+
     def explore(self, current_node=None, current_edge=None):
         '''
         Explore this world from the current state, initial node and edges can
@@ -238,16 +323,15 @@ class Crawler(object):
         crawl = True
         LOGGER.info("Started exploration, current node is %s, current edge is"
                     " %s", str(current_node), str(current_edge))
-        history = []
-        current_path = []
-
-        base_names = {}
+        #FIXME: should use better names for history and current path...
+        history = [] #nodes visited until reset
+        current_path = [] #edges performed until reset
+        base_names = {} #original edge names
 
         while crawl:
             this_node = self.where_am_i()
             if this_node is None:
-                this_node = self.create_node()
-                LOGGER.info("Node created for state %s", str(this_node))
+                this_node = self.create_node(current_path)
                 self._notify_update(this_node)
 
             if current_edge:
@@ -257,10 +341,11 @@ class Crawler(object):
 
                 current_edge.head = this_node
                 if current_edge.return_to_caller == True:
-                    LOGGER.debug("Edge with RTC attrib %s", current_edge.name)
-                    current_edge.name = (current_edge.name + "__" +
-                                         this_node.name).capitalize()
-                    LOGGER.debug("Edge renamed as %s", current_edge.name)
+                    current_edge.name = _qualified_edge_name(current_edge,
+                                                             base_names)
+                    LOGGER.debug("Edge w RTC renamed as %s", current_edge.name)
+                    print "Current path is:"
+                    self._dump_path(current_path)
                     current_edge.return_to_caller = None
 
                 current_edge.add_known_path(current_path)
@@ -268,254 +353,59 @@ class Crawler(object):
 
             current_node = this_node
             history.append(current_node)
-            find_path = True
-            while find_path:
-                find_path = False
-                actual_node = None
-                #get the path to nearest unvisited edge
-                needs_reset = False
-                path = current_node.path_to(None, self._filter_edges)
-                if len(path) == 0 and not current_node is self._graph.nodes[0]:
-                    needs_reset = True
-                    LOGGER.info("No reachable node from here, resetting world")
-                    path = self._graph.nodes[0].path_to(None,
-                                                        self._filter_edges)
-                elif len(history) > 1 and current_node is self._graph.nodes[0]:
-                    needs_reset = True
-                    LOGGER.info("Reached initial state again, resetting world")
-                    path = self._graph.nodes[0].path_to(None,
-                                                        self._filter_edges)
 
-                #FIXME: TODO: path solving avoiding a node (or a list of nodes)
-                for candidate_edge in path[1:]:
-                    if candidate_edge.tail is self._graph.nodes[0]:
-                        needs_reset = True
-                        LOGGER.info("Reached initial state again (thru path "
-                                    "solving), resetting world")
-                        path = self._graph.nodes[0].path_to(None,
-                                                            self._filter_edges)
-
+            while True:
+                current_edge = None
+                path = self._get_path_to_unexplored_edge(current_node)
                 if len(path) == 0:
                     crawl = False
+                    break
+
+                #if needs reset:
+                if path[0].tail is self._graph.nodes[0] and len(history) > 1:
+                    self.timeline.append("reboot")
+                    self._world.reset()
+                    history = []
+                    current_path = []
+
+                result = self._traverse_path(path, history, current_path)
+                if result == True:
+                    current_edge = path[-1]
+                    break
                 else:
-                    if needs_reset:
-                        self.timeline.append("reboot")
-                        self._world.reset()
-                        history = []
-                        current_path = []
-
-                    perform_last_edge = True
-                    for edge in path[:-1]:
-                        current_edge = edge
-                        event = {'departure': datetime.datetime.now(),
-                                 'from': edge}
-                        self.timeline.append(event)
-                        edge.perform(self._world)
-                        current_path.append(current_edge)
-                        history.append(edge.head)
-                        if edge.head.is_in(self._world):
-                            edge.add_known_path(current_path)
+                    edge, actual_node = result
+                    #edge has multiple destinations, create new one with the
+                    #current destination if it does not already exists
+                    #FIXME: timeline, history and so
+                    already_exists = False
+                    if actual_node:
+                        for other_edge in edge.tail.edges:
+                            if other_edge.head == actual_node:
+                                already_exists = True
+                                current_path.append(other_edge)
+                                break
+                    if already_exists:
+                        #as it can get stuck in a loop, we reset to initial
+                        #node and rely on the blacklisted path
+                        current_node = self._graph.nodes[0]
+                    else:
+                        old_name = edge.name
+                        new_edge = edge.clone()
+                        edge.name = _qualified_edge_name(edge, base_names)
+                        new_edge.head = actual_node
+                        current_path.append(new_edge)
+                        if actual_node:
+                            new_edge.name = _qualified_edge_name(new_edge,
+                                                                 base_names)
+                            new_edge.add_known_path(current_path)
+                            LOGGER.info("New edge created as %s", new_edge)
+                            self._notify_update(edge.tail)
+                            current_node = actual_node
                         else:
-                            actual_node = self.where_am_i()
-                            # if current path is a known path to this edge =>
-                            # undeterministic behaviour, abort
-                            if current_path in edge.known_paths:
-                                _log_unexpected_destination(edge,
-                                                            actual_node,
-                                                            current_path)
-                                raise Exception("Unexpected /"
-                                                " undetermined node")
-
-                            #this node took us to another place...
-                            LOGGER.debug("Edge %s has invalid path %s",
-                                         edge,
-                                         str(current_path))
-                            log_invalid_paths(edge)
-                            log_invalid_path(current_path)
-                            edge.add_known_invalid_path(current_path)
-
-                            alternate_edge = None
-                            if actual_node:
-                                for candidate in edge.tail.edges:
-                                    if candidate.head == actual_node:
-                                        alternate_edge = candidate
-                                        break
-
-                            if alternate_edge:
-                                #we're in a known node, find a path from here
-                                LOGGER.info("Current edge switch to %s",
-                                            alternate_edge)
-                                current_node = actual_node
-                                current_edge = alternate_edge
-                                find_path = True
-                            else:
-                                new_edge = edge.clone()
-                                #FIXME: base name must be parent name.edge name!
-                                base_name = base_names.get(edge.name, edge.name)
-                                edge.name = (base_name + "__" +
-                                             edge.head.name).capitalize()
-                                base_names[edge.name] = base_name
-                                current_node = actual_node
-                                current_edge = new_edge
-                                if actual_node:
-                                    new_edge.name = (base_name + "__" +
-                                                  actual_node.name).capitalize()
-                                    base_names[new_edge.name] = base_name
-                                    new_edge.head = actual_node
-                                    new_edge.add_known_path(current_path)
-                                    find_path = True
-                                else:
-                                    new_edge.head = None
-                                    new_edge.return_to_caller = True
-                                    find_path = False
-                                    perform_last_edge = False
-                                LOGGER.info("New edge created as %s", new_edge)
-
-
+                            current_edge = new_edge
+                            new_edge.name = old_name
+                            new_edge.return_to_caller = True
+                            LOGGER.info("New edge created as %s", new_edge)
                             self._notify_update(edge.tail)
                             break
 
-                    if find_path == False and perform_last_edge == True:
-                        event = {'departure': datetime.datetime.now(),
-                                 'from': path[-1]}
-                        self.timeline.append(event)
-                        path[-1].perform(self._world)
-                        current_edge = path[-1]
-                        current_path.append(current_edge)
-
-    def _add_trace_to_edge(self, edge, trace_index):
-        '''
-        Adds a trace, meaning the series of steps used with that index in
-        the timeline to pair with the log info
-        '''
-        steps = []
-        for i in range(trace_index - 1, -1, -1):
-            if self.timeline[i] == 'reboot':
-                break
-            timeline_edge = self.timeline[i]['from']
-            steps.insert(0, "%s.%s" % (timeline_edge.tail.name,
-                                       timeline_edge.name))
-
-        if not 'traces' in edge.logs['instrumentation']:
-            edge.logs['instrumentation']['traces'] = {}
-        edge.logs['instrumentation']['traces'][trace_index] = steps
-        
-    def _add_logged_event_to_edge(self, edge, operation, trace_index, row):
-        '''
-        Adds the given row of data to the given edge as instrumentation captured
-        data
-        '''
-        if not 'instrumentation' in edge.logs:
-            edge.logs['instrumentation'] = {}
-        if not operation in edge.logs['instrumentation']:
-            edge.logs['instrumentation'][operation] = {}
-        if not trace_index in edge.logs['instrumentation'][operation]:
-            edge.logs['instrumentation'][operation][trace_index] = []
-            self._add_trace_to_edge(edge, trace_index)
-        edge.logs['instrumentation'][operation][trace_index].append(row)
-
-    def _correlate_log(self, csv_reader, edge, until, timeline_index):
-        '''
-        Adds events from the given log to the corresponding edge, times are
-        matched from the crawler timeline against the edge it was executed.
-        In this context edge represents what it was executed and until the
-        timestamp of the next edge execution
-        '''
-        ignorable_processes = ["mobsync.exe", "wmpnetwk.exe", "spoolsv.exe",
-                               "smss.exe", "lsm.exe", "wmpnscfg.exe",
-                               "python.exe", "cmd.exe", "wermgr.exe",
-                               "conhost.exe", "tvnserver.exe", "Explorer.EXE",
-                               "Procmon.exe", "Procmon64.exe", "svchost.exe",
-                               "DllHost.exe", "System", "taskhost.exe",
-                               "services.exe", "lsass.exe"]
-        ignorable_path = "C:\\Users\\testuser\\AppData\\Local\\"
-        last_message = ""
-        headers = csv_reader.next()
-        if headers is None:
-            return (None, None)
-        #typical header:
-        #['Time of Day', 'Process Name', 'PID', 'Operation', 'Path', 'Result',
-        # 'Detail']
-
-        while True:
-            try:
-                row = csv_reader.next()
-            except StopIteration:
-                break
-            time, process, _, operation, path, _, _ = row
-            if process in ignorable_processes:
-                pass
-            elif path.startswith(ignorable_path):
-                pass
-            else:
-                timestamp = _procmon_time_to_timestamp(time)
-                if timestamp <= until:
-                    message = "%s %s %s" % (process, operation, path)
-                    if operation == "WriteFile" and not edge is None:
-                        self._add_logged_event_to_edge(edge,
-                                                       operation,
-                                                       timeline_index,
-                                                       row)
-                        if message != last_message:
-                            print "\t%s: %s" % (time, message)
-                        last_message = message
-                    elif operation.startswith("TCP") and not edge is None:
-                        self._add_logged_event_to_edge(edge,
-                                                       operation,
-                                                       timeline_index,
-                                                       row)
-                        if message != last_message:
-                            print "\t%s: %s" % (time, message)
-                        last_message = message
-                    elif operation == "RegSetValue" and not edge is None:
-                        self._add_logged_event_to_edge(edge,
-                                                       operation,
-                                                       timeline_index,
-                                                       row)
-                        if message != last_message:
-                            print "\t%s: %s" % (time, message)
-                        last_message = message
-                else:
-                    last_message = ""
-                    while True:
-                        timeline_index += 1
-                        if timeline_index == len(self.timeline):
-                            return (None, None)
-                        if self.timeline[timeline_index] == "reboot":
-                            pass #print "Reset"
-                        elif self.timeline[timeline_index]['departure'].time() > timestamp:
-                            until = self.timeline[timeline_index]['departure'].time()
-                            if (timeline_index > 2 and
-                              self.timeline[timeline_index - 1] == "reboot"):
-                                edge = self.timeline[timeline_index - 2]['from']
-                                print edge.tail.name + "." + edge.name
-                                print "Reset"
-                            else:
-                                edge = self.timeline[timeline_index - 1]['from']
-                                print edge.tail.name + "." + edge.name
-                            break
-                        else:
-                            edge = self.timeline[timeline_index - 1]['from']
-                            print edge.tail.name + "." + edge.name
-        return (edge, timeline_index)
-
-
-    def correlate_events(self):
-        '''
-        Matches log events to edge executions
-        '''
-        timeline_index = 0
-        until = self.timeline[0]['departure'].time()
-        edge = None
-        # print "Logs in world: %s" % str(self._world.event_logs)
-        # print
-        print "Will try to correlate events from log with timeline"
-        print "Logs are %s" % str(self._world.event_logs)
-        for log in self._world.event_logs:
-            with open(log, 'r') as log_file:
-                csv_reader = csv_unicode.UnicodeReader(log_file,
-                                                       encoding="utf-8-sig")
-                (edge, timeline_index) = self._correlate_log(csv_reader,
-                                                           edge,
-                                                           until,
-                                                           timeline_index)

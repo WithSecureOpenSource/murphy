@@ -23,9 +23,9 @@ if not MURPHY_DIR in sys.path:
     sys.path.append(MURPHY_DIR)
 
     
-from web_workbench.bottle import route, run, static_file, request, redirect, response, HTTPResponse
+from bottle import route, run, static_file, request, redirect, response, HTTPResponse, template
 
-import json, traceback, time, datetime, uuid, StringIO
+import json, traceback, time, datetime, uuid, StringIO, threading
 from PIL import Image
 
 from web_workbench import utils
@@ -36,7 +36,7 @@ from web_workbench.planner import (solve_route, find_needed_params, run_plan,
                                    get_edge_logs as _get_edge_logs,
                                    get_graph_logs as _get_graph_logs)
 from web_workbench.custom_model import create_custom_model,\
-    remove_model_from_workbench
+    remove_model_from_workbench, add_model_to_workbench
 import subprocess
 
 PROJECTS_FILE = 'projects.json'
@@ -145,6 +145,17 @@ def get_model_live_channel(model_name):
 @route('/channel')
 def get_live_channel():
     try:
+        if _TERMINATE_BROADCAST.get(request.query.model, False) == True:
+            #fixme: could just as well serve static...
+            with open('static/img/end_of_transmission.png', 'rb') as a_file:
+                content = a_file.read()
+            headers = {'Content-Length': len(content),
+                       'Content-Type': "image/png",
+                       'Accept-Ranges': "bytes",
+                       'Cache-Control': "no-cache"}
+            _TERMINATE_BROADCAST[request.query.model] = False
+            return HTTPResponse(content, **headers)
+
         model_file = _get_model_file_name(request.query.model)
         with open(model_file, 'rb') as the_file:
             model_dict = json.load(the_file)
@@ -174,7 +185,7 @@ def get_live_channel():
             
     except Exception, ex:
         print "Problem: %s" % str(ex)
-        with open('static/x-space.png', 'rb') as a_file:
+        with open('static/img/booting.png', 'rb') as a_file:
             content = a_file.read()
         headers = {'Content-Length': len(content),
                    'Content-Type': "image/png",
@@ -182,7 +193,51 @@ def get_live_channel():
                    'Cache-Control': "no-cache"}
         return HTTPResponse(content, **headers)
 
-                
+_TERMINATE_BROADCAST = {}
+        
+def _wait_end_of_scrap(proc, project_name):
+    proc.wait()
+    _TERMINATE_BROADCAST[project_name] = True
+
+@route('/murphy/request_create.html', method='POST')
+def request_create_project():
+    project_name = request.forms.get('new project name')
+    content = request.files.get("file content")
+    try:
+        try:
+            content.save("..\\model_extraction_helpers\\files\\%s" % content.filename)
+        except:
+            pass
+        
+        with open("templates/extract_win_scraper_template.py", "r") as the_file:
+            code_template = the_file.read()
+        code_template = code_template.replace("##PROJECT_NAME##", project_name)
+        code_template = code_template.replace("##FILENAME##", content.filename)
+        try:
+            os.makedirs("../samples/%s" % project_name)
+        except:
+            pass
+            
+        with open("../samples/%s/extract_%s.py" % (project_name, project_name), "w") as the_file:
+            the_file.write(code_template)
+
+        add_model_to_workbench("../samples/%s/%s/%s.json" % (project_name, project_name, project_name))
+        #return redirect("/murphy/main.html?model=" + project_name)
+        
+        in_dir = (MURPHY_DIR + ("/samples/%s" % project_name)).replace("/", "\\")
+        cmd = ('cmd.exe /C "set PYTHONPATH=' + MURPHY_DIR +
+               " && cd " + in_dir + " && python.exe extract_" + project_name + ".py")
+        proc = subprocess.Popen(cmd, shell=True, cwd=in_dir)
+        threading.Thread(target=_wait_end_of_scrap, args=(proc, project_name + ".json",)).start()
+        
+        #there could be a leftover unread from previous model extraction
+        _TERMINATE_BROADCAST[project_name + ".json"] = False
+        return template('creating_project.tpl', project_name=project_name)
+    except Exception, ex:
+        print "Problem while saving: %s" % str(ex)
+        traceback.print_exc(file=sys.stdout)
+
+        
 @route('/murphy/model/:model_name/:view_name')
 def get_view(model_name, view_name):
     '''
@@ -197,9 +252,6 @@ def get_view(model_name, view_name):
         view_type = request.query.type
         if view_type == '':
             view_type = 'flow'
-        print "Requested view %s %s %s" % (str(model_name),
-                                           str(view_name),
-                                           view_type)
 
         should_build = True
         view_directory = "projects/%s/%s" % (model_name, view_name)
@@ -262,6 +314,23 @@ def get_edge_logs():
     else:
         return {'status': 'no data'}
 
+        
+@route('/murphy/get_node_json', method='POST')
+def get_node_json():
+    obj = json.load(request.body)
+    model_file = _get_model_file_name(obj['model'])
+    with open(os.path.dirname(model_file) + "/" + obj['node'].replace(" ", "_") + ".json" , "rb") as a_file:
+        node = json.load(a_file)
+    return {'status': 'ok', 'response': node}
+    
+@route('/murphy/get_node_image/:model_name/:node_name')
+def get_node_image(model_name, node_name):
+    model_file = _get_model_file_name(model_name)
+    filename = os.path.dirname(model_file) + "/" + node_name.replace(" ", "_") + ".json"
+    with open(filename , "rb") as a_file:
+        node = json.load(a_file)
+    filename = node.get("HERE", {}).get("reference screenshots", [])[0]['file']
+    return static_file(filename, root=os.path.dirname(model_file) + "/img")
 
 @route('/murphy/get_graph_logs', method='POST')
 def get_graph_logs():
@@ -412,7 +481,6 @@ def get_run_log(model):
     else:
         filename = 'not_found.err'
 
-    print "trying to get log for " + filename
     # static_file does not properly refresh when requests cames ofthen
     with open(filename, "r") as a_file:
         text = "".join(a_file.readlines())
@@ -495,6 +563,10 @@ def server_project_files(project_name, view_name, file_name):
 def server_static2(filename):
     return static_file(filename, root='static/scripts')
     
+@route('/murphy/scripts/murphy/<filename>')
+def server_static2(filename):
+    return static_file(filename, root='static/scripts/murphy')
+    
 @route('/murphy/<filename>')
 def server_static(filename):
     '''
@@ -508,6 +580,10 @@ def server_static(filename):
     else:
         return static_file(filename, root='static')
 
+@route('/img/<filename>')
+def serve_images(filename):
+    return static_file(filename, root='static/img')
+        
 @route('/')
 def index():
     '''

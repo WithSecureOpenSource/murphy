@@ -106,6 +106,8 @@ body,html{
 .client_area_class {
     background-color: #ffffff;
     cursor: default;
+    position: relative;
+    overflow: auto;
 }
 .layout_panel_class {
     flex-direction: row;

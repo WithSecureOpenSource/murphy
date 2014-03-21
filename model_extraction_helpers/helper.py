@@ -289,14 +289,42 @@ def launch(query):
     
 SERVICES['/launch'] = launch
 
+def _compress(filename):
+    import gzip
+    f_in = open(filename, 'rb')
+    f_out = gzip.open(filename + '.gzXX', 'wb')
+    chunk_size = 1024 * 1024 * 1
+    while True:
+        data = f_in.read(chunk_size)
+        f_out.write(data)
+        if len(data) < chunk_size:
+            break
+    f_out.close()
+    f_in.close()
 
+def _decompress(filename):
+    import gzip
+    dest = filename.replace(".gzXX", "")
+    fin = gzip.open(filename, 'rb')
+    fout = open(dest, 'wb')
+    chunk_size = 1024 * 1024 * 1
+    while True:
+        chunk = fin.read(chunk_size)
+        fout.write(chunk)
+        if len(chunk) < chunk_size:
+            break
+    fout.close()
+    fin.close()
+
+    
 def get_file(query):
     try:
         filename = query['filename']
         #with open(filename, 'rb') as the_file:
         #    content = the_file.read()
         #return {'status': 'ok', 'size': base64.b64encode(content)}
-        return {'status': 'ok', 'size': os.path.getsize(filename)}
+        _compress(filename)
+        return {'status': 'ok', 'size': os.path.getsize(filename + '.gzXX')}
     except Exception, ex:
         return {'status': 'fail', 'message': 'Failed to get the file: %s' % str(ex)}
 
@@ -355,9 +383,14 @@ def send_message(client, object):
 
 def stream_file(conn, filename):
     #stream content in 64 kb chunks
-    total_size = os.path.getsize(filename)
+    if os.path.isfile(filename + '.gzXX'):
+        use_file = filename + ".gzXX"
+    else:
+        use_file = filename
+        
+    total_size = os.path.getsize(use_file + '.gzXX')
     remaining_size = total_size
-    with open(filename, 'rb') as the_file:
+    with open(use_file + '.gzXX', 'rb') as the_file:
         while remaining_size > 0:
             chunk = the_file.read(64 * 1024)
             conn.sendall(chunk)

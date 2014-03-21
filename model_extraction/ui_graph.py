@@ -86,9 +86,11 @@ class UIGraph(graph.Graph):
         self.scrap_method(node, world, scraper_hints, node_hints)
         
             
-    def create_node(self, world):
+    def create_node(self, name, world=None):
         '''
-        Creates a node object, name must be unique
+        Creates a node object, name must be unique and is derived from world
+        At this moment, the name itself is ignored but there to comply with the
+        graph interface
         '''
         name = 'nothing'
         node = Node(name, self.path + '/' + self.name, self.images_dir)

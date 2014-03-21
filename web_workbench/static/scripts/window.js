@@ -97,12 +97,12 @@ define(["scripts/drag"], function (drag) {
         // menu, title, min, max, close buttons
 
         _title.getHtmlElement().style.overflow = "hidden";
-        _title.getHtmlElement().style.cursor = 'url("/murphy/hand.cur"), default';
+        _title.getHtmlElement().style.cursor = 'url("/img/hand.cur"), default';
         _title.getHtmlElement().style.textAlign = 'center';
         _layout.add(_title).setExpands(true);
 
         img = document.createElement("img");
-        img.src = "minimize.png";
+        img.src = "/img/minimize.png";
         _close.getHtmlElement().appendChild(img);
         _close.getHtmlElement().style.cursor = 'pointer';
         _layout.add(_close);
@@ -114,10 +114,10 @@ define(["scripts/drag"], function (drag) {
         Object.defineProperty(this,
                               "title",
                                 {get : function () {
-                                    return _title.getHtmlElement().textContent;
+                                    return _title.getHtmlElement().innerHTML;
                                  },
                                  set : function (new_title) {
-                                    _title.getHtmlElement().textContent = new_title;
+                                    _title.getHtmlElement().innerHTML = new_title;
                                  },
                                  enumerable : true
                                 });
@@ -142,7 +142,7 @@ define(["scripts/drag"], function (drag) {
             }
         });
         _captured = function () {
-            _title.getHtmlElement().style.cursor = 'url("/murphy/grab.cur"), default';
+            _title.getHtmlElement().style.cursor = 'url("/img/grab.cur"), default';
         };
         _moved = function (evtobj, target_element, delta_x, delta_y, that_x) {
             if (_that.on_drag !== null) {
@@ -150,7 +150,7 @@ define(["scripts/drag"], function (drag) {
             }
         };
         _released = function () {
-            _title.getHtmlElement().style.cursor = 'url("/murphy/hand.cur"), default';
+            _title.getHtmlElement().style.cursor = 'url("/img/hand.cur"), default';
         };
         _drag = new drag.Dragger(_title.getHtmlElement(), _captured, _moved, _released);
     };

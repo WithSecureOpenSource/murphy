@@ -1,0 +1,11 @@
+javascript files should be accessed with requirejs
+
+modules should return 'a module object' and not a class, return a dictionary containing the elements of the module
+
+use jlint on it, _ are ok as prefixes
+
+use strict is mandatory
+
+better addEventListener than direct function assignment
+
+use _ for private vars

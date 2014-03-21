@@ -189,14 +189,16 @@ class VNCDoToolClient(rfb.RFBClient):
         """ Save the current display to filename
         """
         # request screen update
-        self.framebufferUpdateRequest()
-        self.deferred = Deferred()
-        self.deferred.addCallback(self._captureSave, queue)
+        self.framebufferUpdateRequest(incremental=1)
+        if not self.screen:
+            self.deferred = Deferred()
+            self.deferred.addCallback(self._captureSave, queue)
+        else:
+            queue.put((self.screen.size, 'RGB', self.screen.convert('RGB').tostring('raw')))
         return self.deferred
 
     def _captureSave(self, data, queue):
-        #self.screen.save(filename)
-        queue.put((self.screen.size, 'RGB', self.screen.convert('RGB').tostring('raw')))
+        queue.put((data.size, 'RGB', data.convert('RGB').tostring('raw')))
         return self
 
     def expectScreen(self, filename, maxrms=0):
@@ -270,10 +272,11 @@ class VNCDoToolClient(rfb.RFBClient):
     #
     # base customizations
     #
+    '''
     def connectionMade(self):
         rfb.RFBClient.connectionMade(self)
         self.updates = DeferredQueue()
-
+    '''
     def vncConnectionMade(self):
         self.setPixelFormat()
         self.setEncodings([rfb.RAW_ENCODING])
@@ -304,12 +307,12 @@ class VNCDoToolClient(rfb.RFBClient):
         else:
             self.screen.paste(update, (x, y))
 
-
     def commitUpdate(self, rectangles):
         #   print "In commitUpdate, current deferred is %s" % str(self.deferred)
         if self.deferred:
-            self.deferred.callback(self.screen)
+            d = self.deferred
             self.deferred = None
+            d.callback(self.screen)
         #self.framebufferUpdateRequest()
 
     def vncRequestPassword(self):
@@ -338,5 +341,3 @@ class VNCDoToolFactory(rfb.RFBFactory):
     def clientConnectionMade(self, protocol):
         self.deferred.callback(protocol)
         self.deferred = None
-
-

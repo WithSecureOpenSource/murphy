@@ -1,33 +1,23 @@
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 <html>
+<!--
+Copyright (c) 2011-2013 F-Secure
+See LICENSE for details
+-->
 <link rel="stylesheet" type="text/css" href="styles.css">
 <head>
 <title>Murphy's realms</title>
-<script src='utils2.js'></script>
-<script src='model.js'></script>
-<script src='route_plan_list.js'></script>
-<script src='route_view.js'></script>
-<script src='log.js'></script>
-<script src='run_list_view.js'></script>
-<script src='screens_view.js'></script>
-<script src='thumbnails_view.js'></script>
-<script src='run_plan_view.js'></script>
-<script src='tab_view_control.js'></script>
-<script src='svg_navigation.js'></script>
-<script src='edge_log.js'></script>
-<script src='edge_events_view.js'></script>
-<script src='channel_view.js'></script>
-<script src='main.js'></script>
 <script src="scripts/require.js"></script>
 </head>
 <body class="no-select" style='margin: 0; padding: 0;'>
     <!--Navigation tab in top-->
     <div style='padding: 1 0 2 0;'>
-        Models: <select id='models'></select><button id="delete project" disabled>Delete</button>
+        Models: <select id='models'></select><button id="delete project" disabled>Delete</button><button id="new project">New</button>
         <span id='route planner tab' class="selected-tab">Route</span>
         <span id='thumbnails view tab' class="unselected-tab">Thumbnails</span>
         <span id='screen view tab' class="unselected-tab">Screens</span>
         <span id='simplified view tab' class="unselected-tab">Simplified</span>
+        <span id='dismantler view tab' class="unselected-tab" style="">Dismantler</span>
     </div>
     
     <!--Toolbox window-->
@@ -35,21 +25,21 @@
         Views: <select id='views'></select><br>
         <input type="checkbox" id="view type" value="nodes">Show images
         <input type="checkbox" id="autorefresh" value="nodes">Auto refresh
-        &nbsp;<img id="reload" class='button' src='reload.png'></img>&nbsp;<img id="download" class='button' src='download.png' style='visibility: hidden;'></img><br>
+        &nbsp;<img id="reload" class='button' src='/img/reload.png'></img>&nbsp;<img id="download" class='button' src='/img/download.png' style='visibility: hidden;'></img><br>
         &nbsp;<a id='compare'>Compare</a><br>
         <span id='selections' class="step-selection-area"></span><br>
         <input type=button value='Make Run' id='Make Run'><br>
         <span id='runs' class="step-selection-area"></span><br>
         <span id='footer' class="toolbox-footer">
-            <span id='user'></span>&nbsp;<a href='javascript:logout();'>Logout</a>
-            <span style='float: right'><img src='collapse.png' class='button' id='collapse'></span>
+            <span id='user'></span>&nbsp;<a href='logout user' id='logout user'>Logout</a>
+            <span style='float: right'><img src='/img/collapse.png' class='button' id='collapse'></span>
         </span>        
     </span>
     
     <!--Collapsed toolbox window-->
     <span id='collapsed left bar' class='toolbox-frame-collapsed' style='display: none;'>
-        <img id='reload2' class='button' src='reload.png'></img><br>
-        <img src='expand.png' class='button' id='expand'>
+        <img id='reload2' class='button' src='/img/reload.png'></img><br>
+        <img src='/img/expand.png' class='button' id='expand'>
     </span>
     
     <!--Route planning map view-->
@@ -57,18 +47,8 @@
 </body>
 <script>
 
-document.getElementById('collapse').addEventListener('click', collapse_toolbox);
-document.getElementById('expand').addEventListener('click', expand_toolbox);
-
-document.body.addEventListener('resize', adjustSizeableAreaDimensions);
-window.addEventListener('resize', adjustSizeableAreaDimensions);
-adjustSizeableAreaDimensions();
-
-app = new Application();
-
-function showRun(model_name, run_id) {
-    window.open('view_run2.html?model=' + model_name + '&id=' + run_id, '_blank');
-    window.focus();
-}
+require(["scripts/murphy/main.js"], function (module) {
+    app = new module.Application();
+});
 </script>
 </html>

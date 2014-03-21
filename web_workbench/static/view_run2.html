@@ -5,7 +5,7 @@ Copyright (c) 2011-2013 F-Secure
 See LICENSE for details
 -->
 <head>
-<script src='log.js'></script>
+<script src="scripts/require.js"></script>
 </head>
 <title>Realms of test logs</title>
 <body>
@@ -15,58 +15,37 @@ Run Log:
 <img id='error screenshot' src=''>
 </body>
 <script>
-var QueryString = function () {
-  // This function is anonymous, is executed immediately and 
-  // the return value is assigned to QueryString!
-  var query_string = {};
-  var query = window.location.search.substring(1);
-  var vars = query.split("&");
-  for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-        // If first entry with this name
-    if (typeof query_string[pair[0]] === "undefined") {
-      query_string[pair[0]] = pair[1];
-        // If second entry with this name
-    } else if (typeof query_string[pair[0]] === "string") {
-      var arr = [ query_string[pair[0]], pair[1] ];
-      query_string[pair[0]] = arr;
-        // If third or later entry with this name
-    } else {
-      query_string[pair[0]].push(pair[1]);
-    }
-  } 
-    return query_string;
-} ();
 
-var log = new RunLog(QueryString.model, QueryString.id);
+require(['scripts/murphy/log.js', 'scripts/murphy/utils.js'], function (module, utils) {
+    var log = new module.RunLog(utils.QueryString().model, utils.QueryString().id);
 
-function log_reloaded(log_content) {
-    content = document.getElementById('content');
-    while (content.hasChildNodes()) {
-        content.removeChild(content.lastChild);
+    function log_reloaded(log_content) {
+        content = document.getElementById('content');
+        while (content.hasChildNodes()) {
+            content.removeChild(content.lastChild);
+        }
+        
+        var vnc = log_content.match(/vnc:\/\/\d+\.\d+\.\d+\.\d+:\d+/g);
+        var link = null;
+        if (vnc !== null) {
+            link = document.createElement("a");
+            link.href = vnc;
+            link.appendChild(document.createTextNode(vnc));
+            content.appendChild(link);
+            content.appendChild(document.createElement("br"));
+            content.appendChild(document.createElement("br"));
+        }
+        
+        var text = document.createTextNode(log_content);
+        content.appendChild(text);
+        if (log.running !== false) {
+            setTimeout(request_reload_log, 1000);
+        }
     }
-    
-    var vnc=log_content.match(/vnc:\/\/\d+\.\d+\.\d+\.\d+:\d+/g);
-    var link = null;
-    if (vnc !== null) {
-        link = document.createElement("a");
-        link.href = vnc;
-        link.appendChild(document.createTextNode(vnc));
-        content.appendChild(link);
-        content.appendChild(document.createElement("br"));
-        content.appendChild(document.createElement("br"));
+    function request_reload_log() {
+        log.getText(log_reloaded);
     }
-    
-    var text = document.createTextNode(log_content);
-    content.appendChild(text);
-    if (log.running !== false) {
-        setTimeout(request_reload_log, 1000);
-    }
-}
-function request_reload_log() {
-    log.getText(log_reloaded);
-}
-request_reload_log();
-//document.getElementById('error screenshot').src = '/murphy/get_run_screenshot?id=' + QueryString.id
+    request_reload_log();
+});
 </script>
 </html>

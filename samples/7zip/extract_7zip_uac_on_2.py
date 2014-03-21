@@ -1,6 +1,8 @@
 '''
 Copyright (c) 2011-2013 F-Secure
 See LICENSE for details
+
+NOT WORKING AT THE MOMENT
 '''
 
 from model_extraction import base_extractor, configuration
