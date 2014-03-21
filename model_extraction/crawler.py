@@ -380,7 +380,7 @@ class Crawler(object):
                     already_exists = False
                     if actual_node:
                         for other_edge in edge.tail.edges:
-                            if other_edge.head == actual_node:
+                            if other_edge.head is actual_node:
                                 already_exists = True
                                 current_path.append(other_edge)
                                 break

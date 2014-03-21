@@ -150,7 +150,6 @@ class Edge(object):
             candidate += 1
         new_one = self.tail.create_edge(candidate_name, self.head)
         new_one.return_to_caller = self.return_to_caller
-        new_one.tail.edges.append(new_one)
         return new_one
 
 
