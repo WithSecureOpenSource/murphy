@@ -4,6 +4,7 @@ See LICENSE for details
 '''
 from model_extraction import base_extractor, configuration
 from model_extraction.ui import window_scrap
+from model_extraction.correlator import Correlator
     
 def ignore_comboboxes(extractor, node, world):
     '''
@@ -38,5 +39,6 @@ if __name__ == '__main__':
     
     extractor.crawl_application()
     #Following lines will associate the events collected with the performed user actions (edge executions)
-    extractor.crawler.correlate_events()
+    correlator = Correlator(extractor.world, extractor.crawler.timeline)
+    correlator.correlate_events()
     extractor.project.graph.save_nodes()
